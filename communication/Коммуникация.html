@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<!-- saved from url=(0184)file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Благополучная собака — Здоровая коммуникация</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Благополучная собака — Здоровая коммуникация_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F9F6F0;
+            --bg-white: #FFFFFF;
+            --bg-dark-green: #5D6855;
+            --bg-light-olive: #A8B3A0;
+            --bg-footer: #E8DFC9;
+            --text-dark: #2C2C2C;
+            --text-gray: #757575;
+            --accent-badge: #E8DFC9;
+            --border-soft: #CCCCCC;
+            --radius-card: 24px;
+            --radius-button: 40px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            background: #D9D9D9;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: calc(24px + env(safe-area-inset-top));
+            padding-top: calc(24px + constant(safe-area-inset-top));
+            padding-bottom: 24px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
+            background: #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+            font-size: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .nav a:hover {
+            color: var(--bg-light-olive);
+        }
+
+        .header-contacts-btn {
+            background: var(--bg-light-olive);
+            color: #FFFFFF;
+            border-radius: var(--radius-button);
+            padding: 20px 24px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 0 80px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-badge);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 24px;
+            color: #8A7252;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+
+        .hero-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 90%;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-btn-primary {
+            background: var(--bg-light-olive);
+            color: #FFFFFF;
+            border-radius: var(--radius-button);
+            padding: 14px 28px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .hero-btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border-soft);
+            color: var(--text-gray);
+            border-radius: var(--radius-button);
+            padding: 14px 28px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .hero-image-wrapper {
+            border-radius: 40px 120px 40px 40px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            height: 420px;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* =========================================
+           SECTION: ЦЕЛИ И ПРАВИЛА
+           ========================================= */
+        .goals-section {
+            background: var(--bg-main);
+            padding: 60px 0;
+        }
+
+        .goals-pretitle {
+            text-align: center;
+            font-size: 14px;
+            color: #A8B5A0;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: none;
+        }
+
+        .goals-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .goals-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 32px;
+        }
+
+        .goals-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .goals-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .goal-check {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #A8B3A0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .goal-check svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .goal-text strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .goal-text span {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .goals-fact-box {
+            background: #FFF8F0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #8A7252;
+            line-height: 1.5;
+        }
+
+        .rules-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .rules-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+            color: #8A7252;
+        }
+
+        .rules-text strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .rules-text span {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* =========================================
+           SECTION: СИГНАЛЫ ПРИМИРЕНИЯ
+           ========================================= */
+        .signals-section {
+            background: var(--bg-main);
+            padding: 60px 0;
+        }
+
+        .signals-pretitle {
+            font-size: 13px;
+            font-weight: 700;
+            color: #A8B5A0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .signals-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .signals-subtitle {
+            font-size: 15px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .signals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .signal-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signal-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+
+        .signal-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .signal-card-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .signal-card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 14px;
+            object-fit: cover;
+            margin-top: auto;
+        }
+
+        .signal-card-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 14px;
+            background: #E0D9CF;
+            margin-top: auto;
+        }
+
+        .signal-card-image-placeholder img{
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* =========================================
+           SECTION: 6 ТИПОВ ЛАЯ
+           ========================================= */
+        .bark-section {
+            background: var(--bg-main);
+            padding: 60px 0;
+        }
+
+        .bark-pretitle {
+            font-size: 13px;
+            font-weight: 700;
+            color: #A8B5A0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .bark-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .bark-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .bark-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 24px 28px;
+        }
+
+        .bark-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .bark-badge-green {
+            background: #D4E8D0;
+            color: #4A7A42;
+        }
+
+        .bark-badge-yellow {
+            background: #F5E8C0;
+            color: #8A6A1A;
+        }
+
+        .bark-badge-red {
+            background: #F5D0D0;
+            color: #9A3030;
+        }
+
+        .bark-card-title {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .bark-card-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* =========================================
+           SECTION: СИГНАЛЫ ДИСТАНЦИИ
+           ========================================= */
+        .distance-section {
+            background: var(--bg-main);
+            padding: 60px 0;
+        }
+
+        .distance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .distance-left-card {
+            background: #F0EBE1;
+            border-radius: var(--radius-card);
+            padding: 32px;
+        }
+
+        .distance-left-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .distance-icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #E8DFC9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .distance-card-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .distance-card-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .distance-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .distance-step-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+            color: #8A7252;
+        }
+
+        .distance-step-text strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .distance-step-text span {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .distance-warning-box {
+            background: #FDECEA;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #9A3030;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+
+        .distance-right-image {
+            width: 100%;
+            border-radius: 32px;
+            object-fit: cover;
+            height: 420px;
+        }
+
+        .distance-right-placeholder {
+            width: 100%;
+            border-radius: 32px;
+            background: #D9D9D9;
+            height: 420px;
+        }
+
+        /* =========================================
+           SECTION: ЭМОЦИИ И ЗАПАХИ
+           ========================================= */
+        .emotions-section {
+            background: var(--bg-white);
+            padding: 80px 0;
+        }
+
+        .emotions-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .emotions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .emotion-block {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .emotion-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .emotion-item-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .emotion-item-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .emotion-item-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .interesting-block {
+            background: var(--bg-main);
+            border-radius: var(--radius-card);
+            padding: 28px 32px;
+        }
+
+        .interesting-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .interesting-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .interesting-list li {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            padding-left: 16px;
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .interesting-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--bg-light-olive);
+        }
+
+        .distance-right-placeholder img{
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+            object-fit: cover;
+            display: block;
+        }
+
+        
+        /* =========================================
+           CTA BANNER
+           ========================================= */
+        .cta-section {
+            background: var(--bg-main);
+            padding: 60px 0;
+        }
+
+        .cta-banner {
+            background: var(--bg-dark-green);
+            border-radius: 32px;
+            padding: 64px 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .cta-left h3 {
+            color: #FFFFFF;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            max-width: 380px;
+            line-height: 1.2;
+        }
+
+        .cta-left p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 15px;
+            max-width: 360px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            background: #FFFFFF;
+            color: var(--bg-dark-green);
+            border-radius: var(--radius-button);
+            padding: 14px 32px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .cta-image {
+            width: 300px;
+            height: 220px;
+            border-radius: 24px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .cta-image-placeholder {
+            width: 300px;
+            height: 220px;
+            border-radius: 24px;
+            background: rgba(255,255,255,0.15);
+            flex-shrink: 0;
+        }
+
+        /* FOOTER */
+        .footer-wrapper {
+            background: var(--bg-footer);
+            margin-top: 0;
+        }
+
+        .footer {
+            padding-block: 60px 24px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-block {
+            max-width: 250px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: #D9D9D9;
+        }
+
+        .footer-logo-text {
+            font-weight: 700;
+        }
+
+        .footer-description {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        .footer-column-title {
+            font-weight: 600;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-dark);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #D9D9D9;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 960px) {
+            .container { padding: 0 24px; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-image { height: 320px; }
+            .goals-grid { grid-template-columns: 1fr; }
+            .signals-grid { grid-template-columns: repeat(2, 1fr); }
+            .bark-grid { grid-template-columns: repeat(2, 1fr); }
+            .distance-grid { grid-template-columns: 1fr; }
+            .distance-right-image, .distance-right-placeholder { height: 280px; }
+            .emotions-grid { grid-template-columns: 1fr; }
+            .cta-banner { flex-direction: column; align-items: flex-start; padding: 40px 40px; }
+            .cta-image, .cta-image-placeholder { width: 100%; max-width: 320px; }
+            .footer-top { grid-template-columns: 2fr 1fr 1fr; }
+        }
+
+        @media (max-width: 720px) {
+            .container { padding: 0 20px; }
+            .header { flex-wrap: wrap; gap: 16px; }
+            .nav { width: 100%; justify-content: flex-start; flex-wrap: wrap; row-gap: 8px; }
+            .hero { padding: 40px 0 60px; }
+            .hero-title { font-size: 32px; }
+            .hero-image-wrapper { display: none; }
+            .signals-grid { grid-template-columns: 1fr; }
+            .bark-grid { grid-template-columns: 1fr; }
+            .cta-banner { padding: 32px 24px; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <header class="container header">
+        <div class="header-left">
+            <div class="logo-circle"></div>
+            <div class="brand-name">Благополучная собака</div>
+        </div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#method">Методология</a>
+                <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#topics">Статьи</a>
+                <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#adoption">Консультации</a>
+            </nav>
+            <button class="header-contacts-btn">Контакты</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="container hero" id="method">
+        <div class="hero-content">
+            <span class="hero-badge">Язык собак</span>
+            <h1 class="hero-title">Здоровая коммуникация: как понять свою собаку?</h1>
+            <p class="hero-text">Собаки - социальные животные. Общение с сородичами и людьми - это не просто желание, а их базовая потребность.</p>
+            <div class="hero-buttons">
+                <button class="hero-btn-primary">Изучить сигналы</button>
+                <button class="hero-btn-secondary">О методологии</button>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <div class="image-placeholder hero-image" style="border-radius: 40px 120px 40px 40px;"></div>
+        </div>
+    </section>
+
+    <!-- ЦЕЛИ И ПРАВИЛА МИРНОГО СОСУЩЕСТВОВАНИЯ -->
+    <section class="goals-section" id="topics">
+        <div class="container">
+            <p class="goals-pretitle">Что такое здоровая коммуникация?</p>
+            <h2 class="goals-title">"Правила вежливости" собак</h2>
+            <div class="goals-grid">
+                <!-- Карточка 1: Цели общения -->
+                <div class="goals-card">
+                    <div class="goals-card-icon">🖤</div>
+                    <div class="goals-card-title">Как выглядит здоровая коммуникация собак</div>
+
+                    <div class="goal-item">
+                        <div class="goal-check">
+                            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="goal-text">
+                            <strong>При встрече использовать сигналы примирения, избегать конфликтов</strong>
+                        </div>
+                    </div>
+
+                    <div class="goal-item">
+                        <div class="goal-check">
+                            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="goal-text">
+                            <strong>Соблюдать баланс во время игр, чередовать роли</strong>
+                        </div>
+                    </div>
+
+                    <div class="goal-item">
+                        <div class="goal-check">
+                            <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="goal-text">
+                            <strong>Откликаться на сигналы партнера по игре, учитывать  предпочтения друг друга</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Три правила вежливости -->
+                <div class="goals-card">
+                    <div class="goals-card-icon" style="font-size:18px;">↔️</div>
+                    <div class="goals-card-title">Что препятствует здоровой коммуникации собак</div>
+
+                    <div class="rules-item">
+                        <div class="rules-number">1</div>
+                        <div class="rules-text">
+                            <strong>Слишком сильное возбуждение</strong>
+                        </div>
+                    </div>
+
+                    <div class="rules-item">
+                        <div class="rules-number">2</div>
+                        <div class="rules-text">
+                            <strong>Недостаточный опыт общения с собаками в период социализации</strong>
+
+                            <span>Плюс полученный опыт конкуренции.</span>
+                        </div>
+                    </div>
+
+                    <div class="rules-item">
+                        <div class="rules-number">3</div>
+                        <div class="rules-text">
+                            <strong>Невозможность проявить вежливое поведение из-за вмешательства человека</strong>
+                            <span>-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СИГНАЛЫ ПРИМИРЕНИЯ -->
+    <section class="signals-section">
+        <div class="container">
+            <p class="signals-pretitle">ЯЗЫК ТЕЛА</p>
+            <h2 class="signals-title">Сигналы примирения</h2>
+            <p class="signals-subtitle">Тонкие сигналы языка тела, с помощью которых собака сообщает о своих мирных намерениях или же, наоборот, о внутреннем напряжении. Очень важно давать возможность применить эти сигналы по отношению к людям и собакам, чтобы избежать нездоровой коммуникации, в следствие игнорирования попыток собаки к "вежливому общению".</p>
+            <div class="goals-fact-box">
+                💡 Факт: У собак 61 сигнал примирения и всего 18 сигналов угрозы, используемых для внутри/ и межвидовой коммуникации.
+            </div>
+            <div class="signals-grid">
+                <!-- Карточка 1 -->
+                <div class="signal-card">
+                    <div class="signal-card-icon">👁️</div>
+                    <div class="signal-card-title">Отводит взгляд ("китовый глаз")</div>
+                    <div class="signal-card-title">Отворачивает голову</div>
+                    <div class="signal-card-text">Часто сочетаются. Профилактика прямого контакта, конфликта. Если общение считывается как "безопасное", собака может принять решение о дальнейшем сближении.</div>
+                    <div class="signal-card-image-placeholder"></div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="signal-card">
+                    <div class="signal-card-icon">👅</div>
+                    <div class="signal-card-title">Облизывание, "мерцание языком"</div>
+                    <div class="signal-card-text">Если дистанция кажется слишком близкой, человек напряжен, повышает голос, некомфортно обнимает или фиксирует собаку, а также в новых/непонятных ситуациях.</div>
+                    <div class="signal-card-image-placeholder">
+                        <img src="./communication_assets/tonque.jpg" alt="Картинка 1" class="enrichment-img">
+                    </div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="signal-card">
+                    <div class="signal-card-icon">🌱</div>
+                    <div class="signal-card-title">Нюхает землю/пол / чешется</div>
+                    <div class="signal-card-text"> Собака притворяется, что нюхает землю, чтобы вежливо сблизится/расстаться после игры с другой собакой, или в момент когда что-то вызывает у собаки беспокойство и она хочет смягчить ситуацию (второй вариант - чешется).</div>
+                    <div class="signal-card-image-placeholder"></div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="signal-card">
+                    <div class="signal-card-icon">↩️</div>
+                    <div class="signal-card-title">Игровой поклон</div>
+                    <div class="signal-card-text">Сигнал примирения, выражающий дружелюбие и добрые намеения. Призыв к игре.</div>
+                    <div class="signal-card-image-placeholder">
+                        <img src="./communication_assets/play_bow.jpg" alt="Картинка 1" class="enrichment-img">
+                    </div>
+                </div>
+
+                <!-- Карточка 5 -->
+                <div class="signal-card">
+                    <div class="signal-card-icon">😮</div>
+                    <div class="signal-card-title">Зевание</div>
+                    <div class="signal-card-text">Сигнал высокого уровня дискомфорта, когда собаку "не слышат" в коммуникации или общение на близкой дистанции затянулось. С помощью зевания собака пытается расслабиться.</div>
+                    <div class="signal-card-image-placeholder">
+                        <img src="./communication_assets/yawn.jpg" alt="Картинка 1" class="enrichment-img">
+                    </div>
+                </div>
+
+                <!-- Карточка 6 -->
+                <div class="signal-card">
+                    <div class="signal-card-icon">🌀</div>
+                    <div class="signal-card-title">Движение по дуге</div>
+                    <div class="signal-card-text">Вежливое сближение, в результате которого собаки принимают решение продолжать общение или нет.</div>
+                    <div class="signal-card-image-placeholder">
+                        <img src="./communication_assets/move.jpg" alt="Картинка 1" class="enrichment-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 ТИПОВ ЛАЯ -->
+    <section class="bark-section">
+        <div class="container">
+            <p class="bark-pretitle">КОММУНИКАЦИЯ — О ЧЁМ ГОВОРИТ ЛАЙ</p>
+            <h2 class="bark-title">О чем говорит ваша собака?</h2>
+
+            <div class="bark-grid">
+                <div class="bark-card">
+                    <span class="bark-badge bark-badge-green">Радостный</span>
+                    <div class="bark-card-title">Возбуждённый</div>
+                    <div class="bark-card-text">Собака хочет поиграть, ждёт прогулку с агрессией. Это жажда общения — приветствие.</div>
+                </div>
+
+                <div class="bark-card">
+                    <span class="bark-badge bark-badge-yellow">Осторожный</span>
+                    <div class="bark-card-title">Предупредительный</div>
+                    <div class="bark-card-text">Сообщает о незнакомце. Просто скажите собаке спасибо: что предупредила.</div>
+                </div>
+
+                <div class="bark-card">
+                    <span class="bark-badge bark-badge-red">Важно</span>
+                    <div class="bark-card-title">Защитный</div>
+                    <div class="bark-card-text">Притяжательное или страх и ресурса. Собака не подпустит ближе.</div>
+                </div>
+                <div class="bark-card">
+                    <span class="bark-badge bark-badge-yellow">Осторожный</span>
+                    <div class="bark-card-title">Предупредительный</div>
+                    <div class="bark-card-text">Сообщает о незнакомце. Просто скажите собаке спасибо: что предупредила.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СИГНАЛЫ ДИСТАНЦИИ -->
+    <section class="distance-section">
+        <div class="container">
+            <div class="distance-grid">
+                <div class="distance-left-card">
+                    <div class="distance-left-top">
+                        <div class="distance-icon-circle">🚫</div>
+                        <div class="distance-card-title">Сигналы дистанции</div>
+                    </div>
+                    <p class="distance-card-desc">Если сигналы примирения проигнорированы, собака переходит к просьбе отойти.</p>
+
+                    <div class="distance-step">
+                        <div class="distance-step-num">1</div>
+                        <div class="distance-step-text">
+                            <strong>Замирание</strong>
+                            <span>Жёсткий взгляд и остановка дыхания</span>
+                        </div>
+                    </div>
+
+                    <div class="distance-step">
+                        <div class="distance-step-num">2</div>
+                        <div class="distance-step-text">
+                            <strong>Рычание</strong>
+                            <span>Предупреждение: «Мне некомфортно, отойди»</span>
+                        </div>
+                    </div>
+
+                    <div class="distance-step">
+                        <div class="distance-step-num">3</div>
+                        <div class="distance-step-text">
+                            <strong>Выпады</strong>
+                            <span>Последнее предупреждение без укуса</span>
+                        </div>
+                    </div>
+
+                    <div class="distance-step">
+                        <div class="distance-step-num">4</div>
+                        <div class="distance-step-text">
+                            <strong>Выпады</strong>
+                            <span>Последнее предупреждение без укуса</span>
+                        </div>
+                    </div>
+
+                    <div class="distance-step">
+                        <div class="distance-step-num">5</div>
+                        <div class="distance-step-text">
+                            <strong>Выпады</strong>
+                            <span>Последнее предупреждение без укуса</span>
+                        </div>
+                    </div>
+
+                    <div class="distance-warning-box">
+                        ⚠️ Никогда не наказывайте за рычание! Это приведёт к укусу без предупреждения.
+                    </div>
+                </div>
+
+                <div class="distance-right-placeholder">
+                    <img src="./communication_assets/scary.jpg" alt="Картинка 1" class="enrichment-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЭМОЦИИ И ЗАПАХИ -->
+    <section class="emotions-section">
+        <div class="container">
+            <h2 class="emotions-title">Эмоции и Запахи</h2>
+            <div class="emotions-grid">
+                <div class="emotion-block">
+                    <div class="emotion-item">
+                        <div class="emotion-item-icon">💡</div>
+                        <div>
+                            <div class="emotion-item-title">Эмоциональный мир</div>
+                            <div class="emotion-item-text">Собаки чувствуют радость, страх, гнев и печаль. Учёт их состояния — залог успешного обучения.</div>
+                        </div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-item-icon">💡</div>
+                        <div>
+                            <div class="emotion-item-title">Запаховая карта</div>
+                            <div class="emotion-item-text">Запахи — главный источник информации. Метки рассказывают о здоровье и эмоциях сородичей.</div>
+                        </div>
+                    </div>
+                    <div class="emotion-item">
+                        <div class="emotion-item-icon">💡</div>
+                        <div>
+                            <div class="emotion-item-title">Запаховая карта</div>
+                            <div class="emotion-item-text">Запахи — главный источник информации. Метки рассказывают о здоровье и эмоциях сородичей.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interesting-block">
+                    <ul class="interesting-list">
+                        <li>Виноватый взгляд — это реакция на ваш тон, не осознание вины.</li>
+                        <li>Облизывание рта при встрече — это ритуал обмена информацией.</li>
+                        <li>Длительное облизывание может считаться невежливым среди собак.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-wrapper" id="contacts">
+        <div class="container footer">
+            <div class="footer-top">
+                <div class="footer-logo-block">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"></div>
+                        <div class="footer-logo-text">Благополучная собака</div>
+                    </div>
+                    <p class="footer-description">
+                        Проект о любви, науке и понимании. Создано профессиональными кинологами.
+                    </p>
+                </div>
+                <div>
+                    <div class="footer-column-title">Ресурсы</div>
+                    <div class="footer-links">
+                        <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#topics">Статьи</a>
+                        <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#">Вебинары</a>
+                        <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#">Курсы</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-column-title">О проекте</div>
+                    <div class="footer-links">
+                        <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#method">Методология</a>
+                        <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#">Команда</a>
+                        <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#contacts">Контакты</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-column-title">Соцсети</div>
+                    <div class="footer-socials">
+                        <div class="footer-social-icon"></div>
+                        <div class="footer-social-icon"></div>
+                        <div class="footer-social-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>© 2026 Благополучная собака. Все права защищены.</span>
+                <span>Сделано с заботой о хвостатых.</span>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script data-pplx-inline-edit="">
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script>
+
+</body></html>
