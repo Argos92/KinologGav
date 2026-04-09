@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адаптация собаки в новом доме — Благополучная собака</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg-main: #F9F6F0;
+            --bg-white: #FFFFFF;
+            --bg-dark-green: #5D6855;
+            --bg-light-olive: #A8B3A0;
+            --bg-footer: #E8DFC9;
+            --text-dark: #2C2C2C;
+            --text-gray: #757575;
+            --accent-badge: #E8DFC9;
+            --border-soft: #CCCCCC;
+            --radius-card: 24px;
+            --radius-button: 40px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            background: #D9D9D9;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 24px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
+            background: #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+            font-size: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .nav a:hover {
+            color: var(--bg-light-olive);
+        }
+
+        .header-contacts-btn {
+            background: var(--bg-light-olive);
+            color: #FFFFFF;
+            border-radius: var(--radius-button);
+            padding: 20px 24px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+		.detail-hero-img {
+		border-radius: var(--radius-card);
+		overflow: hidden;
+		height: 260px;
+		width: 500px;
+		background: #D9D9D9;
+		margin-bottom: 24px;
+        margin-top: 24px;
+		} 
+        .detail-hero-img img {
+        border-radius: var(--radius-card);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        }
+ /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 0 80px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-badge);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+
+        .hero-text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 90%;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-btn-primary {
+            background: var(--bg-light-olive);
+            color: #FFFFFF;
+            border-radius: var(--radius-button);
+            padding: 14px 28px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .hero-btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border-soft);
+            color: var(--text-gray);
+            border-radius: var(--radius-button);
+            padding: 14px 28px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .hero-image-wrapper {
+            border-radius: 40px 120px 40px 40px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            height: 420px;
+        }
+
+        /* KNOWLEDGE BASE */
+        .knowledge-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .section-pretitle {
+            font-size: 20px;
+            color: #A8B5A0;
+            text-transform: none;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 600;
+            max-width: 600px;
+        }
+
+        .section-link {
+            font-size: 15px;
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .topic-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topic-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 20px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 22px;
+        }
+
+        .topic-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .topic-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .topic-more {
+            margin-top: auto;
+            font-size: 14px;
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: var(--bg-dark-green);
+            border-radius: 32px;
+            padding: 48px 64px;
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .cta-left h3 {
+            color: #FFFFFF;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .cta-left p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            max-width: 400px;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .cta-btn {
+            background: #FFFFFF;
+            color: var(--bg-dark-green);
+            border-radius: var(--radius-button);
+            padding: 12px 32px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .cta-image {
+            width: 300px;
+            height: 200px;
+            border-radius: 24px;
+        }
+
+        /* ADOPTION / ДОБРЫЕ ДЕЛА */
+        .adoption-section {
+            background: #FFFFFF;
+            padding: 80px 0;
+        }
+
+        .adoption-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .adoption-pretitle {
+            color: #D69090;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .adoption-title {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .adoption-view-all {
+            background: transparent;
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-button);
+            padding: 8px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            color: var(--text-gray);
+        }
+
+        .pets-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .pet-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 16px;
+            border: 1px solid #F0F0F0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pet-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+
+        .pet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .pet-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .pet-age {
+            background: var(--accent-badge);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #8A7252;
+        }
+
+        .pet-desc {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.4;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .pet-meet-btn {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-button);
+            padding: 10px 0;
+            color: var(--text-gray);
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        .footer-wrapper {
+            background: var(--bg-footer);
+            margin-top: 80px;
+        }
+
+        .footer {
+            padding-block: 60px 24px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-block {
+            max-width: 250px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: #D9D9D9;
+        }
+
+        .footer-logo-text {
+            font-weight: 700;
+        }
+
+        .footer-description {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        .footer-column-title {
+            font-weight: 600;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-dark);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #D9D9D9;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+
+        /* ========================================
+           ARTICLE PAGE SPECIFIC STYLES
+        ======================================== */
+
+        /* ARTICLE HERO */
+        .article-hero {
+            padding: 56px 0 48px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .article-hero-title {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+
+        .article-hero-lead {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-hero-lead strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .article-cta-btn {
+            display: inline-block;
+            background: var(--bg-dark-green);
+            color: #FFFFFF;
+            border-radius: var(--radius-button);
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* DIVIDER */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #E0DAD0;
+            margin: 0;
+        }
+
+        /* SECTION LABEL */
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--bg-light-olive);
+            margin-bottom: 20px;
+        }
+
+        /* ---- SECTION: ЧТО СТАНОВИТСЯ СТРЕССОМ ---- */
+        .stress-section {
+            padding: 56px 0;
+            color: var(--bg-white);
+        }
+
+        .stress-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .stress-left {}
+
+        .stress-section-title {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .stress-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .stress-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .stress-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--bg-white);
+            border-radius: 14px;
+            padding: 14px 18px;
+        }
+
+        .stress-item-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #F0EBE1;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .stress-item-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .stress-item-body {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .stress-item-more {
+            flex-shrink: 0;
+            font-size: 13px;
+            color: var(--bg-dark-green);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .stress-item-more:hover {
+            color: var(--text-dark);
+        }
+
+        /* Модальное окно: стресс-факторы */
+        .stress-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .stress-modal.is-open {
+            display: flex;
+        }
+
+        .stress-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(45, 48, 42, 0.45);
+        }
+
+        .stress-modal-dialog {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 440px;
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 28px 24px 24px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .stress-modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 36px 12px 0;
+            color: var(--text-dark);
+        }
+
+        .stress-modal-text {
+            font-size: 15px;
+            line-height: 1.55;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        .stress-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-gray);
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .stress-modal-close:hover {
+            background: rgba(0, 0, 0, 0.06);
+            color: var(--text-dark);
+        }
+
+        /* ---- SECTION: ОТКУДА ПРИЕХАЛА СОБАКА ---- */
+        .history-section {
+            padding: 48px 0 56px;
+        }
+
+        .history-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #C4A882;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .history-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 32px;
+        }
+
+        .history-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .history-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 28px 24px;
+        }
+
+        .history-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .history-card-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .history-card-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .history-card-link {
+            font-size: 13px;
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        /* ---- SECTION: ЕСЛИ СОБАКА ИЗ ПРИЮТА (ТЁМНЫЙ БЛОК) ---- */
+        .shelter-block {
+            background: var(--bg-dark-green);
+            border-radius: 28px;
+            padding: 40px 48px;
+            margin: 0 0 56px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .shelter-left {}
+
+        .shelter-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 6px 14px;
+            margin-bottom: 18px;
+        }
+
+        .shelter-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .shelter-text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.7;
+        }
+
+        .shelter-right {
+            background: rgba(255,255,255,0.1);
+            border-radius: 18px;
+            height: 180px;
+        }
+
+        /* ---- SECTION: ЧТО МОЖНО СДЕЛАТЬ ЗАРАНЕЕ ---- */
+        .prepare-section {
+            padding: 56px 0;
+        }
+
+        .prepare-section-title {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+
+        .prepare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .prepare-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 32px;
+        }
+
+        .prepare-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .prepare-card-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.65;
+        }
+
+        /* ---- SECTION: ПЕРВЫЕ ДНИ (СЛОЖНЫЙ БЛОК) ---- */
+        .first-days-section {
+            padding: 0 0 56px;
+        }
+
+        .first-days-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .first-days-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 32px;
+        }
+
+        .first-days-card-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+        }
+
+        .first-days-card-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .first-days-tip {
+            background: #F5F1EB;
+            border-radius: 14px;
+            padding: 16px 18px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin-top: 8px;
+        }
+
+        .first-days-tip-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: #F0EBE1;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .first-days-tip-text {
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.55;
+        }
+
+        /* RIGHT card with image top */
+        .first-days-card-image {
+            width: 100%;
+            height: 180px;
+            background: #D9D9D9;
+            border-radius: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* ---- SECTION: БЕЗОПАСНОСТЬ ---- */
+        .safety-section {
+            padding: 0 0 56px;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        /* Left — image placeholder */
+        .safety-image-card {
+            background: #D9D9D9;
+            border-radius: var(--radius-card);
+            min-height: 320px;
+        }
+
+        .safety-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .safety-header-block {
+            margin-bottom: 24px;
+        }
+
+        .safety-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--bg-light-olive);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .safety-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .safety-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.65;
+        }
+
+        .safety-sub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .safety-sub-card {
+            background: var(--bg-white);
+            border-radius: 18px;
+            padding: 20px;
+        }
+
+        .safety-sub-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .safety-sub-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .safety-sub-text {
+            font-size: 12px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .safety-sub-link {
+            font-size: 12px;
+            color: var(--text-gray);
+            text-decoration: none;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        /* ---- SECTION: ПОТРЕБНОСТИ ---- */
+        .needs-section {
+            padding: 0 0 56px;
+        }
+
+        .needs-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--bg-light-olive);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .needs-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 32px;
+        }
+
+        .needs-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .need-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .need-icon-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .need-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #F0EBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .need-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .need-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* ---- TWO COLUMN INFO BLOCK ---- */
+        .info-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .info-col-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-card);
+            padding: 32px;
+        }
+
+        .info-col-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+        }
+
+        .info-col-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.65;
+        }
+
+        .info-col-tip {
+            background: #F5F1EB;
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-top: 16px;
+        }
+
+        .info-col-tip-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #F0EBE1;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .info-col-tip-text {
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* ---- SECTION: ЧТО УХУДШАЕТ ---- */
+        .worsens-section {
+            padding: 0 0 56px;
+        }
+
+        .worsens-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--bg-light-olive);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .worsens-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 28px;
+        }
+
+        .worsens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 28px;
+            align-items: stretch;
+        }
+
+        .worsens-card {
+            background: #D9D9D9;
+            border-radius: var(--radius-card);
+            min-height: 0;
+            height: 100%;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .worsens-card-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .worsens-card-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* wide last card */
+        .worsens-card-wide {
+            background: #D6D1C8;
+            border-radius: var(--radius-card);
+            padding: 32px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 56px;
+        }
+
+        .worsens-card-wide-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .worsens-card-wide-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.65;
+        }
+
+        .worsens-card-wide-image {
+            background: #B8B2A8;
+            border-radius: 18px;
+            height: 160px;
+        }
+
+        /* ---- SECTION: РЕЗУЛЬТАТ (ФИНАЛ) ---- */
+        .result-section {
+            padding: 0 0 80px;
+        }
+
+        .result-title {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: left;
+            color: var(--text-dark);
+            margin-bottom: 28px;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .result-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+
+        .result-card-icon {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .result-card-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .result-card-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* ---- КИНОЛОГ ПРО BADGE ---- */
+        .kinolog-bar {
+            background: var(--bg-dark-green);
+            padding: 14px 0;
+        }
+
+        .kinolog-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .kinolog-bar-logo {
+            font-size: 13px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .kinolog-bar-text {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 960px) {
+            .container { padding: 0 24px; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-image { height: 320px; }
+            .topics-grid { grid-template-columns: repeat(2, 1fr); }
+            .cta-banner { flex-direction: column; align-items: flex-start; }
+            .cta-image { width: 100%; max-width: 320px; }
+            .adoption-section { padding: 60px 0; }
+            .pets-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer { padding-inline: 0; }
+            .footer-top { grid-template-columns: 2fr 1fr 1fr; }
+            .stress-grid { grid-template-columns: 1fr; }
+            .history-cards { grid-template-columns: repeat(2, 1fr); }
+            .shelter-block { grid-template-columns: 1fr; }
+            .prepare-grid { grid-template-columns: 1fr; }
+            .first-days-grid { grid-template-columns: 1fr; }
+            .safety-grid { grid-template-columns: 1fr; }
+            .needs-row { grid-template-columns: repeat(2, 1fr); }
+            .info-two-col { grid-template-columns: 1fr; }
+            .worsens-grid { grid-template-columns: repeat(2, 1fr); }
+            .worsens-card-wide { grid-template-columns: 1fr; }
+            .result-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 720px) {
+            .container { padding: 0 20px; }
+            .header { flex-wrap: wrap; gap: 16px; }
+            .nav { width: 100%; justify-content: flex-start; flex-wrap: wrap; row-gap: 8px; }
+            .hero { padding: 40px 0 60px; }
+            .hero-title { font-size: 36px; }
+            .article-hero-title { font-size: 32px; }
+            .topics-grid { grid-template-columns: 1fr; }
+            .cta-banner { padding: 32px 24px; }
+            .adoption-section { padding: 50px 0; }
+            .pets-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { flex-direction: column; gap: 8px; }
+            .history-cards { grid-template-columns: 1fr; }
+            .safety-sub-grid { grid-template-columns: 1fr; }
+            .needs-row { grid-template-columns: repeat(2, 1fr); }
+            .worsens-grid { grid-template-columns: 1fr; }
+            .result-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="page">
+
+    <!-- HEADER -->
+    <header class="container header">
+        <div class="header-left">
+            <div class="logo-circle"></div>
+            <div class="brand-name">Благополучная собака</div>
+        </div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="#method">Методология</a>
+                <a href="#topics">Статьи</a>
+                <a href="#adoption">Консультации</a>
+            </nav>
+            <button class="header-contacts-btn">Контакты</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ====== ARTICLE HERO ====== -->
+        <div class="container">
+            <div class="article-hero">
+                <h1 class="article-hero-title">Адаптация собаки в новом доме</h1>
+                <p class="article-hero-lead">
+                    Переезд в новый дом и тем более в незнакомую для собаки - это стресс. <strong>Собаке необходимо дать столько времени для адаптации, сколько потребуется именно ей</strong> для того, чтобы почувствовать себя в безопасности и постепенно освоиться в новой обстановке.
+                </p>
+                <button class="article-cta-btn">Записаться</button>
+            </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ====== ЧТО СТАНОВИТСЯ СТРЕССОМ ====== -->
+        <div class="container">
+            <div class="stress-section">
+                <span class="section-label">СТРЕСС</span>
+                <div class="stress-grid">
+                    <div class="stress-left">
+                        <h2 class="stress-section-title">Что в новом доме становится стрессом</h2>
+                        <p class="stress-text">
+                            Рассмотрим основные факторы стресса, которые влияют на поведение собаки, и с которыми ей обязательно нужно помочь справиться.
+                        </p>
+						<div class="detail-hero-img">
+							<img src="./adaptation_assets/calm-dog.jpg" alt="Собака расслаблена" loading="lazy">
+						</div>
+                    </div>
+                    <div class="stress-right">
+                        <div class="stress-item">
+                            <div class="stress-item-icon">🏠</div>
+                            <div class="stress-item-body">
+                                <span class="stress-item-text">Поездка</span>
+                                <button type="button" class="stress-item-more" data-stress-detail="Поездка на автомобиле или другом виде транспорте может быть для собаки первой и это само по себе может быть стрессом. Стресс снижается, если есть возможность знакомства с автомобилем, потепенного приучения к поездке и чтобы знакомый человек был рядом.">подробнее</button>
+                            </div>
+                        </div>
+                        <div class="stress-item">
+                            <div class="stress-item-icon">🏠</div>
+                            <div class="stress-item-body">
+                                <span class="stress-item-text">Новый дом</span>
+                                <button type="button" class="stress-item-more" data-stress-detail="Новая обстановка и запахи. Если собака попала домой с улицы, то для нее этот стресс фактор будет более выражен, так как новым будет для нее все: понимание что такое мебель, почему пространство разделено и т.д. В идеале познакомить собаку с домом заранее, дать возможность все обнюхать, пожевать какое-то лакомство, поиграть в поиск и др.">подробнее</button>
+                            </div>
+                        </div>
+                        <div class="stress-item">
+                            <div class="stress-item-icon">🏠</div>
+                            <div class="stress-item-body">
+                                <span class="stress-item-text">Новые люди</span>
+                                <button type="button" class="stress-item-more" data-stress-detail="Незнакомые люди для собаки - также является стресс фактором, который зависит от степени социализации собаки. В идеале приехать к собаке заранее, познакомиться, предложить приятные совместные впечатления и создать базу для доверительных отношений.">подробнее</button>
+                            </div>
+                        </div>
+                        <div class="stress-item">
+                            <div class="stress-item-icon">🏠</div>
+                            <div class="stress-item-body">
+                                <span class="stress-item-text">Новые правила</span>
+                                <button type="button" class="stress-item-more" data-stress-detail="В каждом доме могут быть свои правила к которым собаке нужно будет постепенно адаптироваться, тем более если для собаки будет новым даже само понятие дома. Главное условие здесь - снижаем требования к собаке.">подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ====== ИСТОРИЯ / ОТКУДА ПРИЕХАЛА ====== -->
+        <div class="container">
+            <div class="history-section">
+                <span class="history-label">АДАПТАЦИЯ</span>
+                <h2 class="history-title">Как может проявится стресс у собаки после переезда</h2>
+                <p class="history-card-text">Самый большой страх у владельцев - что так будет всегда, и если это срочно не изменить, не установить все правила, которые будут, то так навсегда и останется. Но на самом деле все как раз, наоборот, потому что попытки изменить поведение собаки не менеджментом среды, а воздействием на собаку, чтобы она ничего из нижеперечисленного не делала, не боялась, не лаяла, не брала что-то со стола, не защищала ресурсы, не делала лужи, и следовала всем правилам - все это наоборот только ухудшает ситуацию. Это часть нормального процесса, так будет не всегда при условии, что владелец собаки будет действовать разумно и учитывая причинно-следственные связи.</p>
+                <div class="history-cards">
+                    <div class="history-card">
+                        <div class="history-card-icon">🏠</div>
+                        <div class="history-card-title">Сложности в следовании новым правилам</div>
+                        <div class="history-card-title">Страх перед прогулками</div>
+                        <div class="history-card-title">Избыточный лай</div>
+
+                     </div>
+                    <div class="history-card">
+                        <div class="history-card-icon">🏢</div>
+                        <div class="history-card-title">Воровство со стола</div>
+                        <div class="history-card-title">Защита ресурсов</div>
+                        <div class="history-card-title">Нечистоплотность</div>
+
+                    </div>
+                    <div class="history-card">
+                        <div class="history-card-icon">🌿</div>
+                        <div class="history-card-title">Недоверие</div>
+                        <div class="history-card-title">Реализация старых привычек</div>
+                        <div class="history-card-title">Попытки найти новые способы повдения</div>
+                        
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== ТЁМНЫЙ БЛОК: ПРИЮТ / УЛИЦА ====== -->
+        <div class="container">
+            <div class="shelter-block">
+                <div class="shelter-left">
+                    <div class="shelter-tag">работа со стрессом</div>
+                    <h3 class="shelter-title">Имеет ли ваш собака признаки стресса</h3>
+                    <p class="shelter-text">
+                        анкета по стрессу
+                    </p>
+                </div>
+                <div class="shelter-right"></div>
+            </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ====== АДАПТАЦИЯ ====== -->
+        <div class="container">
+            <div class="prepare-section">
+                <span class="history-label">АДАПТАЦИЯ</span>
+                <h2 class="prepare-section-title">Как помочь собаке быстрее адаптироваться</h2>
+                <p class="history-card-text">Очень важно ни в коем случае не запирать собаку ни в комнате, ни в клетке. Важно, чтобы у собаки была возможность выбирать самой удобные места, и возможность в любой момент обратиться к кому-то из членов семьи. Обеспечить собаке игрушки, с которыми она сможет взаимодействовать. И конечно один из самых приятных моментов адаптации - это вкусная пища.</p>
+                <div class="prepare-grid">
+                    <div class="prepare-card">
+                        <div class="history-card-icon">🏠</div>
+                        <h3 class="prepare-card-title">Покой в первые дни</h3>
+                        <p class="prepare-card-text">Постарайтесь первое время не приглашать гостей, не устраивать шумных мероприятий, и даже по возможности - отложить поход к ветеринару и гигиенические процедуры.</p>
+                        <p class="prepare-card-text">Начните с коротких прогулок близко к дому, чтобы не перевозбуждать нервную систему собаки.</p>
+                    </div>
+                    <div class="prepare-card">
+                        <div class="history-card-icon">🏢</div>
+                        <h3 class="prepare-card-title">Дать собаке пространство и время</h3>
+                        <p class="prepare-card-text">Постарайтесь обеспечить собаке уютное и безопасное место отдыха.</p>
+                        <p class="prepare-card-text">Не настаивайте на общении и особенно объятиях.</p>
+                    </div>
+                    <div class="prepare-card">
+                        <div class="history-card-icon">🌿</div>
+                        <h3 class="prepare-card-title">Безопасная среда</h3>
+                        <p class="prepare-card-text">Используйте доброжелательный тон в общении с собакой и спокойно относитесь к ее ошибкам..</p>
+                    </div>
+                    <div class="prepare-card">
+                        <div class="history-card-icon">🌿</div>
+                        <h3 class="prepare-card-title">Безопасная среда</h3>
+                        <p class="prepare-card-text">Используйте доброжелательный тон в общении с собакой и спокойно относитесь к ее ошибкам..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ====== ПЕРВЫЕ ДНИ ====== -->
+        <div class="container">
+            <div class="first-days-section" style="padding-top: 56px;">
+                <h2 class="prepare-section-title">Основные стратегии поведения собаки в процессе адаптации</h2>
+                <div class="first-days-grid">
+                    <div class="first-days-card">
+                        <h3 class="first-days-card-title">Малоподвижное поведение</h3>
+                        <p class="first-days-card-text">
+                            Затаивание может выражаться в разной степени, начиная от того, что собака забилась в угол и оттуда не выходит, или выходит только поесть и быстро возвращается обратно.</p>
+                        <p class="first-days-card-text">
+                            Другой вариант затаивания - когда собака ведет себя очень робко, она не возьмет пищу со стола, она послушно дает надеть на себя амуницию и идет гулять и т.д.</p>
+                            <p class="first-days-card-text">
+                            И когда у собаки завершается процесс затаивания, и она начинает адаптироваться и более активно себя проявлять, меньше лежать, больше изучать среду и пространство, человек может испугаться того, что поведение собаки меняется в нежелательную для семьи сторону.</p>
+                            <div class="first-days-tip">
+                            <div class="first-days-tip-icon">💡</div>
+                            <p class="first-days-tip-text">Если собака стала более активной, а вместе с тем, стала более неудобной, вы ее не избаловали, она просто стала больше вам доверять и адаптироваться к среде. ОНа позволяет себе предпринимать попытки удовлетворить свои потребности и сообщить о своих желаниях.</p>
+                        </div>
+                    </div>
+                    <div class="first-days-card">
+                        <h3 class="first-days-card-title">Возбужденное поведение</h3>
+                        <p class="first-days-card-text">
+                            Она может суетиться, лаона может много перемещаться, возможно что-то грызть. Это также проявление стресса в виде повышенной двигательной активности собаки.</p>
+                        </p>
+                        <p class="first-days-card-text">Самоконтроль - это тот навык, которому собака может обучаться в течение всей своей жизни, но в условиях стресса мозг собаки просто не способен одновременно адаптироваться к новой окружающей среде, и выполнять сложные когнитивные процессы по запоминанию новых правил, самоконтролю и т.д.</p>
+                        <div class="first-days-tip">
+                            <div class="first-days-tip-icon">💡</div>
+                            <p class="first-days-tip-text">У кого-то первичная адаптация занимает несколько дней, у кого-то - месяц. Есть собаки, у которых есть пробелы пробелы в социализации, сильные страхи - им понадобится больше времени. Также важно помнить, что если переезжает взрослая собака, то, после после того, как уже прошло какое-то время, важно посетить с ней ветеринарного специалиста, так как у сениоров возможно обострение хронических болезней на фоне стресса. Это, например, может быть причиной появившейся нечистоплотности.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== БЛОК БЕЗОПАСНОСТЬ ====== -->
+
+
+        <hr class="section-divider" />
+
+        <!-- ====== АДАПТАЦИЯ ====== -->
+        <div class="container">
+            <div class="needs-section" style="padding-top: 56px;">
+                <span class="needs-label">ПОТРЕБНОСТИ</span>
+                <h2 class="needs-title">Дополнительные методы, которые смогут ускорить адаптацию собаки</h2>
+                
+                <div class="needs-row">
+                    <div class="need-item">
+                        <div class="need-icon-wrap">
+                            <div class="need-icon">🛡️</div>
+                            <span class="need-title">Обогащенная среда</span>
+                        </div>
+                        <p class="need-text">Собака легче учится, чувствует себя более уверенно, учится испытывать интерес к новому</p>
+                        <p class="need-text">Реализация видотипичного поведения, как следствие удовлетворение потребностей собаки, что положительно сказывается на ее поведении в целом</p>
+                    </div>
+                    <div class="need-item">
+                        <div class="need-icon-wrap">
+                            <div class="need-icon">🍗</div>
+                            <span class="need-title">Успокаивающая музыка и организованный сон</span>
+                        </div>
+                        <p class="need-text">По результатам клинических испытаний успокаивающая музыка снижает тревожность у 85% собак дома, и у 70% собак в приютах.</p>
+                        <p class="need-text">Социальный сон помогает вырабатывать окситоцин, который оказывает противотревожное действие и помогает организму лучше справляться со стрессом.</p>
+                    </div>
+                    <div class="need-item">
+                        <div class="need-icon-wrap">
+                            <div class="need-icon">💧</div>Долгоиграющее жевательное лакомство/конг</span>
+                        </div>
+                        <p class="need-text">Жевание помогает активировать парасимпатическую нервную систему и переключить собаку из состояния стресса в состояние расслабления.</p>
+                    </div>
+                    <div class="need-item">
+                        <div class="need-icon-wrap">
+                            <div class="need-icon">🌿</div>
+                            <span class="need-title">Игры в поиск лакомств</span>
+                        </div>
+                        <p class="need-text">Поиск лакомств способствует реализации видотипичного поведения, помогает снижать стресс и развивать поведенческую гибкость.</p>
+                    </div>
+                </div>
+
+                <!-- Как общаться / Баланс -->
+                <div class="info-two-col">
+                    <div class="info-col-card">
+                        <h4 class="info-col-title">Что нельзя делать в процессе адаптации</h4>
+                        <div class="info-col-tip">
+                            <div class="info-col-tip-icon">🛡️</div>
+                            <p class="info-col-tip-text">Нельзя насильно вытаскивать собаку или заманивать ее куда-то, ставить миску как можно дальше от того места, от того убежища, которое она себе выбрала, пытаясь ее подтолкнуть к тому, чтобы она осваивала все пространство и начала чувствовать себя в нем более комфортно.</p>
+                        </div>
+                    </div>
+                    <div class="info-col-card">
+                        <div class="info-col-tip">
+                            <div class="info-col-tip-icon">🛡️</div>
+                            <p class="info-col-tip-text">Нельзя применять такие стоп методы, как превышение порога страха, в надежде что собака "поймет", что бояться нечего. Это привидет лишь к усилению чувствительности собаки и риску перехода страха в фобию.</p>
+                        </div>
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ====== ЧТО УХУДШАЕТ ====== -->
+        <div class="container">
+            <div class="worsens-section" style="padding-top: 56px;">
+                <span class="worsens-label">Повторная социализация собаки</span>
+                <h2 class="worsens-title">Повторная социализация собаки нужна для создания положительного опыта в отношении с людьми, сородичами и окружающей  средой. <p>Повторная социализация может быть нужна по нескольким причинам</p> </h2>
+                <div class="worsens-grid">
+                    <div class="worsens-card"><strong>Недостаточная социализация в общении с людьми, сородичами</strong>
+                    Незнание правил общения.</div>
+                    <div class="worsens-card"><strong>Полученный негативный опыт в общении с людьми, сородичами.</strong>
+                    </div>
+                    <div class="worsens-card"><strong>Обедненная среда</strong>
+                    Особенно характерно для собак, живущих в вольерах и приютах.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== РЕЗУЛЬТАТ ====== -->
+        <div class="container">
+            <div class="result-section" style="padding-top: 0px;">
+                <h2 class="result-title">Как помочь собаке преодолеть негативный опыт и недостаточность социализации</h2>
+                <div class="result-grid">
+                    <div class="result-card">
+                        <div class="result-card-icon">❤️</div>
+                        <div class="result-card-title">Упражнения на развитие уверенности</div>
+                        <p class="result-card-text"></p>
+                        <p class="result-card-text">Обогащенная среда</p>
+                        <p class="result-card-text">Поисковые игры, шейпинг и др.</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-card-icon">❤️</div>
+                        <div class="result-card-title">Предоставить собаке право выбора, предсказуемость</div>
+                        <p class="result-card-text">Даем возможность собаке проявить инициативу, включаем в повседневную рутину ритуалы - то, что предсказуемость позволяет справляться со стрессом лучше подтверждается клиническими исследованиями.</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-card-icon">❤️</div>
+                        <div class="result-card-title">Целевые методики</div>
+                        <p class="result-card-text">Выстраивание схемы по созданию нового положительного опыта, например, при недостатке социализации с сородичами привлечение к работе собаки-ассистента.</p>
+                    </div>
+                </div>
+            </div>
+             <div class="worsens-card-wide">
+                    <div>
+                        <h3 class="worsens-card-wide-title">Адаптация собаки после переезда в том же составе семьи.</h3>
+                        <p class="worsens-card-wide-text">Факторы стресса те же, кроме новых людей.</p>
+                        <p class="worsens-card-wide-text">Первое время, хотя бы сутки,не оставляйте собаку одну. Затем, если она не ходит за членами семьи "хвостиком", можно оставлять собаку по 5-10 мин. желательно под контролем видеокамеры, с дальнейшим увеличением времени.</p>
+                    </div>
+                    <div class="worsens-card-wide-image"></div>
+                </div>
+            <div class="worsens-card-wide">
+                    <div>
+                        <h3 class="worsens-card-wide-title">Адаптация собаки из приюта.</h3>
+                        <p class="worsens-card-wide-text">Для собаки из приюта будет новым то, что для домашней собаки - рутина. Для нее новым будет почти все, от обстановки за пределами приюта (дома, машины, лифты, лестницы) до обстановки дома и социального взаимодействия с людьми.
+                        <p class="worsens-card-wide-text">Собака из приюта имеет уже накопленный хронический стресс, поэтому будьте готовы проявить максимальное терпение и позволить собаке адаптироваться в своем темпе.</p>
+                            <p class="worsens-card-wide-text">Разделяем даже самые "базовые" на ваш взгляд вещи на маленькие шаги.</p>
+                    </div>
+                    <div class="worsens-card-wide-image"></div>
+                </div>
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer-wrapper" id="contacts">
+        <div class="container footer">
+            <div class="footer-top">
+                <div class="footer-logo-block">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"></div>
+                        <div class="footer-logo-text">Благополучная собака</div>
+                    </div>
+                    <p class="footer-description">
+                        Проект о любви, науке и понимании. Создано профессиональными кинологами.
+                    </p>
+                </div>
+                <div>
+                    <div class="footer-column-title">Ресурсы</div>
+                    <div class="footer-links">
+                        <a href="#topics">Статьи</a>
+                        <a href="#">Вебинары</a>
+                        <a href="#">Курсы</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-column-title">О проекте</div>
+                    <div class="footer-links">
+                        <a href="#method">Методология</a>
+                        <a href="#">Команда</a>
+                        <a href="#contacts">Контакты</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-column-title">Соцсети</div>
+                    <div class="footer-socials">
+                        <div class="footer-social-icon"></div>
+                        <div class="footer-social-icon"></div>
+                        <div class="footer-social-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>© 2026 Благополучная собака. Все права защищены.</span>
+                <span>Сделано с заботой о хвостатых.</span>
+            </div>
+        </div>
+    </footer>
+
+<div class="stress-modal" id="stress-detail-modal" role="dialog" aria-modal="true" aria-labelledby="stress-detail-modal-title" aria-hidden="true">
+    <div class="stress-modal-backdrop" data-close-modal></div>
+    <div class="stress-modal-dialog">
+        <button type="button" class="stress-modal-close" data-close-modal aria-label="Закрыть">×</button>
+        <h3 class="stress-modal-title" id="stress-detail-modal-title">Подробнее</h3>
+        <p class="stress-modal-text" id="stress-detail-modal-text"></p>
+    </div>
+</div>
+
+<script>
+(function () {
+    var modal = document.getElementById('stress-detail-modal');
+    var modalText = document.getElementById('stress-detail-modal-text');
+    var stressRight = document.querySelector('.stress-right');
+    if (!modal || !modalText || !stressRight) return;
+
+    function openStressModal(text) {
+        modalText.textContent = text;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeStressModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    stressRight.addEventListener('click', function (e) {
+        var btn = e.target.closest('.stress-item-more[data-stress-detail]');
+        if (!btn) return;
+        openStressModal(btn.getAttribute('data-stress-detail') || '');
+    });
+
+    modal.querySelectorAll('[data-close-modal]').forEach(function (el) {
+        el.addEventListener('click', closeStressModal);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeStressModal();
+        }
+    });
+})();
+</script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
