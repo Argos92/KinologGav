@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Возрастное развитие собак — каждый этап жизни вашей собаки уникален. Понимание физиологических и психологических изменений помогает создать гармоничные отношения.">
+<title>Возрастное развитие собак — DogMind</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======================================================
+     HEADER (из дизайн-системы)
+     ====================================================== -->
+     <header class="container header">
+      <div class="header-left">
+          <div class="logo-circle"></div>
+          <div class="brand-name">Благополучная собака</div>
+      </div>
+      <div class="header-right">
+          <nav class="nav">
+              <a href="#method">Методология</a>
+              <a href="#topics">Статьи</a>
+              <a href="#adoption">Консультации</a>
+          </nav>
+          <button class="header-contacts-btn">Контакты</button>
+      </div>
+  </header>
+
+<main>
+
+  <!-- ======================================================
+       HERO
+       ====================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <span class="hero-badge">Этапы жизни</span>
+      <h1 class="hero-title">Возрастное развитие собак</h1>
+      <p class="hero-text">Каждый этап жизни вашей собаки уникален. Понимание физиологических и психологических изменений помогает создать гармоничные отношения.</p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ENERGY & CHART
+       ====================================================== -->
+  <section class="energy-section">
+    <div class="container">
+      <div class="topic-card">
+        <div class="energy-grid">
+          <div>
+            <p class="topic-pretitle">Динамика</p>
+            <h2 class="topic-title">Энергия и Обучаемость</h2>
+            <p class="topic-text">График показывает, как меняются потребности в нагрузке в зависимости от возраста.</p>
+            <div class="chart-wrap">
+              <canvas id="energyChart" aria-label="График энергии и обучаемости собаки по возрасту"></canvas>
+            </div>
+            <div class="chart-labels">
+              <span>Щенок</span>
+              <span>1 год</span>
+              <span>3 года</span>
+              <span>7 лет</span>
+              <span>12 лет</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;">
+            <div class="tip-card" style="width:100%;">
+              <div class="tip-card__header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="tip-card__label">Полезная информация</span>
+              </div>
+              <p class="tip-card__text">Согласно исследованиям, ранняя неонатальная стимуляция (не более 3 минут в день) положительно влияет на сопротивляемость щенка болезням, эмоциональную реактивность, способность к обучению и решению проблем во взрослом возрасте (Lindsay 2000 Kenneth and Deborah Martin 2011).
+              <p class="tip-card__text">Пример стимуляции: разная текстура поверхности, поглаживания живота, лапок, аккуратное позиционирование в руках.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       AGE CARDS
+       ====================================================== -->
+  <section class="age-cards-section">
+    <div class="container">
+      <div class="topics-grid">
+
+        <!-- Щенки -->
+        <article class="age-card age-card--active" data-age-panel="puppy">
+          <div class="topic-icon topic-icon--puppy">
+            <!-- Eye / observe icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="age-card__title">Щенки</h3>
+          <p class="age-card__desc">Ранний период жизни щенка оказывает существенное влияние на его поведение во взрослом возрасте.</p>
+          <div>
+            <span class="aspect-label">Ключевые аспекты</span>
+            <div class="tags">
+              <span class="tag tag--puppy">Социализация</span>
+              <span class="tag tag--puppy">Первые прогулки</span>
+              <span class="tag tag--puppy">Периоды страха</span>
+            </div>
+          </div>
+          <div>
+            <span class="know-label">Что важно знать:</span>
+            <p class="know-text">По современным данным не нужно сажать щенка на карантин, нужно просто вовремя его вакцинировать и адекватно относиться к среде, в которую Вы выводите щенка. Отсутствие своевременной социализации с собаками и людьми и обедненная среда приводят к развитию тревожности, страхам и трудностям в обучении и поведении во взрослом возрасте. Исследования раннего опыта собак показывают, что интенсивная, но поздняя социализация уже не способна полностью компенсировать упущенные сенситивные периоды.</p>
+          </div>
+          <button type="button" class="age-card__btn age-card__btn--puppy" data-age-panel="puppy" aria-controls="age-detail-puppy" aria-pressed="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            Подробный гид
+          </button>
+        </article>
+
+        <!-- Подростки -->
+        <article class="age-card" data-age-panel="teen">
+          <div class="topic-icon topic-icon--teen">
+            <!-- Compass / target icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <h3 class="age-card__title">Подростки</h3>
+          <p class="age-card__desc">Подростковый возраст у собак - это период резких изменений в мозге, повышенной чувствительности к стрессу и перестройки поведения, когда милый щенок внезапно превращается в очень самостоятельного, импульсивного и иногда «неудобного» подростка.</p>
+          <div>
+            <span class="aspect-label">Ключевые аспекты</span>
+            <div class="tags">
+              <span class="tag tag--teen">Фрустрация</span>
+              <span class="tag tag--teen">Чувствительность к стрессу</span>
+              <span class="tag tag--teen">Смещение фокуса с человека на окружающую среду</span>
+            </div>
+          </div>
+          <div>
+            <span class="know-label">Что важно знать:</span>
+            <p class="know-text">Внезапно появившегося нежелательного поведения почти не бывает (только если это не проблема со здоровьем), чаще всего есть длинная причинно-следственная цепочка, которую просто не замечали, пока подросток не начал активно защищать свои границы.</p>
+          </div>
+          <button type="button" class="age-card__btn age-card__btn--teen" data-age-panel="teen" aria-controls="age-detail-teen" aria-pressed="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            Подробный гид
+          </button>
+        </article>
+
+        <!-- Сениоры -->
+        <article class="age-card" data-age-panel="senior">
+          <div class="topic-icon topic-icon--senior">
+            <!-- Walking person icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-2 5h4l-1 6"/><path d="M10 12l-2 4"/><path d="M14 12l2 4"/></svg>
+          </div>
+          <h3 class="age-card__title">Сениоры</h3>
+          <p class="age-card__desc">Этот возрастной период собаки может длиться много лет и сопровождается как изменением потребности в нагрузках, так и изменением поведения, нередко связанным прежде всего с состоянием здоровья собаки.</p>
+                 
+            <div>
+            <span class="aspect-label">Ключевые аспекты</span>
+            <div class="tags">
+              <span class="tag tag--senior">Организация домашнего пространства</span>
+              <span class="tag tag--senior">Когнитивная нагрузка</span>
+              <span class="tag tag--senior">Поддержка опорно-двигательного аппарата</span>
+            </div>
+          </div>
+          <div>
+            <span class="know-label">Что важно знать:</span>
+            <p class="know-text">Почти треть 11 летних собак и более половины собак в 15 летнем возрасте имеют признаки когнитивной дисфункции, потому что мозг и нервная система играют ключевую роль в старении организма.</p>
+            
+            <p class="know-text">Вы можете проверить своего питомца по шкале когнитивной дисфункции <a href="https://vetpetcare.ru/scd" class="topic-more">https://vetpetcare.ru/scd</a>
+            <p class="know-text">Автор шкалы КД - ветеринарный невролог Людмила Коникова.</p>
+          </div>
+          <button type="button" class="age-card__btn age-card__btn--senior" data-age-panel="senior" aria-controls="age-detail-senior" aria-pressed="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            Подробный гид
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+      Щенки
+       ====================================================== -->
+  <section class="detail-section detail-panel is-active" id="age-detail-puppy" data-age-panel="puppy" aria-hidden="false">
+    <div class="container">
+
+      <div class="detail-header">
+        <div class="detail-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h2 class="detail-title">Щенки: Фундамент будущего</h2>
+      </div>
+
+      <div class="detail-hero-img">
+        <img src="breads.webp" alt="Щенок исследует траву — период активной социализации" loading="lazy">
+      </div>
+
+      <div class="detail-blocks">
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Чувствительные периоды</h3>
+          </div>
+           
+
+            <p class="puppies-text">Каждый щеночек в процессе своего развития проходит очень важные периоды, которые затем повлияют на его поведение во взрослом возрасте:</p>
+            <p class="puppies-text">- <strong>с 3 до 5 недель</strong> начинается социализация: щеночек учится первым коммуникативным навыкам с другими собаками и формирует видовую идентичность. Нужно помнить, что негативный опыт в период до 5 недель щенка ничему не учит (он может снова полезть туда, где испытал боль).</p>
+            
+            <p class="puppies-text"><strong>С 3 до 14 недель щенки могут узнать больше, чем в последствии узнать за всю свою жизнь</strong>. Поэтому можно бережно обогащать среду и предлагать щенку те стимулы, которые будут постоянно присутствовать в  его дальнейшей жизни (шум фена, блендера, воды в ванной, стиральной машины и др.).</p>
+            <p class="puppies-text"><strong>Обогащенная среда может включать разнообразные тактильные поверхности</strong> (трава, пушистые\модульные ортопедические коврики\нюхательные коврики, веточки и палочки, для разнообразия паттернов движения и др.), аудиальную стимуляцию (например колокольчики «музыка ветра», монетки\орешки в стаканчике), а также аккуратное позиционирование в руках. Самое главное - безопасность и умеренность (никаких скользских и высоких поверхностей, пугающих звуков и т.д.).</p>
+            
+            <p class="puppies-text">На этапе, когда щенки начинают есть взрослую пищу очень важно, чтобы у каждого щенка была своя миска и пространство - это очень важная профилактика появления охраны ресурса в будущем</p>
+            
+            <p class="puppies-text">- <strong> 6 до 12 недель</strong> идёт интенсивная социализация, щенки продолжают учиться взаимодействию с сородичами, а также  учатся взаимодействовать со средой и новыми предметами.
+              <p class="puppies-text">Очень важно, чтобы период знакомства с людьми произошел с 5 по 7 неделю, потому что дальше начнется первый период страхов, когда щенок легче связывает пугающие события с местом, людьми или звуками, поэтому знакомство с миром должно быть очень бережным. Очень важно в этот момент не перевозить щенка в другой дом, а, наоборот, обеспечить щенку максимально безопасную обстановку, беречь от пугающих стимулов и не оставлять щенка одного.</p>
+            
+              <p class="puppies-text">- <strong>поздняя социализация начинается в 10-12 недель и до полового созревания (16-20 недель)</strong>. Учатся взаимодействовать с новыми предметами и средой. Здесь начинается второй период страхов, который может продолжаться два-три дня и пройти абсолютно незаметно, а может длиться 2-3 недели. Проходят они самостоятельно, главное не закрепить какие-то стрессовые реакции.</p>
+            </p>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Первые прогулки щенка</h3>
+          </div>
+          <p class="info-block__text"><strong>Перед выходом на улицу щенка со шлейкой и поводком щенка нужно знакомить постепенно</strong>: сначала давать их обнюхать, использовать как элемент обогащённой среды, затем ненадолго надевать дома и предлагать привычные спокойные занятия.
+            Первые выходы совершаются очень постепенно: открывают дверь квартиры или подъезда и дают щенку самому решать, выходить ли за порог. Задача человека - не тянуть и не заманивать, а создать безопасность: оставлять путь к дому открытым, говорить спокойным голосом и следовать за инициативой щенка.
+            <p class="know-text"><strong>На первых прогулках цель</strong> - дать щенку в спокойном состоянии понюхать, осмотреться и вернуться домой. Прогулки сначала длятся буквально несколько минут, затем постепенно увеличиваются.
+            Маршруты сначала лучше делать одинаковыми: щенок осваивает «базовую» полянку или небольшой участок, где ему становится знакомо и безопасно, а затем понемногу добавлять новые участки, избегая резкой смены обстановки и переизбытка впечатлений.</p>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Физическая нагрузка</h3>
+          </div>
+          <p class="info-block__text">У щенков опорно-двигательный аппарат еще не сформирован, "зоны роста" костей еще не закрыты, суставные хрящи мягкие, а мышцы и связки слабее, чем у взрослых собак. Необходим очень бережный подход к любым видам физической активности: ограничичение прыжков, бега, спуска по лестнице и скользских поверхностей. Предпочтительны короткие прогулки с разнообразными впечатлениями и мягкие занятие на баланс тела и развитие проприорцепции.</p>
+        </div>
+
+        <div class="checklist-card">
+          <p class="checklist-card__title">Чек-лист правил правильной социализации для опекуна:</p>
+          <ul class="checklist">
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">В период социализации важнее не количество контактов, а их качество: первые встречи с людьми лучше организовывать с людьми, готовыми следовать вашим инструкциям, а не со случайными прохожими. Человек не должен навязывать тактильный контакт, а дать щенку подойти, обнюхать, а гладить только если тот сам телом тянется ближе.</p>
+                <p class="know-text">Через игры со сверстниками щенок учится управлять своим телом, балансом, координацией. Также во время игры в борьбу, в кусания, щенок учится контролировать силу своего укуса, получая обратную связь от партнеров по игре, когда он прикусывает слишком сильно, это очень поможет ему в общении с собаками в будущем.</p>
+                <p class="know-text">Однако также важно, чтобы в окружении щенка были и взрослые собаки, поведение которых щенок будет заимствовать. Как мы хотим, чтобы щенок вел себя, когда вырастет, таких партнеров в окружении мы ему и предлагаем, потому что щенок копирует поведение старших товарищей.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Для здоровой щенячьей познавательной активности, ему нужно изучать окружающий мир. И если он проснулся в стерильной квартире, где вообще ничего нет, то, конечно же, он пойдет и будет искать возможности, что ему поизучать, погрызть, и скорее всего это будут какие-то ценности, до которых он в итоге доберется. Если же мы предоставляем возможности, т.е. мы разложили какие-то предметы для игр, то у щенков будет все перед глазами, и они пойдут и с большей вероятностью будут изучать именно это. Предметы должны быть разной текстуры (что-то резиновое (например, щенячий конг), плюшевое, деревянное). Если вы забрали у щенка что-то, что ему нельзя брать, нужно дать ему альтернативу такой же текстуры.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Полезные занятия и навыки. Делаем акцент на спокойных видах активности: поиск лакомств, развивающие игры, обогащение среды, спокойное взаимодействие с какими-то предметами, например, плюшевая игрушка, которую щенок будет просто носить в зубах, спать с ней и т.д. Нюхательные и социальные прогулки, наблюдение за окружающей средой. Возбуждающие игры (борьба, перетяжки, мячики, бурные игры с собаками) остаются, но в очень дозированном формате и всегда заканчиваются на спокойной ноте.</p>
+                <p class="know-text">К полезным навыкам относятся уход (мытьё лап, стрижка когтей, осмотры), обучение идее обмена предметов и первые короткие визиты в места, которые важны для будущей жизни: ветеринарная клиника, кафе, зоомагазин. Всё это вводится маленькими шагами, в спокойное время и с опорой на инициативу щенка, чтобы опыт оставался безопасным и предсказуемым. Расширение тех пространств, в которые может приходить щенок и тех вещей, с которыми этому щенку в его жизни с этим опекуном предстоит с высокой долей вероятности встречаться.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="related-topics">
+          <span class="related-topics__label">Связанные темы:</span>
+          <div class="related-links">
+            <a href="#" class="related-link">Аксессуары для щенка <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="#" class="related-link">Первые дни в доме <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="#" class="related-link">Игры и развитие <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!-- ======================================================
+      Подростки
+       ====================================================== -->
+  <section class="detail-section detail-panel" id="age-detail-teen" data-age-panel="teen" aria-hidden="true">
+    <div class="container">
+
+      <div class="detail-header">
+        <div class="detail-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h2 class="detail-title">Подростки</h2>
+      </div>
+
+      <div class="detail-hero-img">
+        <img src="young.jpg" alt="Щенок исследует траву — период активной социализации" loading="lazy">
+      </div>
+
+      <div class="detail-blocks">
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Чувствительность к стрессу</h3>
+          </div>
+          <p class="info-block__text">Мозг подростка очень чувствителен к стрессу: уровень гормонов стресса снижаются в два раза медленней, чем у взрослых, в следствие чего появляются и легко закрепляются возбудимость, реактивность и тревожность, как следствие - выученное поведение.
+
+            <p class="info-block__text">Любой повторяющийся стресс (пугающие его ситуации, жесткие методы воспитания, постоянные ограничения) наслаивается, формируя устойчивые проблемные паттерны поведения.</p>
+            <p class="info-block__text">Внезапно появившегося нежелательного поведения почти не бывает (только если это не проблема со здоровьем), чаще всего есть длинная причинно-следственная цепочка, которую просто не замечали, пока подросток не начал активно защищать свои границы.</p>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Подростки и фрустрация</h3>
+          </div>
+          <p class="info-block__text">У подростка обязательно должна быть возможность легко получать вознаграждение. Это имеет вполне конкретное обоснование:  у взрослых людей и собак уровень активации дофаминовой системы, т.е. системы вознаграждения, включается в момент предвкушения награды, а не в момент ее получения. А вот у подростков (и собак, и людей), наоборот, дофаминовая система нацелена на получение вознаграждения «здесь и сейчас». Подростки очень остро переживают фрустрацию, вследствие чего легко возникает агрессия, переадресованные реакции и навязчивые действия. 
+            <p class="info-block__text">Что можно делать: регулярно давать собаке доступное вознаграждение, например в игре поиск лакомств, использовать успокаивающие активности (триада рвать, грызть, лизать, ноузворк), чередовать нагрузку и отдых.</p>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Физическая нагрузка</h3>
+          </div>
+          <p class="info-block__text">Не все активности будут полезны и безопасны. Не является полезным - быстрые и продолжительные и повторяющиеся упражнения по типу бега за мечом и постоянного возврата обратно к владельцу, потому что будет расти уровень глюкозы.</p>
+            <p class="know-text">Полезная активность - это социальная игра, как с людьми, так и с собаками. Внимательно подбирать партнёров для общения: спокойные, социально компетентные собаки, с которыми возможны не только «догонялки», но и совместные прогулки в умеренном темпе. Упражнения на пересеченной местности, которые очень нравятся подросткам, потому что они обеспечивают и растяжку, и физическую нагрузку, и когнитивную нагрузку, и удовлетворяют их тягу к исследовательской деятельности.</p>
+        </div>
+
+        <div class="checklist-card">
+          <p class="checklist-card__title">Фокус внимания</p>
+          <ul class="checklist">
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+              <p class="know-text">У щенка фокус внимания смещён на человека: он держится рядом, легко откликается, редко уходит далеко.</p>
+              <p class="know-text">У подростка же фокус резко уходит в сторону окружающей среды: интерес к новым собакам, людям, запахам, маршрутам становится ведущим мотивом., поэтому контакт с владельцем для подростков установить все-таки очень сложно в силу того, что они мотивированы не на человека, а на окружающую среду, которая более разнообразна, более привлекательна и более интересна для собаки.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Увеличивается дистанция, на которую собака готова отходить; снижается стабильность выполнения уже известных навыков (подзыв, выдержка, спокойствие рядом).</p>
+            </div>
+            </li>
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Правильно организовать прогулки: длинный поводок, возможность нюхать, выбирать маршрут, исследовать среду и при этом оставаться в безопасности.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="related-topics">
+          <span class="related-topics__label">Связанные темы:</span>
+          <div class="related-links">
+            <a href="#" class="related-link">Аксессуары для щенка <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="#" class="related-link">Первые дни в доме <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="#" class="related-link">Игры и развитие <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!-- ======================================================
+      Сеньоры
+       ====================================================== -->
+  <section class="detail-section detail-panel" id="age-detail-senior" data-age-panel="senior" aria-hidden="true">
+    <div class="container">
+
+      <div class="detail-header">
+        <div class="detail-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h2 class="detail-title">Сениоры</h2>
+      </div>
+
+      <div class="detail-hero-img">
+        <img src="senior.webp" alt="Щенок исследует траву — период активной социализации" loading="lazy">
+      </div>
+
+      <div class="detail-blocks">
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Корректировки образа жизни</h3>
+          </div>
+          <p class="info-block__text">У пожилых собак, или сеньоров, все большее значение приобретает тема качества жизни, и все больше владельцев задаются вопросами, как изменить образ жизни, когда они замечают первые возрастные изменения. 
+            Как правило снижается потребность в физических нагрузках, возрастает потребность во сне и отдыхе, при этом меняются и социальные реакции: собака может реже соглашаться на игру, избегать бурных контактов с другими собаками.
+            Любые резкие изменения в поведении пожилой собаки требуют в первую очередь ветеринарной диагностики. Болезненность суставов, зубная боль, снижение чувствительности могут привести к тому, что собака отказывается от привычных контактов, начинает рычать при попытке взять ее на руки или погладить, а также избегает определенных движений, например прыжков в машину или ванну, подъема по лестнице или выполнения команд, связанных с нагрузкой на больные участки. Если эти сигналы игнорировать и продолжать прежний образ жизни, чрезмерная нагрузка и постоянный дискомфорт могут стать фактором хронического стресса со всеми сопутствующими проявлениями.
+            Образ жизни пожилой собаки нуждается в регулярной корректировке: важно адаптировать длительность и темп прогулок, маршруты и виды активности под ее текущие возможности, желательно с участием ортопеда или реабилитолога, который поможет подобрать безопасные нагрузки и укажет, что уже противопоказано. Если прогулки по необходимости становятся короче, особенно важно компенсировать снижение количества внешних впечатлений увеличением доли ментальных нагрузок: поисковые и развивающие игры, поиск лакомства, занятия по типу шейпинга помогают сохранять интерес к жизни и насыщают впечатлениями без лишней физической нагрузки. Многие сеньоры прекрасно осваивают новые навыки, пусть иногда и медленнее, чем щенки, и получают от этого заметное удовольствие.
+            При снижении слуха и/или зрения особенно важны новые, продуманные ритуалы общения: нужно так подходить к собаке и организовывать встречи с людьми, чтобы события не были для нее внезапными и пугающими.</p>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Возраст сениора</h3>
+          </div>
+          <p class="info-block__text">Взрослых собак, или сениоров, принято класифицировать по следующим возрастным группам:
+                        
+            <p class="know-text">- Ранний период сениоров, это 6–9 лет</p>
+            <p class="know-text">- Поздний период сеньоров, который начинается в 10 и заканчивается в 11 лет</p>
+            <p class="know-text">- Гериатрический период, который охватывает 12–18 и более лет. И внутри этого периода есть период, который называется very aged – это от 15 до 18 и более лет.</p>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block__header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="info-block__title">Появление второй собаки</h3>
+          </div>
+          <p class="info-block__text">Если в доме пожилая собака и планируется появление второй собаки, особенно щенка, необходимо заранее оценить, хватит ли ресурсов (временных, физических, эмоциональных и материальных) для полноценной заботы о двух животных с разными потребностями. 
+            Щенки обычно настойчиво требуют игр и контакта, могут причинять боль при прыжках и прикусах, а попытки сеньора защитить свое право на отдых (рычание, отгораживание) нередко ошибочно воспринимаются как доминирование и наказываются, что еще больше ухудшает его состояние и отношение к щенку.</p>
+        </div>
+
+        <div class="checklist-card">
+          <p class="checklist-card__title">Чек-лист для качественного сна и отдыха:</p>
+          <ul class="checklist">
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Возрастает значение качества мест для сна и отдыха, мягких лежанок и подушек, а также способов попадания на возвышения и спуска с них.</p>
+              </div>
+              </li>
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Может понадобиться обеспечить более низкие места для сна или добавить пандусы и ступеньки к кровати, дивану, машине или ванне, чтобы уменьшить прыжки и удары при приземлении, а также подобрать подушки и матрасы, которые лучше разгружают суставы и позволяют мышцам полноценно расслабляться.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <svg class="checklist__check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="checklist__item-body">
+                <p class="know-text">Как правило требуется изменить и способ кормления: поместить миску на подставку, отрегулировав высоту или подобрать такое положение тела во время еды, в котором собаке наиболее комфортно.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="related-topics">
+          <span class="related-topics__label">Связанные темы:</span>
+          <div class="related-links">
+            <a href="#" class="related-link">Аксессуары для щенка <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="#" class="related-link">Первые дни в доме <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="#" class="related-link">Игры и развитие <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ======================================================
+     FOOTER (из дизайн-системы)
+     ====================================================== -->
+<footer class="footer-wrapper" id="contacts">
+    <div class="container footer">
+        <div class="footer-top">
+            <div class="footer-logo-block">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon"></div>
+                    <div class="footer-logo-text">DogMind</div>
+                </div>
+                <p class="footer-description">
+                    Грамотный подход к воспитанию собак на каждом этапе их жизни.
+                </p>
+            </div>
+            <div>
+                <div class="footer-column-title">Разделы</div>
+                <div class="footer-links">
+                    <a href="#">Основы воспитания</a>
+                    <a href="#">Питание</a>
+                    <a href="#">Возрастное развитие</a>
+                    <a href="#">Стресс и поведение</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-column-title">О центре</div>
+                <div class="footer-links">
+                    <a href="#">О нас</a>
+                    <a href="#">Кинологи</a>
+                    <a href="#">Записаться</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-column-title">Соцсети</div>
+                <div class="footer-socials">
+                    <div class="footer-social-icon"></div>
+                    <div class="footer-social-icon"></div>
+                    <div class="footer-social-icon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <span>© 2024 DogMind — Грамотный подход к воспитанию</span>
+            <span><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" style="color:var(--text-gray);text-decoration:none;">Created with Perplexity Computer</a></span>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Energy Chart
+(function(){
+  const ctx = document.getElementById('energyChart');
+  if (!ctx) return;
+
+  const labels = ['','','','','','','','','','',''];
+  const energyData = [82, 96, 88, 74, 70, 64, 58, 50, 42, 35, 27];
+  const learnData  = [58, 68, 84, 76, 64, 54, 57, 60, 52, 40, 29];
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Энергия',
+          data: energyData,
+          borderColor: '#C9A89E',
+          backgroundColor: 'rgba(201,168,158,0.13)',
+          borderWidth: 2.5,
+          tension: 0.45,
+          fill: true,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+        },
+        {
+          label: 'Обучаемость',
+          data: learnData,
+          borderColor: '#A8B3A0',
+          backgroundColor: 'rgba(168,179,160,0.1)',
+          borderWidth: 2.5,
+          tension: 0.45,
+          fill: true,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#fff',
+          titleColor: '#2C2C2C',
+          bodyColor: '#757575',
+          borderColor: '#CCCCCC',
+          borderWidth: 1,
+          padding: 10,
+          cornerRadius: 10,
+        }
+      },
+      scales: {
+        x: { display: false, grid: { display: false } },
+        y: { display: false, min: 0, max: 110, grid: { display: false } }
+      },
+      interaction: { mode: 'index', intersect: false }
+    }
+  });
+})();
+
+// Sticky header shadow
+(function(){
+  const hdr = document.querySelector('.header');
+  const cont = hdr.parentElement;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      cont.style.boxShadow = '0 2px 12px rgba(44,44,44,0.07)';
+      cont.style.position = 'sticky';
+      cont.style.top = '0';
+      cont.style.zIndex = '100';
+      cont.style.background = 'rgba(249,246,240,0.94)';
+      cont.style.backdropFilter = 'blur(12px)';
+    } else {
+      cont.style.boxShadow = '';
+      cont.style.background = '';
+      cont.style.backdropFilter = '';
+    }
+  }, { passive: true });
+})();
+
+(function () {
+  var buttons = document.querySelectorAll('.age-card__btn[data-age-panel]');
+  var panels = document.querySelectorAll('.detail-panel[data-age-panel]');
+  var cards = document.querySelectorAll('.age-card[data-age-panel]');
+  if (!buttons.length || !panels.length) return;
+
+  function showAgePanel(id) {
+    panels.forEach(function (panel) {
+      var on = panel.getAttribute('data-age-panel') === id;
+      panel.classList.toggle('is-active', on);
+      panel.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+    buttons.forEach(function (btn) {
+      var on = btn.getAttribute('data-age-panel') === id;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    cards.forEach(function (card) {
+      card.classList.toggle('age-card--active', card.getAttribute('data-age-panel') === id);
+    });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-age-panel');
+      if (!id) return;
+      showAgePanel(id);
+      var panel = document.getElementById('age-detail-' + id);
+      if (panel) {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
+
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
