@@ -71,6 +71,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
+            color: inherit;
         }
 
         .logo-circle {
@@ -785,7 +787,6 @@
 
         .history-card-title {
             font-size: 14px;
-            font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 12px;
         }
@@ -1202,6 +1203,8 @@
         }
 
         .worsens-card {
+            font-size: 16px;
+            font-weight: 500;
             background: #D9D9D9;
             border-radius: var(--radius-card);
             min-height: 0;
@@ -1223,6 +1226,7 @@
             font-size: 13px;
             color: var(--text-gray);
             line-height: 1.5;
+            margin-bottom: 16px;
         }
 
         /* wide last card */
@@ -1248,13 +1252,23 @@
             font-size: 14px;
             color: var(--text-gray);
             line-height: 1.65;
+            width: 70%;
         }
 
         .worsens-card-wide-image {
             background: #B8B2A8;
             border-radius: 18px;
-            height: 160px;
+            width: 200px;
+            height: 460px;
+            object-position: center center;
         }
+
+        .worsens-card-wide-image img{
+            height: 460px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
 
         /* ---- SECTION: РЕЗУЛЬТАТ (ФИНАЛ) ---- */
         .result-section {
@@ -1271,7 +1285,7 @@
 
         .result-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
 
@@ -1373,17 +1387,17 @@
 
     <!-- HEADER -->
     <header class="container header">
-        <div class="header-left">
+        <a class="header-left"  href="../index.html">
             <div class="logo-circle"></div>
             <div class="brand-name">Благополучная собака</div>
-        </div>
+        </a>
         <div class="header-right">
             <nav class="nav">
                 <a href="#method">Методология</a>
                 <a href="#topics">Статьи</a>
                 <a href="#adoption">Консультации</a>
             </nav>
-            <button class="header-contacts-btn">Контакты</button>
+            <button class="header-contacts-btn">Обратная связь</button>
         </div>
     </header>
 
@@ -1413,14 +1427,14 @@
                             Рассмотрим основные факторы стресса, которые влияют на поведение собаки, и с которыми ей обязательно нужно помочь справиться.
                         </p>
 						<div class="detail-hero-img">
-							<img src="./adaptation_assets/calm-dog.jpg" alt="Собака расслаблена" loading="lazy">
+							<img src="./adaptation_assets/calm-dog2.jpg" alt="Собака расслаблена" loading="lazy">
 						</div>
                     </div>
                     <div class="stress-right">
                         <div class="stress-item">
                             <div class="stress-item-icon">🏠</div>
                             <div class="stress-item-body">
-                                <span class="stress-item-text">Поездка</span>
+                                <span class="stress-item-text">Поездка, новый вид транспорта</span>
                                 <button type="button" class="stress-item-more" data-stress-detail="Поездка на автомобиле или другом виде транспорте может быть для собаки первой и это само по себе может быть стрессом. Стресс снижается, если есть возможность знакомства с автомобилем, потепенного приучения к поездке и чтобы знакомый человек был рядом.">подробнее</button>
                             </div>
                         </div>
@@ -1428,21 +1442,21 @@
                             <div class="stress-item-icon">🏠</div>
                             <div class="stress-item-body">
                                 <span class="stress-item-text">Новый дом</span>
-                                <button type="button" class="stress-item-more" data-stress-detail="Новая обстановка и запахи. Если собака попала домой с улицы, то для нее этот стресс фактор будет более выражен, так как новым будет для нее все: понимание что такое мебель, почему пространство разделено и т.д. В идеале познакомить собаку с домом заранее, дать возможность все обнюхать, пожевать какое-то лакомство, поиграть в поиск и др.">подробнее</button>
+                                <button type="button" class="stress-item-more" data-stress-detail="Новая обстановка и запахи. Если собака попала домой с улицы, то для нее этот стресс фактор будет более выражен, так как новым для нее будет все: понимание что такое мебель, почему пространство разделено и т.д. В идеале познакомить собаку с домом заранее, дать возможность все обнюхать, пожевать какое-то лакомство, поиграть в поиск, включить успокаивающую музыку и др.">подробнее</button>
                             </div>
                         </div>
                         <div class="stress-item">
                             <div class="stress-item-icon">🏠</div>
                             <div class="stress-item-body">
                                 <span class="stress-item-text">Новые люди</span>
-                                <button type="button" class="stress-item-more" data-stress-detail="Незнакомые люди для собаки - также является стресс фактором, который зависит от степени социализации собаки. В идеале приехать к собаке заранее, познакомиться, предложить приятные совместные впечатления и создать базу для доверительных отношений.">подробнее</button>
+                                <button type="button" class="stress-item-more" data-stress-detail="Если вы хотите пригласить собаку в свою семью, лучше приехать к собаке для знакомства заранее, в идеале - несколько раз, чтобы познакомиться друг с другом, погулять, предложить приятные совместные впечатления и создать базу для дальнейших доверительных отношений.">подробнее</button>
                             </div>
                         </div>
                         <div class="stress-item">
                             <div class="stress-item-icon">🏠</div>
                             <div class="stress-item-body">
                                 <span class="stress-item-text">Новые правила</span>
-                                <button type="button" class="stress-item-more" data-stress-detail="В каждом доме могут быть свои правила к которым собаке нужно будет постепенно адаптироваться, тем более если для собаки будет новым даже само понятие дома. Главное условие здесь - снижаем требования к собаке.">подробнее</button>
+                                <button type="button" class="stress-item-more" data-stress-detail="В каждом доме могут быть свои правила к которым собаке нужно будет постепенно адаптироваться, тем более если для собаки будет новым даже само понятие дома. Главное условие здесь - снижение требований к собаке.">подробнее</button>
                             </div>
                         </div>
                     </div>
@@ -1457,7 +1471,7 @@
             <div class="history-section">
                 <span class="history-label">АДАПТАЦИЯ</span>
                 <h2 class="history-title">Как может проявится стресс у собаки после переезда</h2>
-                <p class="history-card-text">Самый большой страх у владельцев - что так будет всегда, и если это срочно не изменить, не установить все правила, которые будут, то так навсегда и останется. Но на самом деле все как раз, наоборот, потому что попытки изменить поведение собаки не менеджментом среды, а воздействием на собаку, чтобы она ничего из нижеперечисленного не делала, не боялась, не лаяла, не брала что-то со стола, не защищала ресурсы, не делала лужи, и следовала всем правилам - все это наоборот только ухудшает ситуацию. Это часть нормального процесса, так будет не всегда при условии, что владелец собаки будет действовать разумно и учитывая причинно-следственные связи.</p>
+                <p class="history-card-text">Самый большой страх у владельцев - что так будет всегда, и если это поведение срочно не изменить, не установить все правила, которые будут, то так навсегда и останется. Но на самом деле все как раз наоборот, потому что попытки изменить поведение собаки не менеджментом среды, а воздействием на собаку, чтобы она ничего из нижеперечисленного не делала, не боялась, не лаяла, не брала что-то со стола, не защищала ресурсы, не делала лужи, и следовала всем правилам - все это наоборот только ухудшает ситуацию. <strong>Это часть нормального процесса и так будет не всегда при условии, что владелец собаки будет действовать разумно и учитывая причинно-следственные связи.</strong>. </p>
                 <div class="history-cards">
                     <div class="history-card">
                         <div class="history-card-icon">🏠</div>
@@ -1467,35 +1481,21 @@
 
                      </div>
                     <div class="history-card">
-                        <div class="history-card-icon">🏢</div>
+                        <div class="history-card-icon">🏠</div>
                         <div class="history-card-title">Воровство со стола</div>
                         <div class="history-card-title">Защита ресурсов</div>
                         <div class="history-card-title">Нечистоплотность</div>
 
                     </div>
                     <div class="history-card">
-                        <div class="history-card-icon">🌿</div>
+                        <div class="history-card-icon">🏠</div>
                         <div class="history-card-title">Недоверие</div>
-                        <div class="history-card-title">Реализация старых привычек</div>
+                        <div class="history-card-title">Реализация старых привычек, достижение результатов привычным для нее образом.</div>
                         <div class="history-card-title">Попытки найти новые способы повдения</div>
                         
                     </div>
                   
                 </div>
-            </div>
-        </div>
-
-        <!-- ====== ТЁМНЫЙ БЛОК: ПРИЮТ / УЛИЦА ====== -->
-        <div class="container">
-            <div class="shelter-block">
-                <div class="shelter-left">
-                    <div class="shelter-tag">работа со стрессом</div>
-                    <h3 class="shelter-title">Имеет ли ваш собака признаки стресса</h3>
-                    <p class="shelter-text">
-                        анкета по стрессу
-                    </p>
-                </div>
-                <div class="shelter-right"></div>
             </div>
         </div>
 
@@ -1506,29 +1506,33 @@
             <div class="prepare-section">
                 <span class="history-label">АДАПТАЦИЯ</span>
                 <h2 class="prepare-section-title">Как помочь собаке быстрее адаптироваться</h2>
-                <p class="history-card-text">Очень важно ни в коем случае не запирать собаку ни в комнате, ни в клетке. Важно, чтобы у собаки была возможность выбирать самой удобные места, и возможность в любой момент обратиться к кому-то из членов семьи. Обеспечить собаке игрушки, с которыми она сможет взаимодействовать. И конечно один из самых приятных моментов адаптации - это вкусная пища.</p>
                 <div class="prepare-grid">
                     <div class="prepare-card">
-                        <div class="history-card-icon">🏠</div>
+                        <div class="history-card-icon">✔️</div>
                         <h3 class="prepare-card-title">Покой в первые дни</h3>
                         <p class="prepare-card-text">Постарайтесь первое время не приглашать гостей, не устраивать шумных мероприятий, и даже по возможности - отложить поход к ветеринару и гигиенические процедуры.</p>
                         <p class="prepare-card-text">Начните с коротких прогулок близко к дому, чтобы не перевозбуждать нервную систему собаки.</p>
                     </div>
                     <div class="prepare-card">
-                        <div class="history-card-icon">🏢</div>
+                        <div class="history-card-icon">✔️</div>
                         <h3 class="prepare-card-title">Дать собаке пространство и время</h3>
                         <p class="prepare-card-text">Постарайтесь обеспечить собаке уютное и безопасное место отдыха.</p>
                         <p class="prepare-card-text">Не настаивайте на общении и особенно объятиях.</p>
+                        <p class="prepare-card-text">Ставьте только те рамки, с которыми собака точно сможет справиться.</p>
                     </div>
                     <div class="prepare-card">
-                        <div class="history-card-icon">🌿</div>
+                        <div class="history-card-icon">✔️</div>
                         <h3 class="prepare-card-title">Безопасная среда</h3>
-                        <p class="prepare-card-text">Используйте доброжелательный тон в общении с собакой и спокойно относитесь к ее ошибкам..</p>
+                        <p class="prepare-card-text">Используйте доброжелательный тон в общении, будьте внимательны к потребностям собаки и спокойно относитесь к ее ошибкам.</p>
                     </div>
                     <div class="prepare-card">
-                        <div class="history-card-icon">🌿</div>
-                        <h3 class="prepare-card-title">Безопасная среда</h3>
-                        <p class="prepare-card-text">Используйте доброжелательный тон в общении с собакой и спокойно относитесь к ее ошибкам..</p>
+                        <div class="history-card-icon">✔️</div>
+                        <h3 class="prepare-card-title">Обеспечить изобилие</h3>
+                        <p class="prepare-card-text">Доступ к членам семьи, <strong>отсутствие изоляции.</strong></p>
+                        <p class="prepare-card-text"><strong>Игрушки</strong> и другие вещи, которые доступны собаке, чтобы она имела возможность с ними поиграть, погрызть, полежать с ними в лежанке.</p>
+                        <p class="prepare-card-text">Вкусная пища и <strong>лакомства</strong>, которые могут порадовать собаку (без резкой смены рациона).</p>
+                        <p class="prepare-card-text"><strong>Удобная амуниция.</strong></p>
+
                     </div>
                 </div>
             </div>
@@ -1551,18 +1555,18 @@
                             И когда у собаки завершается процесс затаивания, и она начинает адаптироваться и более активно себя проявлять, меньше лежать, больше изучать среду и пространство, человек может испугаться того, что поведение собаки меняется в нежелательную для семьи сторону.</p>
                             <div class="first-days-tip">
                             <div class="first-days-tip-icon">💡</div>
-                            <p class="first-days-tip-text">Если собака стала более активной, а вместе с тем, стала более неудобной, вы ее не избаловали, она просто стала больше вам доверять и адаптироваться к среде. ОНа позволяет себе предпринимать попытки удовлетворить свои потребности и сообщить о своих желаниях.</p>
+                            <p class="first-days-tip-text">Если собака стала более активной, а вместе с тем, стала более неудобной, вы ее не избаловали, просто <strong>она стала больше вам доверять и адаптироваться к среде.</strong> Она позволяет себе предпринимать попытки удовлетворить свои потребности и сообщить о своих желаниях.</p>
                         </div>
                     </div>
                     <div class="first-days-card">
                         <h3 class="first-days-card-title">Возбужденное поведение</h3>
                         <p class="first-days-card-text">
-                            Она может суетиться, лаона может много перемещаться, возможно что-то грызть. Это также проявление стресса в виде повышенной двигательной активности собаки.</p>
+                            Собака может суетиться, лаять, может много перемещаться, возможно что-то грызть. Это также проявление стресса в виде повышенной двигательной активности собаки.</p>
                         </p>
-                        <p class="first-days-card-text">Самоконтроль - это тот навык, которому собака может обучаться в течение всей своей жизни, но в условиях стресса мозг собаки просто не способен одновременно адаптироваться к новой окружающей среде, и выполнять сложные когнитивные процессы по запоминанию новых правил, самоконтролю и т.д.</p>
+                        <p class="first-days-card-text">В условиях стресса мозг собаки просто не способен одновременно адаптироваться к новой окружающей среде, и выполнять сложные когнитивные процессы по запоминанию новых правил, самоконтролю и т.д.</p>
                         <div class="first-days-tip">
                             <div class="first-days-tip-icon">💡</div>
-                            <p class="first-days-tip-text">У кого-то первичная адаптация занимает несколько дней, у кого-то - месяц. Есть собаки, у которых есть пробелы пробелы в социализации, сильные страхи - им понадобится больше времени. Также важно помнить, что если переезжает взрослая собака, то, после после того, как уже прошло какое-то время, важно посетить с ней ветеринарного специалиста, так как у сениоров возможно обострение хронических болезней на фоне стресса. Это, например, может быть причиной появившейся нечистоплотности.</p>
+                            <p class="first-days-tip-text">У одной собаки первичная адаптация занимает несколько дней, у другой - месяц. Есть собаки, у которых есть пробелы в социализации, сильные страхи - им понадобится больше времени. Также <strong>важно помнить, что если переезжает взрослая собака, то, после после того, как уже прошло какое-то время, важно посетить с ней ветеринарного специалиста</strong>, так как у сениоров возможно обострение хронических болезней на фоне стресса. Это, например, может быть причиной появившейся нечистоплотности.</p>
                         </div>
                     </div>
                 </div>
@@ -1583,7 +1587,7 @@
                 <div class="needs-row">
                     <div class="need-item">
                         <div class="need-icon-wrap">
-                            <div class="need-icon">🛡️</div>
+                            <div class="need-icon">✔️</div>
                             <span class="need-title">Обогащенная среда</span>
                         </div>
                         <p class="need-text">Собака легче учится, чувствует себя более уверенно, учится испытывать интерес к новому</p>
@@ -1591,7 +1595,7 @@
                     </div>
                     <div class="need-item">
                         <div class="need-icon-wrap">
-                            <div class="need-icon">🍗</div>
+                            <div class="need-icon">✔️</div>
                             <span class="need-title">Успокаивающая музыка и организованный сон</span>
                         </div>
                         <p class="need-text">По результатам клинических испытаний успокаивающая музыка снижает тревожность у 85% собак дома, и у 70% собак в приютах.</p>
@@ -1599,13 +1603,14 @@
                     </div>
                     <div class="need-item">
                         <div class="need-icon-wrap">
-                            <div class="need-icon">💧</div>Долгоиграющее жевательное лакомство/конг</span>
+                            <div class="need-icon">✔️</div>
+                            <span class="need-title">Долгоиграющее жевательное лакомство/конг</span>
                         </div>
                         <p class="need-text">Жевание помогает активировать парасимпатическую нервную систему и переключить собаку из состояния стресса в состояние расслабления.</p>
                     </div>
                     <div class="need-item">
                         <div class="need-icon-wrap">
-                            <div class="need-icon">🌿</div>
+                            <div class="need-icon">✔️</div>
                             <span class="need-title">Игры в поиск лакомств</span>
                         </div>
                         <p class="need-text">Поиск лакомств способствует реализации видотипичного поведения, помогает снижать стресс и развивать поведенческую гибкость.</p>
@@ -1617,13 +1622,13 @@
                     <div class="info-col-card">
                         <h4 class="info-col-title">Что нельзя делать в процессе адаптации</h4>
                         <div class="info-col-tip">
-                            <div class="info-col-tip-icon">🛡️</div>
+                            <div class="info-col-tip-icon">❌</div>
                             <p class="info-col-tip-text">Нельзя насильно вытаскивать собаку или заманивать ее куда-то, ставить миску как можно дальше от того места, от того убежища, которое она себе выбрала, пытаясь ее подтолкнуть к тому, чтобы она осваивала все пространство и начала чувствовать себя в нем более комфортно.</p>
                         </div>
                     </div>
                     <div class="info-col-card">
                         <div class="info-col-tip">
-                            <div class="info-col-tip-icon">🛡️</div>
+                            <div class="info-col-tip-icon">❌</div>
                             <p class="info-col-tip-text">Нельзя применять такие стоп методы, как превышение порога страха, в надежде что собака "поймет", что бояться нечего. Это привидет лишь к усилению чувствительности собаки и риску перехода страха в фобию.</p>
                         </div>
                     </div>
@@ -1639,14 +1644,16 @@
         <div class="container">
             <div class="worsens-section" style="padding-top: 56px;">
                 <span class="worsens-label">Повторная социализация собаки</span>
-                <h2 class="worsens-title">Повторная социализация собаки нужна для создания положительного опыта в отношении с людьми, сородичами и окружающей  средой. <p>Повторная социализация может быть нужна по нескольким причинам</p> </h2>
+                <h2 class="worsens-title">Повторная социализация собаки - почему она бывает необходима собаке?</h2>
+                <div class="worsens-card-text">Ресоциализация необходима собаке в основном в двух случаях: либо в случае <strong>недостаточности</strong> (собаке не хватило социализации с сородичами, людьми или взаимодействия с окружающей средй), либо в случае получения <strong>негативного опыта.</strong></div>
                 <div class="worsens-grid">
-                    <div class="worsens-card"><strong>Недостаточная социализация в общении с людьми, сородичами</strong>
-                    Незнание правил общения.</div>
-                    <div class="worsens-card"><strong>Полученный негативный опыт в общении с людьми, сородичами.</strong>
+                    <div class="worsens-card">Недостаточность социализации по отношению к людям или собакам
+                        <p class="prepare-card-text">(незнание правил общения)</div>
+                    <div class="worsens-card">Негативный опыт, полученный при взаимодействии с людьми или собаками
                     </div>
-                    <div class="worsens-card"><strong>Обедненная среда</strong>
-                    Особенно характерно для собак, живущих в вольерах и приютах.</div>
+                    <div class="worsens-card">Недостаточный или негативный опыт, полученный при взаимодействии с окружающей средой
+                        <p class="prepare-card-text">(к среде в целом, или отдельным частям среды в частности)</p>
+                        <p class="prepare-card-text">Часто встречается у собак, живущих в вольерах и приютах.</div>
                 </div>
             </div>
         </div>
@@ -1654,24 +1661,29 @@
         <!-- ====== РЕЗУЛЬТАТ ====== -->
         <div class="container">
             <div class="result-section" style="padding-top: 0px;">
-                <h2 class="result-title">Как помочь собаке преодолеть негативный опыт и недостаточность социализации</h2>
+                <h2 class="result-title">Как помочь собаке преодолеть негативный опыт или его недостаточность:</h2>
                 <div class="result-grid">
                     <div class="result-card">
-                        <div class="result-card-icon">❤️</div>
+                        <div class="result-card-icon">☘️</div>
                         <div class="result-card-title">Упражнения на развитие уверенности</div>
                         <p class="result-card-text"></p>
                         <p class="result-card-text">Обогащенная среда</p>
                         <p class="result-card-text">Поисковые игры, шейпинг и др.</p>
                     </div>
                     <div class="result-card">
-                        <div class="result-card-icon">❤️</div>
+                        <div class="result-card-icon">⚖️</div>
                         <div class="result-card-title">Предоставить собаке право выбора, предсказуемость</div>
-                        <p class="result-card-text">Даем возможность собаке проявить инициативу, включаем в повседневную рутину ритуалы - то, что предсказуемость позволяет справляться со стрессом лучше подтверждается клиническими исследованиями.</p>
+                        <p class="result-card-text">Дать возможность собаке проявить инициативу и включить в повседневную рутину ритуалы - то, что <strong>предсказуемость позволяет справляться со стрессом лучше</strong> подтверждается клиническими исследованиями.</p>
                     </div>
                     <div class="result-card">
-                        <div class="result-card-icon">❤️</div>
-                        <div class="result-card-title">Целевые методики</div>
-                        <p class="result-card-text">Выстраивание схемы по созданию нового положительного опыта, например, при недостатке социализации с сородичами привлечение к работе собаки-ассистента.</p>
+                        <div class="result-card-icon">🐾</div>
+                        <div class="result-card-title">Целевые упражнения</div>
+                        <p class="result-card-text">Очень эффективно создание обогащенной среды, в которой присутствует объект к которому нужно сформировать новое отношение</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-card-icon">🐕‍🦺</div>
+                        <div class="result-card-title">Целевые упражнения</div>
+                        <p class="result-card-text">Выстраивание схемы по <strong>созданию нового положительного опыта</strong>, например, при недостатке социализации с сородичами - <strong>привлечение к работе собаки-ассистента.</strong></p>
                     </div>
                 </div>
             </div>
@@ -1679,18 +1691,15 @@
                     <div>
                         <h3 class="worsens-card-wide-title">Адаптация собаки после переезда в том же составе семьи.</h3>
                         <p class="worsens-card-wide-text">Факторы стресса те же, кроме новых людей.</p>
-                        <p class="worsens-card-wide-text">Первое время, хотя бы сутки,не оставляйте собаку одну. Затем, если она не ходит за членами семьи "хвостиком", можно оставлять собаку по 5-10 мин. желательно под контролем видеокамеры, с дальнейшим увеличением времени.</p>
+                        <p class="worsens-card-wide-text"><strong>Первое время, хотя бы сутки, не оставляйте собаку одну.</strong> Затем, если она не ходит за членами семьи "хвостиком", можно оставлять собаку по 5-10 мин. желательно под контролем видеокамеры, с дальнейшим увеличением времени.</p>
+                        <h3 class="worsens-card-wide-title" style="margin-top:18px";>Адаптация собаки из приюта.</h3>
+                        <p class="worsens-card-wide-text"><strong>Для собаки из приюта будет новым то, что для домашней собаки может быть рутиной.</strong> Для нее новым будет почти все, от обстановки за пределами приюта (дома, машины, лифты, лестницы) до обстановки дома и социального взаимодействия с людьми.
+                            <p class="worsens-card-wide-text"><strong>Собака из приюта имеет уже накопленный хронический стресс, скорее всего она длительное время испытывала нехватку чего-то важного:</strong> еды (или разнообразия еды), контакта, субъективной безопасности. И когда собака попадает в условия, где это возможно получить, где в доступе есть еда, которая вкусно пахнет, где люди всегда рядом, то в этом случае собака, которая испытывала длительный недостаток ресурсов, может испытывать гипертрофированную потребность в этом. Ей будет крайне сложно удерживаться от каких-то искушений, если она, например, видит еду, она может испытывать очень много эмоций от нахождения рядом человека.
+    Важно это учитывать в процессе адаптации собаки, и тогда адаптация проходит быстрее и легче. <strong>Если это не учитывать, могут принять какие-то неверные решения, и в этом случае стресс может длиться дольше, или собака может из одного хронического стресса перейти в другой и остаться в этом же состоянии.</strong>>    
                     </div>
-                    <div class="worsens-card-wide-image"></div>
-                </div>
-            <div class="worsens-card-wide">
-                    <div>
-                        <h3 class="worsens-card-wide-title">Адаптация собаки из приюта.</h3>
-                        <p class="worsens-card-wide-text">Для собаки из приюта будет новым то, что для домашней собаки - рутина. Для нее новым будет почти все, от обстановки за пределами приюта (дома, машины, лифты, лестницы) до обстановки дома и социального взаимодействия с людьми.
-                        <p class="worsens-card-wide-text">Собака из приюта имеет уже накопленный хронический стресс, поэтому будьте готовы проявить максимальное терпение и позволить собаке адаптироваться в своем темпе.</p>
-                            <p class="worsens-card-wide-text">Разделяем даже самые "базовые" на ваш взгляд вещи на маленькие шаги.</p>
+                    <div class="worsens-card-wide-image">
+                        <img src="./adaptation_assets/priyut.jpg"  alt="Щенок исследует траву — период активной социализации" loading="lazy">
                     </div>
-                    <div class="worsens-card-wide-image"></div>
                 </div>
         </div>
 
@@ -1787,6 +1796,34 @@
             closeStressModal();
         }
     });
+})();
+</script>
+<script>
+(function () {
+  var contactsButton = document.querySelector('.header-contacts-btn');
+  if (!contactsButton) return;
+  var receiverEmail = 'your@email.com';
+  var widgetStyle = document.createElement('style');
+  widgetStyle.textContent = '.contacts-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;z-index:2000}.contacts-modal.is-open{display:flex}.contacts-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.42)}.contacts-modal__dialog{position:relative;z-index:1;width:100%;max-width:460px;background:#fff;border-radius:18px;padding:24px;box-shadow:0 18px 46px rgba(0,0,0,.16)}.contacts-modal__title{margin:0 28px 14px 0;font-size:20px}.contacts-modal__close{position:absolute;top:10px;right:10px;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer}.contacts-form{display:flex;flex-direction:column;gap:10px}.contacts-form input,.contacts-form textarea{width:100%;border:1px solid #d7d7d7;border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px}.contacts-form textarea{min-height:90px;resize:vertical}.contacts-form button{margin-top:4px;border:0;border-radius:999px;padding:12px 18px;font-family:inherit;font-weight:700;cursor:pointer;background:#5D6855;color:#fff}';
+  document.head.appendChild(widgetStyle);
+  var modal = document.createElement('div');
+  modal.className = 'contacts-modal';
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML = '<div class="contacts-modal__backdrop" data-close="1"></div><div class="contacts-modal__dialog"><button type="button" class="contacts-modal__close" data-close="1" aria-label="Закрыть">×</button><h3 class="contacts-modal__title">Контакты</h3><form class="contacts-form"><input name="name" placeholder="Имя" required><input name="contacts" placeholder="Контакты" required><textarea name="comment" placeholder="Комментарий"></textarea><button type="submit">Отправить</button></form></div>';
+  document.body.appendChild(modal);
+  function openModal(){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  contactsButton.addEventListener('click', openModal);
+  modal.addEventListener('click', function (e) { if (e.target.closest('[data-close="1"]')) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+  modal.querySelector('.contacts-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var formData = new FormData(e.target);
+    var subject = encodeURIComponent('Новая заявка с сайта');
+    var body = encodeURIComponent('Имя: ' + (formData.get('name') || '') + '\nКонтакты: ' + (formData.get('contacts') || '') + '\nКомментарий: ' + (formData.get('comment') || ''));
+    window.location.href = 'mailto:' + receiverEmail + '?subject=' + subject + '&body=' + body;
+    closeModal();
+  });
 })();
 </script>
 <script data-pplx-inline-edit>
