@@ -73,6 +73,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
+            color: inherit;
         }
 
         .logo-circle {
@@ -187,10 +189,14 @@
         }
 
         .hero-image {
-            height: 420px;
+            height: 500px;
             width: 100%;
             object-fit: cover;
             display: block;
+        }
+        
+        .hero-image img{
+            width: 100%;
         }
 
         /* =========================================
@@ -892,17 +898,17 @@
 
     <!-- HEADER -->
     <header class="container header">
-        <div class="header-left">
+        <a class="header-left"  href="../index.html">
             <div class="logo-circle"></div>
             <div class="brand-name">Благополучная собака</div>
-        </div>
+        </a>
         <div class="header-right">
             <nav class="nav">
                 <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#method">Методология</a>
                 <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#topics">Статьи</a>
                 <a href="file:///C:/Users/User_quarantine/Downloads/Telegram%20Desktop/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%BD%D0%B0%D1%8F%20%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.html#adoption">Консультации</a>
             </nav>
-            <button class="header-contacts-btn">Контакты</button>
+            <button class="header-contacts-btn">Обратная связь</button>
         </div>
     </header>
 
@@ -910,7 +916,7 @@
     <section class="container hero" id="method">
         <div class="hero-content">
             <span class="hero-badge">Язык собак</span>
-            <h1 class="hero-title">Здоровая коммуникация: как понять свою собаку?</h1>
+            <h1 class="hero-title">О чем хочет сказать ваша собака: учимся ее понимать с "полуслова"</h1>
             <p class="hero-text">Собаки - социальные животные. Общение с сородичами и людьми - это не просто желание, а их базовая потребность.</p>
             <div class="hero-buttons">
                 <button class="hero-btn-primary">Изучить сигналы</button>
@@ -918,7 +924,9 @@
             </div>
         </div>
         <div class="hero-image-wrapper">
-            <div class="image-placeholder hero-image" style="border-radius: 40px 120px 40px 40px;"></div>
+            <div class="image-placeholder hero-image" style="border-radius: 40px 120px 40px 40px;">
+                <img src="./communication_assets/chat.jpg" alt="Картинка 1" class="enrichment-img">
+            </div>
         </div>
     </section>
 
@@ -930,8 +938,8 @@
             <div class="goals-grid">
                 <!-- Карточка 1: Цели общения -->
                 <div class="goals-card">
-                    <div class="goals-card-icon">🖤</div>
-                    <div class="goals-card-title">Как выглядит здоровая коммуникация собак</div>
+                    <div class="goals-card-icon">✔️</div>
+                    <div class="goals-card-title">Как выглядит "small talk" у собак</div>
 
                     <div class="goal-item">
                         <div class="goal-check">
@@ -940,7 +948,7 @@
                             </svg>
                         </div>
                         <div class="goal-text">
-                            <strong>При встрече использовать сигналы примирения, избегать конфликтов</strong>
+                            "Светских характер": использовать при встрече сигналы примирения, вежливо избегая недопонимания и конфликтных ситуаций
                         </div>
                     </div>
 
@@ -951,7 +959,7 @@
                             </svg>
                         </div>
                         <div class="goal-text">
-                            <strong>Соблюдать баланс во время игр, чередовать роли</strong>
+                            Во время игр чередовать роли, чтобы удовольствие от игры получили все участники
                         </div>
                     </div>
 
@@ -962,37 +970,34 @@
                             </svg>
                         </div>
                         <div class="goal-text">
-                            <strong>Откликаться на сигналы партнера по игре, учитывать  предпочтения друг друга</strong>
+                            "Учитывать культурные различия": вежливо откликаться на сигналы партнера по игре, учитывать предпочтения друг друга
                         </div>
                     </div>
                 </div>
 
                 <!-- Карточка 2: Три правила вежливости -->
                 <div class="goals-card">
-                    <div class="goals-card-icon" style="font-size:18px;">↔️</div>
-                    <div class="goals-card-title">Что препятствует здоровой коммуникации собак</div>
+                    <div class="goals-card-icon" style="font-size:18px;">❓ </div>
+                    <div class="goals-card-title">Почему диалог может не сложиться</div>
 
                     <div class="rules-item">
                         <div class="rules-number">1</div>
                         <div class="rules-text">
-                            <strong>Слишком сильное возбуждение</strong>
+                            Отсутствие опыта или недостаточный опыт ощения в раннем возрасте со взрослыми собаками и сверстниками
                         </div>
                     </div>
 
                     <div class="rules-item">
                         <div class="rules-number">2</div>
                         <div class="rules-text">
-                            <strong>Недостаточный опыт общения с собаками в период социализации</strong>
-
-                            <span>Плюс полученный опыт конкуренции.</span>
+                            Опыт конкуренции и борьбы за ресурсы в раннем возрасте
                         </div>
                     </div>
 
                     <div class="rules-item">
                         <div class="rules-number">3</div>
                         <div class="rules-text">
-                            <strong>Невозможность проявить вежливое поведение из-за вмешательства человека</strong>
-                            <span>-</span>
+                            Невозможность проявить вежливое поведение из-за вмешательства человека, сильное возбуждение и фрустрация от невозможности поздороваться с другой собакой
                         </div>
                     </div>
                 </div>
@@ -1005,9 +1010,9 @@
         <div class="container">
             <p class="signals-pretitle">ЯЗЫК ТЕЛА</p>
             <h2 class="signals-title">Сигналы примирения</h2>
-            <p class="signals-subtitle">Тонкие сигналы языка тела, с помощью которых собака сообщает о своих мирных намерениях или же, наоборот, о внутреннем напряжении. Очень важно давать возможность применить эти сигналы по отношению к людям и собакам, чтобы избежать нездоровой коммуникации, в следствие игнорирования попыток собаки к "вежливому общению".</p>
+            <p class="signals-subtitle">Тонкие сигналы языка тела, с помощью которых ваша собака сообщает о своих мирных намерениях или же, наоборот, о внутреннем напряжении. Очень важно давать ей возможность применять эти сигналы по отношению к людям и собакам, не игнорировать ее попытки к "вежливому общению", а, наоборот, помочь разрешать ситуации которые могут быть потенциально конфликтными на уровне вежливого взаимодействия.</p>
             <div class="goals-fact-box">
-                💡 Факт: У собак 61 сигнал примирения и всего 18 сигналов угрозы, используемых для внутри/ и межвидовой коммуникации.
+                💡 Попробуйте начать применять эти сигналы по отношению к своей собаке, расслабить с их помощью в таких ситуациях, как гигиенические процедры или посещение ветклиники, и увидите, насколько комфортнее станет вашей собаке, а вам приятнее от того, что вы ее понимаете.
             </div>
             <div class="signals-grid">
                 <!-- Карточка 1 -->
@@ -1016,14 +1021,16 @@
                     <div class="signal-card-title">Отводит взгляд ("китовый глаз")</div>
                     <div class="signal-card-title">Отворачивает голову</div>
                     <div class="signal-card-text">Часто сочетаются. Профилактика прямого контакта, конфликта. Если общение считывается как "безопасное", собака может принять решение о дальнейшем сближении.</div>
-                    <div class="signal-card-image-placeholder"></div>
+                    <div class="signal-card-image-placeholder">
+                        <img src="./communication_assets/big_eye.webp" alt="Картинка 1" class="enrichment-img">
+                    </div>
                 </div>
 
                 <!-- Карточка 2 -->
                 <div class="signal-card">
                     <div class="signal-card-icon">👅</div>
                     <div class="signal-card-title">Облизывание, "мерцание языком"</div>
-                    <div class="signal-card-text">Если дистанция кажется слишком близкой, человек напряжен, повышает голос, некомфортно обнимает или фиксирует собаку, а также в новых/непонятных ситуациях.</div>
+                    <div class="signal-card-text">Собака применяет этот сигнал, если дистанция кажется слишком близкой или человек напряжен, повышает голос, некомфортно обнимает или фиксирует собаку, а также в новых/непонятных ситуациях.</div>
                     <div class="signal-card-image-placeholder">
                         <img src="./communication_assets/tonque.jpg" alt="Картинка 1" class="enrichment-img">
                     </div>
@@ -1033,15 +1040,17 @@
                 <div class="signal-card">
                     <div class="signal-card-icon">🌱</div>
                     <div class="signal-card-title">Нюхает землю/пол / чешется</div>
-                    <div class="signal-card-text"> Собака притворяется, что нюхает землю, чтобы вежливо сблизится/расстаться после игры с другой собакой, или в момент когда что-то вызывает у собаки беспокойство и она хочет смягчить ситуацию (второй вариант - чешется).</div>
-                    <div class="signal-card-image-placeholder"></div>
+                    <div class="signal-card-text"> Собака притворяется, что нюхает землю, чтобы вежливо сблизится/расстаться после игры с другой собакой, или в момент, когда что-то вызывает у собаки беспокойство и она хочет смягчить ситуацию (второй вариант - чешется).</div>
+                    <div class="signal-card-image-placeholder">
+                        <img src="./communication_assets/low_snif.jpg" alt="Картинка 1" class="enrichment-img">
+                    </div>
                 </div>
 
                 <!-- Карточка 4 -->
                 <div class="signal-card">
-                    <div class="signal-card-icon">↩️</div>
+                    <div class="signal-card-icon">⏬</div>
                     <div class="signal-card-title">Игровой поклон</div>
-                    <div class="signal-card-text">Сигнал примирения, выражающий дружелюбие и добрые намеения. Призыв к игре.</div>
+                    <div class="signal-card-text">Сигнал примирения, выражающий дружелюбие и добрые намерения. Этологи описывают «play bow» как специальный игровой жест, который сообщает партнёру, что даже грубые элементы (прыжки, хватания зубами, погоня) - часть игры, а не настоящая агрессия.</div>
                     <div class="signal-card-image-placeholder">
                         <img src="./communication_assets/play_bow.jpg" alt="Картинка 1" class="enrichment-img">
                     </div>
@@ -1059,7 +1068,7 @@
 
                 <!-- Карточка 6 -->
                 <div class="signal-card">
-                    <div class="signal-card-icon">🌀</div>
+                    <div class="signal-card-icon">🔄</div>
                     <div class="signal-card-title">Движение по дуге</div>
                     <div class="signal-card-text">Вежливое сближение, в результате которого собаки принимают решение продолжать общение или нет.</div>
                     <div class="signal-card-image-placeholder">
@@ -1078,26 +1087,26 @@
 
             <div class="bark-grid">
                 <div class="bark-card">
-                    <span class="bark-badge bark-badge-green">Эмоциональный</span>
-                    <div class="bark-card-title">Возбуждённый лай</div>
+                    <span class="bark-badge bark-badge-green">Часто возникает от радости при виде другой собаки и желания с ней пообщаться, и с другой стороны от разочарования, что у нее нет возможности это сделать</span>
+                    <div class="bark-card-title">Возбуждённый лай/лай "фрустрации"</div>
                     <div class="bark-card-text">Почти непрерывный лай высокой частоты, напоминающий "истерику" у собаки.</div>
                 </div>
 
                 <div class="bark-card">
-                    <span class="bark-badge bark-badge-yellow">Осторожный</span>
-                    <div class="bark-card-title">Предупредительный</div>
-                    <div class="bark-card-text">Сообщает вам о незнакомце. Добавьте ритуалл "спасибо, что предупредила" и его продолжительность станет меньше.</div>
+                    <span class="bark-badge bark-badge-yellow">Добавьте ритуал "спасибо", стоп-сигнал рукой, возможно первое время р и его продолжительность станет меньше</span>
+                    <div class="bark-card-title">Предупредительный лай</div>
+                    <div class="bark-card-text">Сообщает вам о незнакомце (собаке важно дать понять, что вы ее услышали).</div>
                 </div>
 
                 <div class="bark-card">
-                    <span class="bark-badge bark-badge-red">Важно</span>
-                    <div class="bark-card-title">Защитный</div>
-                    <div class="bark-card-text">Короткий и низкий лай, включающий некоторые рычащие звуки.</div>
+                    <span class="bark-badge bark-badge-red">Помогите вашей собаке, применив сигнал разделения (встаньте между ней и пугающим объектом)</span>
+                    <div class="bark-card-title">Защитный лай</div>
+                    <div class="bark-card-text">Короткий и низкий лай, включающий некоторые рычащие звуки (например, собака может лаять на людей, проезжающих на самокате или велосипеде).</div>
                 </div>
                 <div class="bark-card">
-                    <span class="bark-badge bark-badge-red">Важно</span>
-                    <div class="bark-card-title">Одинокий</div>
-                    <div class="bark-card-text">Очень часто при это виде лая вашей собаке нужна помощь справится с тревогой расставания.</div>
+                    <span class="bark-badge bark-badge-red">Игнорирование лая - стоп-метод!</span>
+                    <div class="bark-card-title">Одинокий лай</div>
+                    <div class="bark-card-text">Очень часто при этом виде лая вашей собаке нужна помощь справиться с тревогой расставания. Обратитесь к специалисту, чтобы сделать это бережно.</div>
                 </div>
             </div>
         </div>
@@ -1112,7 +1121,7 @@
                         <div class="distance-icon-circle">🚫</div>
                         <div class="distance-card-title">Сигналы дистанции</div>
                     </div>
-                    <p class="distance-card-desc">Если сигналы примирения проигнорированы, собака переходит к просьбе отойти.</p>
+                    <p class="distance-card-desc">Сигналы дистанции собака применяет уже тогда, когда сигналы примирения были проигнорированы или не считаны вовремя. <strong>Сигналы дистанции (или угрозы) мы не интерпретируем как агрессивное поведение.</strong> Если собака не кусает, она не хочет этого делать, ее цель - продемонстрировать угрожающее поведение, чтобы попросить отойти, оставить кого-то на дистанции или попросить прекратить что-то делать.</p>
 
                     <div class="distance-step">
                         <div class="distance-step-num">1</div>
@@ -1126,14 +1135,14 @@
                         <div class="distance-step-num">2</div>
                         <div class="distance-step-text">
                             <strong>Рычание</strong>
-                            <span>Предупреждение: «Мне некомфортно, отойди»</span>
+                            <span>Предупреждение: «мне некомфортно, отойди»</span>
                         </div>
                     </div>
 
                     <div class="distance-step">
                         <div class="distance-step-num">3</div>
                         <div class="distance-step-text">
-                            <strong>Выпады</strong>
+                            <strong>Выпады с лаем ; оскал</strong>
                             <span>"Последнее предупреждение"</span>
                         </div>
                     </div>
@@ -1141,21 +1150,13 @@
                     <div class="distance-step">
                         <div class="distance-step-num">4</div>
                         <div class="distance-step-text">
-                            <strong>Выпады</strong>
-                            <span>Последнее предупреждение</span>
-                        </div>
-                    </div>
-
-                    <div class="distance-step">
-                        <div class="distance-step-num">5</div>
-                        <div class="distance-step-text">
-                            <strong>Выпады</strong>
-                            <span>Последнее предупреждение</span>
+                            <strong>Щелчки зубами возле морды другой собаки</strong>
+                            <span>Этот сигнал иногда может проявляться как «выброс эмоций» от очень сильного возбуждения.</span>
                         </div>
                     </div>
 
                     <div class="distance-warning-box">
-                        ⚠️ Никогда не наказывайте за рычание и не игнорируйте стоящие за ним причины! Это приведёт к тому, что ваша собака перестанет подавать вам многочисленные сигналы примирения и дистанции, защищая свои границы.
+                        ⚠️ Никогда не наказывайте за рычание и не игнорируйте стоящие за ним причины! Это приведёт к тому, что ваша собака перестанет подавать вам многочисленные сигналы примирения и дистанции, защищая свои границы и будет вынуждена укусить.
                     </div>
                 </div>
 
@@ -1176,15 +1177,15 @@
                         <div class="emotion-item-icon">💡</div>
                         <div>
                             <div class="emotion-item-title">Факт</div>
-                            <div class="emotion-item-text">У собак 61 сигнал примирения и всего 18 сигналов угрозы, используемых для внутри/ и межвидовой коммуникации.</div>
+                            <div class="emotion-item-text">У собак 61 сигнал примирения и всего 18 сигналов угрозы, используемых для внутри/ и межвидовой коммуникации - они настроены на мир!</div>
                         </div>
                     </div>
 
                     <div class="emotion-item">
                         <div class="emotion-item-icon">💡</div>
                         <div>
-                            <div class="emotion-item-title">Особенности восприятия</div>
-                            <div class="emotion-item-text">.......................</div>
+                            <div class="emotion-item-title">Щенячьи глазки</div>
+                            <div class="emotion-item-text">Согласно исследованиям, в процессе одомашнивания у собак развилась особая мышца вокруг глаза, позволяющая поднимать внутренний угол брови; это делает взгляд более «детским» и вызывает у людей сильнее желание заботиться о собаке.</div>
                         </div>
                     </div>
                     <div class="emotion-item">
@@ -1198,9 +1199,9 @@
 
                 <div class="interesting-block">
                     <ul class="interesting-list">
-                        <li>Виноватый взгляд — это сигнал примирения и реакция на ваш тон, а не "осознание вины".</li>
-                        <li>Облизывание рта при встрече — это ритуал обмена информацией.</li>
-                        <li>Длительное облизывание может считаться невежливым среди собак.</li>
+                        <li>"Виноватый взгляд" - это сигнал примирения собаки и реакция на ваш тон, а не "осознание вины".</li>
+                        <li>Если вы хотите показать собаке свои добрые намерения и снизить возможное напряжение, смягчите взгляд, чаще моргайте и отведите взгляд в сторону избегая прямого пристального контакта "глаза в глаза".</li>
+                        <li>"Королевство запахов". Запаховая коммуникация - это важнейшая часть репертуара общения собак, изучение информации о сородичах путем обнюхивания их меток и следов пребывания и оставления своих. А обнюхивая зону вокруг рта собаки даже понимают что кто ел.</li>
                     </ul>
                 </div>
             </div>
@@ -1254,6 +1255,54 @@
     </footer>
 
 </div>
+<script>
+(function () {
+  var contactsButton = document.querySelector('.header-contacts-btn');
+  if (!contactsButton) return;
+
+  var receiverEmail = 'your@email.com';
+  var widgetStyle = document.createElement('style');
+  widgetStyle.textContent = '.contacts-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;z-index:2000}.contacts-modal.is-open{display:flex}.contacts-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.42)}.contacts-modal__dialog{position:relative;z-index:1;width:100%;max-width:460px;background:#fff;border-radius:18px;padding:24px;box-shadow:0 18px 46px rgba(0,0,0,.16)}.contacts-modal__title{margin:0 28px 14px 0;font-size:20px}.contacts-modal__close{position:absolute;top:10px;right:10px;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer}.contacts-form{display:flex;flex-direction:column;gap:10px}.contacts-form input,.contacts-form textarea{width:100%;border:1px solid #d7d7d7;border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px}.contacts-form textarea{min-height:90px;resize:vertical}.contacts-form button{margin-top:4px;border:0;border-radius:999px;padding:12px 18px;font-family:inherit;font-weight:700;cursor:pointer;background:#5D6855;color:#fff}';
+  document.head.appendChild(widgetStyle);
+
+  var modal = document.createElement('div');
+  modal.className = 'contacts-modal';
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML = '<div class="contacts-modal__backdrop" data-close="1"></div><div class="contacts-modal__dialog"><button type="button" class="contacts-modal__close" data-close="1" aria-label="Закрыть">×</button><h3 class="contacts-modal__title">Контакты</h3><form class="contacts-form"><input name="name" placeholder="Имя" required><input name="contacts" placeholder="Контакты" required><textarea name="comment" placeholder="Комментарий"></textarea><button type="submit">Отправить</button></form></div>';
+  document.body.appendChild(modal);
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  contactsButton.addEventListener('click', openModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target.closest('[data-close="1"]')) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  modal.querySelector('.contacts-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var formData = new FormData(e.target);
+    var name = formData.get('name') || '';
+    var contacts = formData.get('contacts') || '';
+    var comment = formData.get('comment') || '';
+    var subject = encodeURIComponent('Новая заявка с сайта');
+    var body = encodeURIComponent('Имя: ' + name + '\nКонтакты: ' + contacts + '\nКомментарий: ' + comment);
+    window.location.href = 'mailto:' + receiverEmail + '?subject=' + subject + '&body=' + body;
+    closeModal();
+  });
+})();
+</script>
 <script data-pplx-inline-edit="">
 (function(){
   if(window===window.top)return;
