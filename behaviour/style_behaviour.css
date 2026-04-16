@@ -548,6 +548,13 @@ section[id] {
     text-align: center;
 }
 
+.enrichment-photo-item img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(calc(-50% + 30px));
+}
+
+
 .enrichment-img {
     width: 100%;
     height: 240px;
