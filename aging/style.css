@@ -104,6 +104,10 @@ a { color: inherit; text-decoration: none; }
     font-size: 22px;
 }
 
+.logo-circle img {
+    height: 70%;
+}
+
 .brand-name {
     font-size: 18px;
     font-weight: 600;
