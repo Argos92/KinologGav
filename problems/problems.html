@@ -125,6 +125,14 @@
         }
 
         /* ========== HERO ========== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 0 80px;
+        }
+
         .hero-section {
             position: relative;
             width: 100%;
@@ -260,7 +268,7 @@
         /* ========== ПРИНЦИПЫ ========== */
         .principles-section {
             background: var(--bg-main);
-            padding: 72px 0;
+            padding: 15px 0;
         }
 
         .principles-pretitle {
@@ -401,7 +409,7 @@
         /* ========== АГРЕССИЯ ========== */
         .aggression-section {
             background: var(--bg-main);
-            padding: 72px 0;
+            padding: 20px 0;
         }
 
         .aggression-pretitle {
@@ -860,6 +868,10 @@
             background: radial-gradient(ellipse at 70% 50%, #c5d8b0 0%, #8aaa70 60%, #5a7248 100%);
         }
 
+        .instruments-photo-inner img {
+            width: 100%;
+        }
+
         .instruments-game-card {
             background: var(--bg-white);
             border-radius: 20px;
@@ -1113,99 +1125,17 @@
 
     <!-- HERO -->
     <section class="hero-section">
-        <div class="hero-dog-bg"></div>
-        <div class="hero-bg-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">Неадаптивное поведение</div>
-                <h1 class="hero-title">Поведение Собаки.<br>Научный<br>подход к поведению.</h1>
-                <p class="hero-text">Поможем разобраться в поведении вашей собаки через науку, этику и уважение к животному.</p>
-                <div class="hero-buttons">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ПРИНЦИПЫ -->
-    <section class="principles-section" id="method">
-        <div class="container">
-            <div class="section-pretitle principles-pretitle">Принципы</div>
-            <div class="section-title">Как мы работаем с поведением</div>
-
-            <div class="principles-grid">
-                <div class="principles-list">
-                    <div class="principle-item">
-                        <div class="principle-num">1</div>
-                        <div class="principle-body">
-                            <div class="principle-title">Анализ образа жизни</div>
-                            <div class="principle-text">Работа всегда начинается с оценки ментального и физического благополучия. Мы смотрим на сон, питание и среду.</div>
-                        </div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-num">2</div>
-                        <div class="principle-body">
-                            <div class="principle-title">Поиск потребностей</div>
-                            <div class="principle-text">У поведения всегда есть цель. Мы выясняем, какие потребности собака пытается удовлетворить своими действиями.</div>
-                        </div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-num">3</div>
-                        <div class="principle-body">
-                            <div class="principle-title">Программа антистресс</div>
-                            <div class="principle-text">Ключевой этап. Часто нормализация уровня стресса достаточна, чтобы собака перестала подавать поводы для жалоб.</div>
-                        </div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-num">4</div>
-                        <div class="principle-body">
-                            <div class="principle-title">Целевые методики</div>
-                            <div class="principle-text">Применяем десенситизацию и контробусловливание, если у собаки есть глубокий негативный опыт.</div>
+                <div class="hero-dog-bg"></div>
+                <div class="hero-bg-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-badge">Нежелательное поведение</div>
+                        <h1 class="hero-title">Что стоит за "проблемным" поведением собаки.</h1>
+                        <p class="hero-text">С чего начать работу и что точно нельзя делать.</p>
+                        <div class="hero-buttons">
                         </div>
                     </div>
                 </div>
-
-                <div class="principles-right-card">
-                    <div class="principles-right-card-header">
-                        <div class="principles-right-icon">📋</div>
-                        <div class="principles-right-title">Этапы любого кейса</div>
-                    </div>
-                    <ul class="principles-right-list">
-                        <li>
-                            <div class="check-dot">
-                                <svg viewBox="0 0 10 10" fill="none">
-                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            Сбор данных (анамнез и видео)
-                        </li>
-                        <li>
-                            <div class="check-dot">
-                                <svg viewBox="0 0 10 10" fill="none">
-                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            Поиск скрытых причин и триггеров
-                        </li>
-                        <li>
-                            <div class="check-dot">
-                                <svg viewBox="0 0 10 10" fill="none">
-                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            Индивидуальный план рекомендаций
-                        </li>
-                        <li>
-                            <div class="check-dot">
-                                <svg viewBox="0 0 10 10" fill="none">
-                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            Мониторинг динамики симптомов
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- АГРЕССИЯ -->
@@ -1218,7 +1148,8 @@
                 <div class="aggression-left-card">
                     <div class="aggression-left-title">Агрессия vs Агрессивность</div>
                     <div class="aggression-left-text">
-                        Агрессия — это поведенческий акт. Агрессивность — склонность к его проявлению при провоцирующих факторах и соответствующем внутреннем состоянии (например хронический стресс). Основные причины агрессивности две: нарушенная потребность в безопасности (психологической или физической) или гипертрофированная потребность в ресурсе (еде, внимании).
+                        <li>Если ваша собака стала проявлять недружелюбное поведение, важно понимать, что такое агрессия, а что такое агрессивность\проявление недружелюбного поведения.</li>
+                        <li><strong>Агрессия</strong> - это поведенческий акт. <strong>Агрессивность</strong> - склонность к его проявлению при провоцирующих факторах и соответствующем внутреннем состоянии (например хронический стресс). Основные причины агрессивности две: <strong>нарушенная потребность в безопасности</strong> (психологической или физической) или <strong>гипертрофированная потребность в ресурсе</strong> (еде, внимании).</li>
                     </div>
                 </div>
 
@@ -1226,8 +1157,8 @@
                     <div class="aggression-right-icon">⚠️</div>
                     <div class="aggression-right-title">Важно понимать</div>
                     <ul class="aggression-right-list">
-                        <li>Хорошее условия воспитания, родительская забота блокируют гены агрессивности</li>
-                        <li>Сильный хронический стресс - часто причина появления агрессии</li>
+                        <li>Хорошие условия жизни собаки и родительская забота в детстве блокируют влияние отдельных генов на предрасположенность к агрессивности</li>
+                        <li>Хронический стресс является одной из наиболее частых причин появления агрессии</li>
                         <li>Собака может не повторять недружелюбное (агрессивное) поведение если не будет провоцирующих факторов</li>
                     </ul>
                 </div>
@@ -1236,66 +1167,187 @@
             <div class="triggers-block">
                 <div class="triggers-label">Причины повышенной агрессивности у собак</div>
                 <div class="triggers-tags">
-                    <div class="trigger-tag"><span class="trigger-tag-icon">🐕</span>Негативный опыт или его отсутствие</div>
-                    <div class="trigger-tag"><span class="trigger-tag-icon">🦴</span>Стресс</div>
-                    <div class="trigger-tag"><span class="trigger-tag-icon">🚪</span>Боль</div>
-                    <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Гены/div>
-                    <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Снижение слуха, зрения</div>
-                    
+                    <div class="trigger-tag"><span class="trigger-tag-icon">🐕</span>Негативный опыт или отсутствие опыта (например, в общении с сородичами, людьми)</div>
+                    <div class="trigger-tag"><span class="trigger-tag-icon">🦴</span>Стресс (порог чувствительности к стрессору у каждой собаки индивидуален)</div>
+                    <div class="trigger-tag"><span class="trigger-tag-icon">🚪</span>Проблемы со здоровьем, боль, снижение слуха и зрения</div>
+                    <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Депривация потребностей (еда, социальный контакт и др.), ограничение физической свободы</div>
+
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+
+
+
     </section>
 
+    <!-- ПРИНЦИПЫ -->
+    <section class="principles-section" id="method">
+        <div class="container">
+            <div class="section-pretitle principles-pretitle">Принципы</div>
+            <div class="section-title">Работа с недружелюбным поведением</div>
+            <div class="principle-body">
+                <div class="triggers-block">
+                    <div class="triggers-label">Адекватное поведение, с которым работать не нужно</div>
+                    <div class="triggers-tags">
+                        <div class="trigger-tag"><span class="trigger-tag-icon">🐕</span>Предупредительный лай</div>
+                        <div class="trigger-tag"><span class="trigger-tag-icon">🦴</span>Защита ресурса, когда собака ест</div>
+                        <div class="trigger-tag"><span class="trigger-tag-icon">🚪</span>Собака рычит на руках у владельца при приближении других собак</div>
+                        <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Материнская агрессия</div>
+                        <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Собака отгоняет кавалера, который настойчиво лезет под хвост</div>
+                    </div>
+                </div>
+            </div>
+            <div class="principles-grid">
+                <div class="principles-list">
+                    <div class="principle-item">
+                        <div class="principle-num">1</div>
 
-    <div class="triggers-block">
-        <div class="triggers-label">Адекватное поведение, с которым мы не работаем</div>
-        <div class="triggers-tags">
-            <div class="trigger-tag"><span class="trigger-tag-icon">🐕</span>Предупредительный лай</div>
-            <div class="trigger-tag"><span class="trigger-tag-icon">🦴</span> Защита ресурса, когда собака ест</div>
-            <div class="trigger-tag"><span class="trigger-tag-icon">🚪</span>Собака рычит на руках у владельца при приближении других собак</div>
-            <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Материнская агрессия</div>
-            <div class="trigger-tag"><span class="trigger-tag-icon">🏃</span>Собака отгоняет кавалера, который настойчиво лезет под хвост</div>
-            <span class="tr
+                        <div class="principle-body">
+                            <div class="principle-title">Оценка адекватности проявлений</div>
+                            <li class="principle-text">Сигналы угрозы (рычание, угрожающая мимика и позы), выпады с лаем, клацание зубами, "укусы" воздуха</li>
+                            <li class="principle-text">Проявлением истинной агрессии являются только толчки головой, боком; укусы разной силы.</li>
+
+                            <li class="principle-text">
+                                Ничего не происходит внезапно - всё развивается постепенно, нарастая. Сначала появляются сигналы примирения (попытки снизить напряжение, показать миролюбивые намерения).
+
+                                Затем часто следует избегание (уклонение от прямого контакта или конфликта).
+
+                                Потом идут сигналы угрозы (предупреждение, недружелюбное поведение).
+
+                                И только после всего этого происходит проявление истинной агрессии.
+                            </li>
+
+                            <li class="principle-text">Вывод: не нужно доводить собаку до проявления истинной агрессии, слущайте ее сигналы, уважайте личные границы. Рычание - не нужно блокировать и запрещать, это показатель напряжения собаки.</liclass="principle-text">
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-num">2</div>
+                        <div class="principle-body">
+                            <div class="principle-title">Поиск причин</div>
+                            <div class="principle-text">
+                                В основном это нарушенная потребность в безопасности (психологической или физической) или гипертрофированная потребность в ресурсе (еде, внимании).
+                                <strong>Правильно</strong> понять причину недружелюбного поведения собаки очень важно.
+                                Например, если собака бросается на собак на улице с лаем, нужно обратить внимание на несколько факторов:
+                                Какой тип лая у собаки (информацию о лае можно посмотреть <a href="../behaviour/behaviour.html">здесь</a>), на каком расстоянии собака начинает бросается? Есть ли возможность у собаки проявить сигналы примирения, пообщаться с собакой при желании? И в итоге может оказаться, что это не агрессия, а
+                                возбужденный лай от невозможности общаться.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-num">3</div>
+                        <div class="principle-body">
+                            <div class="principle-title">Исключение триггеров</div>
+                            <div class="principle-text">Исключить факторы, провоцирующие собаку на проявление агрессивности. Если это сородичи на улице, значит составить менеджмент прогулки так, чтобы по максимуму избегать встреч с собаками до момента, когда наша собака сможет встечаться с ними на опредленном расстоянии.</div>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-num">4</div>
+                        <div class="principle-body">
+                            <div class="principle-title"></div>
+                            <div class="principle-text">Работать с агрессией можно и нужно, но важно помнить, что это поэтапный процесс, и очень важно отнестись максимально внимательно к каждому этапу работы. Если мы правильно найдем причину и исключим триггеры, можно приступить к следующему этапу: изменению отношений к провоцирующим факторам через целевые методики со специалистом. Дополнительно: упражнения на развитие уверенности и самоконтроля, работа со снижением уровня стресса</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principles-right-card">
+                    <div class="principles-right-card-header">
+                        <div class="principles-right-icon">📋</div>
+                        <div class="principles-right-title">
+                            Основные ошибки, которые мешают нам решать проблемы
+                            поведения</div>
+                    </div>
+                    <ul class="principles-right-list">
+                        <li>
+                            <div class="check-dot">
+                                <svg viewBox="0 0 10 10" fill="none">
+                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            Очень часто причины проблем поведения списывают на недостатки воспитания, игнорируя физическое и ментальное состояние
+                            собаки.
+                        </li>
+                        <li>
+                            <div class="check-dot">
+                                <svg viewBox="0 0 10 10" fill="none">
+                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            Согласно современным исследованиям, основная причина проблем поведения (80%) - это физическое недомогание собаки, боль
+                            и стресс. Собака попадает в состояние стресса, потому что ее
+                            хозяева не знают или не задумываются о том, как воздействуют
+                            на собаку условия ее содержания в семье и способы тренировки.
+                            Поэтому прежде чем решать проблемы поведения, важно подумать, все ли мы сделали для того, чтобы собака чувствовала себя
+                            хорошо: не находится ли она в состоянии стресса, соответствует ли
+                            питание потребностям ее организма, не испытывает ли она боль.
+                        </li>
+                        <li>
+                            <div class="check-dot">
+                                <svg viewBox="0 0 10 10" fill="none">
+                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            Некоторые опекуны приписывают непослушание собаки и проблемы поведения ее «доминантности», несмотря на то, что теория доминирования опровергнута ее создателем уже много лет назад. Стараясь подавить
+                            «доминантность» наказаниями и «ломкой» собаки, они блокируют
+                            себе путь поиска истинных причин нарушения поведения и рискуют
+                            привести собаку в хроническое состояние агрессии и самозащиты.
+    
+                        </li>
+                        <li>
+                            <div class="check-dot">
+                                <svg viewBox="0 0 10 10" fill="none">
+                                    <polyline points="2,5 4,7 8,3" stroke="#8A7252" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                          
+                            Определенные виды поведения собаки считаются опекунами проблемными, хотя они характерны собаке как виду, например, подбирание пищи с земли (видотипичное поведение).
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-    </div>
     </section>
 
     <!-- МЕТОДИКИ -->
     <section class="methods-section">
         <div class="container">
-            <div class="section-pretitle methods-pretitle">Методики</div>
-            <div class="section-title">Целевая работа</div>
+            <div class="section-pretitle methods-pretitle">Хроничесий стресс как одна из причин недружелюбного поведения</div>
+            <div class="section-title">Частые причины хронического стресса у собак (одной из основных причин недружелюбного поведения)</div>
 
             <div class="methods-grid">
                 <div class="method-card">
                     <div class="method-icon">👨‍👩‍👧</div>
-                    <div class="method-title">Агрессия к семье</div>
-                    <div class="method-text">Агрессия территориальная. Инициируется только отсутствием доверия и подавленными качествами в основном при подходе к миске или праздничной подготовке.</div>
+                    <div class="method-title">Последствия грубого отношения со стороны опекуна</div>
+                    <div class="method-text">Наши собаки теряются, когда опекуны оказываются невнимательными
+                        к их физическим и ментальным нуждам, игнорируют желание общаться, неадекватно реагируют на их коммуникативные сигналы, ведут себя
+                        непредсказуемо и агрессивно. Они полностью зависят от хозяина. Они не
+                        могут сами уйти из семьи или решить все свои проблемы. Поэтому они
+                        попадают в состояние стресса, нередко сильного. Собака перестает ждать
+                        от хозяина помощи, внутренне обособляется и старается решить свои проблемы сама.
+                    </div>
 
                 </div>
 
                 <div class="method-card">
                     <div class="method-icon">🧑‍🤝‍🧑</div>
-                    <div class="method-title">Агрессия к гостям</div>
-                    <div class="method-text">Разработка ритуала: звонок, лакомство, барьеры. Или приветствие гостя и усиление у нового Подходов для собаки, который ценит каждую секцию.</div>
+                    <div class="method-title">Слишком частый или слишком редкий физический контакт с хозяином также может явиться источником стресса</div>
+                    <div class="method-text">Щенков и собак мелких пород часто чрезмерно берут на руки, похлопывают и целуют. Если во время такого эмоционального общения пронаблюдать за выражением мордочки и языком тела собак, то становится ясным, что подобное обращение становится источником стресса для них. С другими собаками, напротив, опекуны практически никогда не вступают в физический контакт: не гладят их и не обращают на них внимания. Социальная изоляция также приводит к сильному стрессу.</div>
 
                 </div>
 
                 <div class="method-card">
                     <div class="method-icon">🏋️</div>
-                    <div class="method-title">Протоколы BAT/LAT</div>
-                    <div class="method-text">Обучение собаки делать другой выбор в присутствии триггера. Работаем на комфортной дистанции ниже порога и используем функциональное подкрепление.</div>
+                    <div class="method-title">Слишком много правил поведения в повседневной жизни или полное отсутствие каких-либо правил</div>
+                    <div class="method-text">
+                        И то, и другое является источником стресса. Собака, которой постоянно указывают, что она должна делать и которую непрерывно одергивают, в скором времени начинает нервничать. Вместе с тем, собака, которой вообще не установили никаких правил повседневной жизни, чувствует себя неуверенно из-за отсутствия привычного, определенного уклада жизни.
+                    </div>
 
                 </div>
 
                 <div class="method-card">
                     <div class="method-icon">🔄</div>
-                    <div class="method-title">Контробусловливание</div>
-                    <div class="method-text">Изменение эмоционального ответа. Создаём новые, приятные ассоциации с пугающим стимулом ниже порога реагирования.</div>
+                    <div class="method-title">Боль, снижение слуха и зрения, проблемы со здоровьем</div>
+                    <div class="method-text">Как снижение слуха и зрения, хроническая боль могут провоцировать развитие хронического стресса у собаки, так и стресс усиливает боль.</div>
 
                 </div>
             </div>
@@ -1307,28 +1359,31 @@
         <div class="container">
             <div class="cta-banner">
                 <div class="cta-left">
-                    <div class="cta-pretitle">Прогулки с реактивной собакой</div>
-                    <div class="cta-title">Прогулки с реактивной собакой</div>
-                    <div class="cta-subtitle">Цель: сделать прогулки предсказуемыми и безопасными, минимизируя стрессовые воспоминания у собаки</div>
+                    <div class="cta-pretitle">Хронический стресс</div>
+                    <div class="cta-title">Как мы можем помочь собаке снизить хронический стресс</div>
+                    <div class="cta-subtitle">
+                        При хроническом стрессе у собаки могут ухудшаться физиологические показатели, память и концентрация, а при неконтролируемом стрессе развиваться депрессивно-подобное состояние.
+                    </div>
                     <ul class="cta-list">
-                        <li><span class="cta-list-dot"></span>Безопасный маршрут — Избегайте пиковых часов и мест скопления</li>
-                        <li><span class="cta-list-dot"></span>Позиция защиты — Встаньте между собакой и триггером</li>
-                        <li><span class="cta-list-dot"></span>Длина поводка — Зафиксируйте комфортную длину для собаки</li>
+                        <li><span class="cta-list-dot"></span>Проанализировать факторы стресса и устранить их причины</li>
+                        <li><span class="cta-list-dot"></span>Снизить требования к собаке, не обучать командам и навыкам до момента, пока собака не выйдет из состояния стресса (это связано в тчт с тем, что память в состоянии стресса ухудшауется).</li>
+                        <li><span class="cta-list-dot"></span>Обеспечить собаке полноценный сон (примерно 12-14 часов для взрослой собаки)</li>
+                        <li><span class="cta-list-dot"></span>Создать для собаки максимально безопасную среду, ритуалы и предсказуемость.</li>
                     </ul>
+                    <a href="https://docs.google.com/document/d/1QB0P1ry6HlBSBFi13WaUZlm7854lU82Q6oVyyjuYYPA/edit?usp=sharing">Анкета на наличие симптомов стресса</a>
                 </div>
-
                 <div class="cta-right">
                     <div class="cta-rule-card">
-                        <div class="cta-rule-title">Правила в подъезде</div>
-                        <ul class="cta-rule-list">
-                            <li>Слышите людей? Встаньте в проулок первым</li>
-                            <li>Перед выходом — выгляните первым</li>
-                            <li>В лифте закрывайте дверь пока собака от других</li>
-                            <li>Используйте 2-й вход для лучшего обзора</li>
-                        </ul>
+                        <div class="instruments-photo">
+                            <div class="instruments-photo-inner">
+                                <img src="relax.jpg" alt="собака-расслабляка">
+                            </div>
+                        </div>
+                        <div class="cta-subtitle"> На выборке из пятидесяти приютских собак показано, что даже 15 минут спокойного и ласкового общения в день могут иметь положительное значение на уровень стресса приютских собак (исследование на базе Университета Райта (Wright State University) в США, 2017г.).</div>
+
                     </div>
                 </div>
-            </div>
+
         </div>
     </section>
 
@@ -1336,25 +1391,39 @@
     <section class="stress-section">
         <div class="container">
             <div class="section-pretitle stress-pretitle">Стресс</div>
-            <div class="section-title">Понимание состояния</div>
+            <div class="section-title">Дополнительные методы помочь собаке справиться со стрессом</div>
 
             <div class="stress-grid">
                 <div class="stress-card">
-                    <div class="stress-icon">⚡</div>
-                    <div class="stress-title">Симптомы стресса</div>
-                    <div class="stress-text">Хронический стресс ведёт к снижению иммунитета, депрессии и высокой болезненности.</div>
+                    <div class="stress-icon">🦴</div>
+                    <div class="stress-title">Жевание, поиск лакомств</div>
+                    <div class="stress-text">
+                        <strong>Когда собака жуёт, происходит стимуляция блуждающего нерва, который, в свою очередь, активирует парасимпатическую нервную систему и переключает функционирование организма в более "расслабленный" режим.</strong>
+                        Правила безопасности: собака должна быть сытой и лакомство, которое находится внутри игрушек, должно быть средней ценности и не перевозбуждать собаку.
+                        Пример: долгоиграющие лакомства, конг с начинкой, палочка кофейного дерева.
+                        Также можно использовать лакомства в поисковых играх, нюхательном коврике, замораживать паштеты и йогурт в лизательном коврике и т.д.
+                        
+                    </div>
                 </div>
 
                 <div class="stress-card">
-                    <div class="stress-icon">⚡</div>
-                    <div class="stress-title">Острый стресс</div>
-                    <div class="stress-text">Подавляет пищевое поведение. Работает в 9 этих состояниях: самые сильные обычные.</div>
+                    <div class="stress-icon">🎵</div>
+                    <div class="stress-title">Музыкотерапия</div>
+                    <div class="stress-text">
+                        Успокаивающая музыка – это мелодии (спокойные, односложные, например, фортепиано), которые мы предлагаем к прослушиванию собаке на протяжении какого-то времени, минимум 15-20 мин, в идеале 30-40 мин. Это то, что помогает собаке успокаиваться и может работать как в ситуации, когда действие стресс-факторов еще продолжает воздействовать на собаку, например, поездки на машине.
+                        Клинические испытания в области музыкотерапии показали, что в 70% случаев в приютах и в 85% дома благодаря музыкотерапии, основанной на принципах биоакустики, у собак снизилась тревожность (Wells, D.L., et al., 2002).
+
+                    </div>
                 </div>
 
                 <div class="stress-card">
                     <div class="stress-icon">🔁</div>
-                    <div class="stress-title">Хронический</div>
-                    <div class="stress-text">Постоянная активация систем стресса. Приводит к болезням ССС.</div>
+                    <div class="stress-title">Добровольная физическая активность</div>
+                    <div class="stress-text">
+                        В результате эксперимента проекта DogFieldStudy у собак измеряли пульс во время прогулок на поводке разной длины (1,5 м и 5 м) и без поводка. В исследовании участвовала 61 собака.
+                        <strong>При прогулке на более длинном поводке собаки дольше и чаще нюхают, что способствует более спокойному и физиологически менее напряженному состоянию.</strong> Отдельно отметим пользу прогулок для собак по пересеченной местности.
+
+</div>
                 </div>
             </div>
         </div>
@@ -1364,46 +1433,73 @@
     <section class="instruments-section">
         <div class="container">
             <div class="section-pretitle instruments-pretitle">Инструменты</div>
-            <div class="section-title">Ритуалы и самоконтроль</div>
+            <div class="section-title" Самоконтроль</div>
 
             <div class="instruments-grid">
                 <div class="instruments-left">
-                    <div class="instruments-left-title">Зачем нужны ритуалы?</div>
+                    <div class="instruments-left-title">Зачем нужно работать над самоконтролем собаки?</div>
                     <p style="font-size:14px;color:var(--text-gray);line-height:1.55;margin-bottom:20px;">
-                        Дни даёт предсказуемость и обращает к профилактике агрессии. Ритуал выхода, встречи гостей или ухода из дома создаёт нужный эмоциональный фон.
+                        Способность управлять своим поведением в
+                        условиях противоречивого влияния внешней
+                        среды или собственных биологических
+                        механизмов, в частности, при подверженности
+                        собственным импульсивным порывам.
                     </p>
-
-                    <div class="instrument-item">
-                        <div class="instrument-icon">🎵</div>
-                        <div class="instrument-body">
-                            <div class="instrument-title">Ритуал ухода: музыка + поиск лакомств за 15 мин до ухода</div>
-                            <div class="instrument-text">Снижает тревожность ожидания, переключает на позитив</div>
-                        </div>
-                    </div>
 
                     <div class="instrument-item">
                         <div class="instrument-icon">🏁</div>
                         <div class="instrument-body">
-                            <div class="instrument-title">Ритуал тренировок: специальный реквием и фраза-старт</div>
-                            <div class="instrument-text">Создаёт устойчивое состояние готовности к обучению</div>
+                            <div class="instrument-title">Что препятствует развитию самоконтроля:</div>
+                            <div class="instrument-text">
+                                чрезмерные возбуждающие игры
+                                (бросание мяча, палки, догонялки и т.д.)
+                                отсутствие рамок и границ (ритуалов,
+                                правил)
+                                гиперопека
+                                депривация
+                                хронический стресс
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="instrument-item">
+                        <div class="instrument-icon">✔️</div>
+                        <div class="instrument-body">
+                            <div class="instrument-title">Что помогает развитию самоконтроля:</div>
+                            <div class="instrument-text">
+                                общение со взрослыми собаками
+                                разумные рамки и границы
+                                баланс нагрузок
+                                безопасная и питательная среда
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="instruments-right">
                     <div>
-                        <div class="instruments-right-title">Развитие уверенности</div>
-                        <div class="instruments-right-text">Обогащение среды и предсказуемость снижают настороженность. Важно не подсказывать собаке решения задач!</div>
+                        <div class="instruments-right-title">Правила</div>
+                        <div class="instruments-right-text">Важно не подсказывать собаке решения задач, не продолжать игру если собака не справляется с нагрузкой, перевозбуждается, нервничает из-за того, что у нее что-то не получается</div>
                     </div>
                     <div class="instruments-photo">
-                        <div class="instruments-photo-inner"></div>
+                        <div class="instruments-photo-inner">
+                            <img src="super-hero.jpg" alt="собака-расслабляка">
+                        </div>
                     </div>
                     <div class="instruments-game-card">
-                        <div class="instruments-game-title">Поисковые игры</div>
-                        <div class="instruments-game-text">Коробки, полотенца, коврики. Собака должна решать задачу сама, без подсказок.</div>
-                        <a href="#" class="instruments-game-link">Подробнее</a>
-                    </div>
-                </div>
+                        <div class="instruments-game-title">Упражнение "стоп-игра"</div>
+                        <div class="instruments-game-text">
+                            Чередуем возбуждение-успокоение, помогая собаке научиться осознанным усилием тормозить возбуждение (несколько секунд интенсивной иры, например перетяжка).
+                        </div>
+                            <div class="instruments-game-title">Навык "Оставь"</div>
+                            <div class="instruments-game-text">
+                                Учим собаку останавливать свои порывы.</div>
+                            <div class="instruments-game-title">
+                                Поисковые игры, обогащенная среда
+                                <div class="triggers-tags">
+                                    <div class="trigger-tag" style="margin-top:20px;"><span class="trigger-tag-icon">🐕</span><a style="text-decoration: none; color: black;" href="../blago/blago.html">Описание поисковых игр</a></div>
+                                </div>
+                            </div>
             </div>
         </div>
     </section>
@@ -1415,8 +1511,8 @@
                 <div class="safety-left">
                     <div class="safety-icon">⚠️</div>
                     <div class="safety-text-block">
-                        <div class="safety-title">Безопасность при работе с агрессией</div>
-                        <div class="safety-text">Безопасность данных обязательна. Специалист должен быть в защитной одежде собаки — не поэдем и о самоподготовке</div>
+                        <div class="safety-title">Рекомендации не заменят обращения к специалисту</div>
+                        <div class="safety-text">Важно правильно выявить у вашего питомца причины стресса и недружелюбного поведения</div>
                     </div>
                 </div>
             </div>
