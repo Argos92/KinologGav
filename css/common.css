@@ -59,18 +59,18 @@ img {
 /* ============================================================
    ОБЩИЙ HEADER (одинаков на всех страницах)
    ============================================================ */
-/* Отступ сверху есть ВСЕГДА (24px), плюс safe-area на устройствах с вырезом.
-   Порядок важен: older WebKit использует constant(), современные — env(),
-   обычные браузеры — первую строку (24px). */
+/* Отступ сверху есть ВСЕГДА: 32px базово, плюс safe-area на устройствах с вырезом.
+   Фолбэки идут в порядке поддержки: plain px → constant() → env().
+   !important защищает от случайных переопределений из кэшированных страничных стилей. */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    padding-top: 24px;
-    padding-top: calc(24px + constant(safe-area-inset-top));
-    padding-top: calc(24px + env(safe-area-inset-top));
-    padding-bottom: 24px;
+    padding-top: 32px !important;
+    padding-top: calc(32px + constant(safe-area-inset-top)) !important;
+    padding-top: calc(32px + env(safe-area-inset-top)) !important;
+    padding-bottom: 28px !important;
 }
 
 .header-left {
@@ -123,6 +123,7 @@ img {
     color: var(--bg-light-olive);
 }
 
+/* Кнопка «Обратная связь»: высота уменьшена ~в 1.5 раза (padding 13px вместо 20px) */
 .header-contacts-btn {
     display: inline-block;
     background: var(--bg-light-olive);
@@ -130,10 +131,11 @@ img {
     text-decoration: none;
     white-space: nowrap;
     border-radius: var(--radius-button);
-    padding: 20px 24px;
+    padding: 13px 24px;
     border: none;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.2;
     cursor: pointer;
 }
 
@@ -161,7 +163,7 @@ img {
     }
 
     .header-contacts-btn {
-        padding: 12px 18px;
+        padding: 10px 18px;
         font-size: 13px;
     }
 }

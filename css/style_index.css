@@ -533,10 +533,7 @@ body {
 }
 
 @media (max-width: 720px) {
-    /* фиксированная ширина кнопки «Обратная связь» ломала ряд header'а */
-    .header-contacts-btn {
-        padding: 12px 18px;
-    }
+    /* кнопка «Обратная связь» на мобильных — размеры берутся из css/common.css */
 
     .hero-text {
         max-width: 100%;
