@@ -642,7 +642,6 @@ a { color: inherit; text-decoration: none; }
     .energy-grid { grid-template-columns: 1fr; }
     .topics-grid { grid-template-columns: 1fr; }
     .footer-top  { grid-template-columns: 1fr 1fr; }
-    .nav         { display: none; }
 }
 
 @media (max-width: 640px) {

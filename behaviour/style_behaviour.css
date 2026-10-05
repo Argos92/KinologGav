@@ -38,13 +38,7 @@ body {
     padding: 0 40px;
 }
 
-/* ===== HEADER ===== */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-block: 24px;
-        }
+/* ===== HEADER ===== — стили в css/common.css (общий header) */
 
 /* ===== HERO ===== */
 .hero-section {
