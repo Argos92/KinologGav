@@ -123,7 +123,7 @@ img {
     color: var(--bg-light-olive);
 }
 
-/* Кнопка «Обратная связь»: высота уменьшена ~в 1.5 раза (padding 13px вместо 20px) */
+/* Кнопка «Контакты»: высота уменьшена ~в 1.5 раза (padding 13px вместо 20px) */
 .header-contacts-btn {
     display: inline-block;
     background: var(--bg-light-olive);
