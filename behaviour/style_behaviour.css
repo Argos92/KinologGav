@@ -38,74 +38,7 @@ body {
     padding: 0 40px;
 }
 
-/* ===== HEADER ===== */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-block: 24px;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: #2C2C2C;
-        }
-
-        .logo-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 14px;
-            background: #D9D9D9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-        }
-
-        .logo-circle img {
-            height: 70%;
-        }
-
-        .brand-name {
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .nav {
-            display: flex;
-            gap: 32px;
-            font-size: 15px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-        }
-
-        .nav a:hover {
-            color: var(--bg-light-olive);
-        }
-
-        .header-contacts-btn {
-            background: var(--bg-light-olive);
-            color: #FFFFFF;
-            border-radius: var(--radius-button);
-            padding: 20px 24px;
-            border: none;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-        }
+/* ===== HEADER ===== — стили в css/common.css (общий header) */
 
 /* ===== HERO ===== */
 .hero-section {
@@ -556,7 +489,6 @@ section[id] {
       transform: translateY(calc(-50% + 30px));
 }
 
-
 .enrichment-img {
     width: 100%;
     height: 240px;
@@ -819,85 +751,85 @@ section[id] {
             margin-top: 80px;
         }
 
-        .footer {
+.footer {
             padding-block: 60px 24px;
         }
 
-        .footer-top {
+.footer-top {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 40px;
             margin-bottom: 40px;
         }
 
-        .footer-logo-block {
+.footer-logo-block {
             max-width: 250px;
         }
 
-        .footer-logo {
+.footer-logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .footer-logo-icon {
+.footer-logo-icon {
             width: 36px;
             height: 36px;
             border-radius: 12px;
             background: #D9D9D9;
         }
 
-        .footer-logo-text {
+.footer-logo-text {
             font-weight: 700;
         }
 
-        .footer-description {
+.footer-description {
             font-size: 13px;
             color: var(--text-gray);
             margin-top: 16px;
             line-height: 1.5;
         }
 
-        .footer-column-title {
+.footer-column-title {
             font-weight: 600;
             margin-bottom: 16px;
             font-size: 14px;
         }
 
-        .footer-links {
+.footer-links {
             display: flex;
             flex-direction: column;
             gap: 12px;
             font-size: 14px;
         }
 
-        .footer-links a {
+.footer-links a {
             color: var(--text-gray);
             text-decoration: none;
         }
 
-        .footer-links a:hover {
+.footer-links a:hover {
             color: var(--text-dark);
         }
 
-        .footer-socials {
+.footer-socials {
             display: flex;
             gap: 12px;
         }
 
-        .footer-social-icon {
+.footer-social-icon {
             width: 32px;
             height: 32px;
             border-radius: 50%;
             background: #D9D9D9;
         }
 
-        .footer-divider {
+.footer-divider {
             border-top: 1px solid rgba(0, 0, 0, 0.05);
             margin-bottom: 24px;
         }
 
-        .footer-bottom {
+.footer-bottom {
             display: flex;
             justify-content: space-between;
             font-size: 12px;
@@ -940,103 +872,86 @@ section[id] {
 @media (max-width: 720px) {
     .container {
         padding: 0 20px;
+    
     }
-
-    .header-right {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .header {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        row-gap: 8px;
-    }
-
     .hero-title {
         font-size: 32px;
+    
     }
-
     .hero-section {
         padding: 24px 0 40px;
+    
     }
-
     .main-layout {
         grid-template-columns: 1fr;
         gap: 32px;
+    
     }
-
     .sidebar {
         position: static;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+    
     }
-
     .sidebar-links {
         margin-bottom: 0;
+    
     }
-
     .needs-cards {
         grid-template-columns: 1fr;
+    
     }
-
     .breed-types {
         grid-template-columns: 1fr;
+    
     }
-
     .enrichment-photos {
         grid-template-columns: 1fr;
+    
     }
-
     .enrichment-img {
         height: 200px;
+    
     }
-
     .safety-banner {
         flex-direction: column;
         text-align: center;
         padding: 24px;
+    
     }
-
     .checklist-items {
         grid-template-columns: repeat(2, 1fr);
+    
     }
-
     .footer-bottom-simple {
         flex-direction: column;
         gap: 8px;
         text-align: center;
+    
     }
     .footer-top {
         grid-template-columns: 1fr 1fr;
+    
     }
-
     .footer-bottom {
         flex-direction: column;
         gap: 8px;
-}
+
+    }
 }
 
 @media (max-width: 480px) {
-
-
     .sidebar {
         grid-template-columns: 1fr;
+    
     }
-
     .checklist-items {
         grid-template-columns: 1fr 1fr;
+    
     }
-
     .hero-title {
         font-size: 28px;
+    
     }
-
 }
