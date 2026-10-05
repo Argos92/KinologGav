@@ -123,6 +123,7 @@ img {
     color: var(--bg-light-olive);
 }
 
+/* Кнопка «Контакты»: высота уменьшена ~в 1.5 раза (padding 13px вместо 20px) */
 .header-contacts-btn {
     display: inline-block;
     background: var(--bg-light-olive);
@@ -130,10 +131,11 @@ img {
     text-decoration: none;
     white-space: nowrap;
     border-radius: var(--radius-button);
-    padding: 20px 24px;
+    padding: 13px 24px;
     border: none;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.2;
     cursor: pointer;
 }
 
@@ -161,7 +163,7 @@ img {
     }
 
     .header-contacts-btn {
-        padding: 12px 18px;
+        padding: 10px 18px;
         font-size: 13px;
     }
 }
