@@ -43,13 +43,7 @@ body {
             background: #D9D9D9;
         }
 
-/* HEADER */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-block: 24px;
-        }
+/* HEADER — стили в css/common.css (общий header для всех страниц) */
 
 .detail-hero-img {
 		border-radius: var(--radius-card);

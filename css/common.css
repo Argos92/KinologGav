@@ -59,11 +59,16 @@ img {
 /* ============================================================
    ОБЩИЙ HEADER (одинаков на всех страницах)
    ============================================================ */
+/* Отступ сверху есть ВСЕГДА (24px), плюс safe-area на устройствах с вырезом.
+   Порядок важен: older WebKit использует constant(), современные — env(),
+   обычные браузеры — первую строку (24px). */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    padding-top: 24px;
+    padding-top: calc(24px + constant(safe-area-inset-top));
     padding-top: calc(24px + env(safe-area-inset-top));
     padding-bottom: 24px;
 }
