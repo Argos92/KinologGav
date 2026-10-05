@@ -59,18 +59,18 @@ img {
 /* ============================================================
    ОБЩИЙ HEADER (одинаков на всех страницах)
    ============================================================ */
-/* Отступ сверху есть ВСЕГДА: 32px базово, плюс safe-area на устройствах с вырезом.
-   Фолбэки идут в порядке поддержки: plain px → constant() → env().
-   !important защищает от случайных переопределений из кэшированных страничных стилей. */
+/* Отступ сверху есть ВСЕГДА (24px), плюс safe-area на устройствах с вырезом.
+   Порядок важен: older WebKit использует constant(), современные — env(),
+   обычные браузеры — первую строку (24px). */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    padding-top: 32px !important;
-    padding-top: calc(32px + constant(safe-area-inset-top)) !important;
-    padding-top: calc(32px + env(safe-area-inset-top)) !important;
-    padding-bottom: 28px !important;
+    padding-top: 24px;
+    padding-top: calc(24px + constant(safe-area-inset-top));
+    padding-top: calc(24px + env(safe-area-inset-top));
+    padding-bottom: 24px;
 }
 
 .header-left {
