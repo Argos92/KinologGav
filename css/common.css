@@ -62,7 +62,7 @@ img {
 /* Отступ сверху есть ВСЕГДА (24px), плюс safe-area на устройствах с вырезом.
    Порядок важен: older WebKit использует constant(), современные — env(),
    обычные браузеры — первую строку (24px). */
-.header {
+.container.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,7 +141,7 @@ img {
 
 /* ---------- Header: адаптив ---------- */
 @media (max-width: 720px) {
-    .header {
+    .container.header {
         flex-wrap: wrap;
         row-gap: 12px;
     }
