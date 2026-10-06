@@ -180,6 +180,84 @@ img {
 }
 
 /* ============================================================
+   ОБЩАЯ ПЛАШКА ЗАПИСИ К КИНОЛОГУ
+   ============================================================ */
+.specialist-cta {
+    margin: 64px auto 0;
+    padding: 0 40px;
+}
+
+.specialist-cta__inner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    background: var(--bg-dark-green);
+    color: #FFFFFF;
+    border-radius: 24px;
+    padding: 28px 32px;
+}
+
+.specialist-cta__eyebrow {
+    color: #D8E0D2;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.specialist-cta__title {
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.specialist-cta__text {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 680px;
+}
+
+.specialist-cta__button {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: var(--radius-button);
+    background: #FFFFFF;
+    color: var(--bg-dark-green);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+    .specialist-cta {
+        padding: 0 20px;
+    }
+
+    .specialist-cta__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 26px 24px;
+    }
+
+    .specialist-cta__title {
+        font-size: 23px;
+    }
+
+    .specialist-cta__button {
+        width: 100%;
+    }
+}
+
+/* ============================================================
    ОБЩИЕ КНОПКИ HERO (используются на нескольких страницах)
    ============================================================ */
 .hero-buttons {

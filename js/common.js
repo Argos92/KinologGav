@@ -10,6 +10,38 @@
 (function () {
     'use strict';
 
+    /* ---------- Мобильное меню ---------- */
+    var navToggle = document.querySelector('.nav-toggle');
+    var mainNav = document.querySelector('.main-nav');
+
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+            var isOpen = mainNav.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        mainNav.addEventListener('click', function (e) {
+            if (e.target.closest('a')) {
+                mainNav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.header-right')) {
+                mainNav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                mainNav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     /* ---------- Модалка «О проекте» ---------- */
     var aboutBtn = document.querySelector('.about-project-btn');
     var aboutModal = document.querySelector('.about-modal');
