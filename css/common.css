@@ -183,13 +183,15 @@ img {
    ОБЩАЯ ПЛАШКА ЗАПИСИ К КИНОЛОГУ
    ============================================================ */
 .specialist-cta {
+    width: 100%;
+    max-width: 1200px;
     margin: 64px auto 0;
     padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .specialist-cta__inner {
     width: 100%;
-    max-width: 1120px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
