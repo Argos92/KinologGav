@@ -68,6 +68,10 @@
                         '<input name="pet" required>',
                     '</label>',
                     '<label class="contacts-form__field">',
+                        '<span>Контакты</span>',
+                        '<input name="contacts" autocomplete="tel" required>',
+                    '</label>',
+                    '<label class="contacts-form__field">',
                         '<span>Проблема</span>',
                         '<textarea name="problem" required></textarea>',
                     '</label>',
@@ -117,10 +121,15 @@
             e.preventDefault();
             var formData = new FormData(contactForm);
             var googleData = new FormData();
+            var problemText = [
+                formData.get('problem') || '',
+                '',
+                'Контакты: ' + (formData.get('contacts') || '')
+            ].join('\n');
 
             googleData.append(googleFormFields.name, formData.get('name') || '');
             googleData.append(googleFormFields.pet, formData.get('pet') || '');
-            googleData.append(googleFormFields.problem, formData.get('problem') || '');
+            googleData.append(googleFormFields.problem, problemText);
 
             submitButton.disabled = true;
             contactStatus.textContent = 'Отправляю заявку...';
