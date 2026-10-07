@@ -19,158 +19,226 @@
                 <div class="brand-name">Благополучная собака</div>
             </a>
             <div class="header-right">
-                <nav class="nav"></nav>
-                <a href="https://forms.gle/RQvBHuGSBAH4rzZR6" class="header-contacts-btn">Контакты</a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav main-nav" id="main-nav">
+                    <a href="#services">Услуги</a>
+                    <a href="#approach">Подход</a>
+                    <a href="#knowledge">База знаний</a>
+                    <a href="#prices">Цены</a>
+                    <a href="#reviews">Отзывы</a>
+                </nav>
+                <a href="mailto:order@sknms.ru" class="header-contacts-btn contact-trigger">Контакты</a>
             </div>
         </header>
 
         <main class="container">
             <!-- HERO -->
-            <section class="hero" id="method">
-                <div>
-                    <div class="hero-badge">Гуманная кинология и забота.</div>
-                    <h1 class="hero-title">Понимание собаки начинается здесь.</h1>
+            <section class="hero" id="top">
+                <div class="hero-content">
+                    <div class="hero-badge">Кинолог в гуманном подходе</div>
+                    <h1 class="hero-title">Привет. Я Мария, кинолог, использующий гуманный подход.</h1>
                     <p class="hero-text">
-                        Наш проект поможет вам построить гармоничные отношения через научный подход, эмпатию и глубокое понимание поведения собак.
+                        Я помогаю собакам и их людям спокойнее понимать друг друга: разбираю страхи,
+                        агрессию, сепарационную тревогу, адаптацию и сложности на прогулках.
                     </p>
+                    <ul class="hero-list" aria-label="С какими запросами можно обратиться">
+                        <li>собака боится людей или сородичей</li>
+                        <li>не остается одна дома</li>
+                        <li>проявляет агрессию</li>
+                        <li>тянет поводок на прогулке</li>
+                    </ul>
                     <div class="hero-buttons">
-                        <a href="./blago/blago.html" class="hero-btn-primary">Начать путь</a>
-                        <!-- кнопка О ПРОЕКТЕ с классом для JS -->
+                        <a href="mailto:order@sknms.ru" class="hero-btn-primary contact-trigger">Записаться ко мне</a>
                         <button type="button" class="hero-btn-secondary about-project-btn">
-                            О проекте
+                            О портале
                         </button>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
                     <div class="image-placeholder hero-image">
-                        <img src="senior.webp" alt="Взросление">
+                        <img src="dva_psa.jpg" alt="Две спокойные собаки рядом с человеком">
+                    </div>
+                </div>
+            </section>
+
+            <section class="intro-section" id="services">
+                <div class="section-header">
+                    <div>
+                        <div class="section-pretitle">С чем я помогаю</div>
+                        <h2 class="section-title">Работаю с поведением без давления, рывков и запугивания.</h2>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Поведенческие проблемы</h3>
+                        <p>Страхи, агрессия, сепарационная тревога, компульсивные расстройства и другие состояния, за которыми стоит потребность собаки.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Адаптация и ресоциализация</h3>
+                        <p>Помощь собакам из приютов и с улицы: новый дом, правила быта, безопасные знакомства и снижение стресса.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Дом, прогулки и амуниция</h3>
+                        <p>Организация пространства, выбор шлейки и поводка, прогулки, развивающие занятия и жизнь нескольких животных дома.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Щенки и возрастные этапы</h3>
+                        <p>Подбор щенка, адаптация, начальные навыки, онлайн-сопровождение, социализация, подростковый период и пожилые собаки.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="approach-section" id="approach">
+                <div class="approach-card">
+                    <div>
+                        <div class="section-pretitle">Подход</div>
+                        <h2 class="section-title">Только гуманные методы по современным европейским стандартам PDTE.</h2>
+                        <p class="approach-text">
+                            Я не занимаюсь дрессурой и ОКД. В работе важны доверие, уважение к состоянию собаки,
+                            понятные упражнения и пошаговый план, который можно встроить в реальную жизнь семьи.
+                        </p>
+                    </div>
+                    <div class="work-result">
+                        <h3>В процессе работы вы получите</h3>
+                        <ul>
+                            <li>консультацию и разбор ситуации</li>
+                            <li>пошаговый план работы с поведением</li>
+                            <li>упражнения для вашей собаки</li>
+                            <li>поддержку и корректировку действий</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
             <!-- KNOWLEDGE BASE -->
-            <section class="knowledge-section" id="topics">
+            <section class="knowledge-section" id="knowledge">
                 <div class="section-header">
                     <div>
                         <div class="section-pretitle">База знаний</div>
-                        <h2 class="section-title">Чем наш проект может быть полезен Вам и Вашей собаке?</h2>
+                        <h2 class="section-title">Это подходы гуманной кинологии, которые я использую в работе.</h2>
                     </div>
                 </div>
 
                 <div class="topics-grid">
                     <article class="topic-card">
-                        <div class="topic-icon">☀️</div>
                         <h3 class="topic-title">Основы благополучия</h3>
                         <p class="topic-text">
-                            Организация быта и полезных занятий для комфортной жизни вашей собаки
+                            Комфортная среда, сон, питание, безопасность, бытовые процедуры и занятия без лишнего стресса.
                         </p>
-                        <a href="./blago/blago.html" class="topic-more">Подробнее →</a>
+                        <a href="./blago/blago.html" class="topic-more">Изучить раздел</a>
                     </article>
 
                     <article class="topic-card">
-                        <div class="topic-icon">🏡</div>
                         <h3 class="topic-title">Собака в новом доме</h3>
                         <p class="topic-text">
-                            Адаптация собаки в новом доме. Ресоциализация
+                            Как помочь собаке адаптироваться, если она приехала из приюта, с улицы или из другой семьи.
                         </p>
-                        <a href="./adaptation/Адаптация_собаки_—_Благополучная_собака.html" class="topic-more">Подробнее →</a>
+                        <a href="./adaptation/Адаптация_собаки_—_Благополучная_собака.html" class="topic-more">Изучить раздел</a>
                     </article>
 
                     <article class="topic-card">
-                        <div class="topic-icon">❤️</div>
                         <h3 class="topic-title">Потребности собак</h3>
                         <p class="topic-text">
-                            Учимся понимать и удовлетворять потребности собаки.
+                            Нежелательное поведение часто связано с неудовлетворенной потребностью, болью или стрессом.
                         </p>
-                        <a href="./behaviour/behaviour.html" class="topic-more">Подробнее →</a>
+                        <a href="./behaviour/behaviour.html" class="topic-more">Изучить раздел</a>
                     </article>
 
                     <article class="topic-card">
-                        <div class="topic-icon">📋</div>
                         <h3 class="topic-title">Паспортный контроль</h3>
                         <p class="topic-text">
-                            Щенки, подростки и сениоры: организация быта и ухода в каждом возрастном периоде.
+                            Щенки, подростки и сениоры нуждаются в разном темпе, нагрузке, уходе и поддержке.
                         </p>
-                        <a href="./aging/aging.html" class="topic-more">Подробнее →</a>
+                        <a href="./aging/aging.html" class="topic-more">Изучить раздел</a>
                     </article>
 
                     <article class="topic-card">
-                        <div class="topic-icon">🔔</div>
                         <h3 class="topic-title">Сигналы примирения</h3>
                         <p class="topic-text">
-                            Интересные факты о коммуникации собак друг с другом.
+                            Язык тела помогает раньше замечать дискомфорт и не доводить ситуацию до конфликта.
                         </p>
-                        <a href="./communication/Коммуникация.html" class="topic-more">Подробнее →</a>
+                        <a href="./communication/Коммуникация.html" class="topic-more">Изучить раздел</a>
                     </article>
 
                     <article class="topic-card">
-                        <div class="topic-icon">🧩</div>
                         <h3 class="topic-title">Что стоит за "проблемным" поведением</h3>
                         <p class="topic-text">
-                            Нежелательное/неадаптивное поведение. С чего начать работу и что точно нельзя делать.
+                            С чего начать разбор поведения и почему наказания не решают причину проблемы.
                         </p>
-                        <a href="./problems/problems.html" class="topic-more">Подробнее →</a>
+                        <a href="./problems/problems.html" class="topic-more">Изучить раздел</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="prices-section" id="prices">
+                <div class="section-header">
+                    <div>
+                        <div class="section-pretitle">Стоимость</div>
+                        <h2 class="section-title">Форматы работы</h2>
+                    </div>
+                </div>
+                <div class="prices-grid">
+                    <article class="price-card price-card--featured">
+                        <div class="price-label">Первичная консультация</div>
+                        <div class="price-value">5 000 руб.</div>
+                        <p>Разбор запроса, истории собаки, условий жизни и первые рекомендации для старта работы.</p>
+                    </article>
+                    <article class="price-card">
+                        <div class="price-label">Недельное ведение питомца</div>
+                        <div class="price-value">10 000 руб.</div>
+                        <p>Сопровождение после консультации: поддержка, ответы на вопросы и корректировка плана.</p>
+                    </article>
+                    <article class="price-card">
+                        <div class="price-label">Повторная консультация</div>
+                        <div class="price-value">3 000 руб.</div>
+                        <p>Оценка прогресса, уточнение упражнений и следующий шаг работы с поведением.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="reviews-section" id="reviews">
+                <div class="section-header">
+                    <div>
+                        <div class="section-pretitle">Отзывы</div>
+                        <h2 class="section-title">Что говорят семьи после работы со мной</h2>
+                    </div>
+                </div>
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <p>Мария работала с нашей девочкой Джек-расселом, помогала скорректировать поведение: собака бросается на включенный пылесос, воет, когда никого нет дома, на улице иногда бросается на собак. Очень понравился подход Марии: современный, гуманный, мягко и спокойно, но при этом уверенно, был расписан пошаговый план работы. Начав выполнять рекомендации, уже заметили улучшения!</p>
+                        <div class="review-author">Валерия</div>
+                    </article>
+                    <article class="review-card">
+                        <p>Мы взяли из приюта взрослого французского бульдога. Мария нам очень помогла: проконсультировала по многим вопросам, подсказала практические действия, провела индивидуальную консультацию. Поддерживает связь, готова ответить на все вопросы. Нашла индивидуальный подход к собаке.</p>
+                        <div class="review-author">Нина</div>
+                    </article>
+                    <article class="review-card">
+                        <p>Обратились с проблемой зооагрессии. Мария провела детальные интервью, проинструктировала, как наблюдать за поведением и фиксировать прогресс. Рекомендации помогли свести зооагрессию на ноль за месяц занятий. Прогулки стали намного приятнее и спокойнее.</p>
+                        <div class="review-author">Лера</div>
                     </article>
                 </div>
             </section>
 
             <!-- CTA BANNER -->
-            <section class="cta-banner">
+            <section class="cta-banner" id="contact">
                 <div class="cta-left">
-                    <h3>Не нашли подходящую тему?</h3>
+                    <h3>Не знаете, с чего начать?</h3>
                     <p>
-                        Если у вас есть какие-то дополнительные вопросы, вы можете с нами связаться.
+                        Опишите ситуацию, возраст собаки и главную трудность. Я подскажу подходящий формат работы.
                     </p>
-                    <button class="cta-btn">Контакты</button>
+                    <a class="cta-btn contact-trigger" href="mailto:order@sknms.ru">Записаться на консультацию</a>
                 </div>
-                <div class="image-placeholder cta-image">
-                    <img src="dva_psa.jpg" style="width: 100%;" alt="Щенок исследует траву — период активной социализации" loading="lazy">
+                <div class="cta-note">
+                    <span>Современный гуманный подход</span>
+                    <span>План работы и поддержка</span>
+                    <span>Без ОКД и жестких методов</span>
                 </div>
             </section>
         </main>
-
-        <!-- ADOPTION SECTION -->
-        <section class="adoption-section" id="adoption">
-            <div class="container">
-                <div class="adoption-header">
-                    <div>
-                        <div class="adoption-pretitle">Добрые дела</div>
-                        <h2 class="adoption-title">Они ищут дом</h2>
-                    </div>
-                    <button class="adoption-view-all">Смотреть всех</button>
-                </div>
-
-                <div class="pets-grid">
-                    <article class="pet-card">
-                        <div class="image-placeholder pet-photo">
-                            <img src="./adoption_assets/d1.jpg" alt="Лого-благополучная собака">
-                        </div>
-                        <div class="pet-header">
-                            <div class="pet-name">Шелби</div>
-                            <div class="pet-age">2 года</div>
-                        </div>
-                        <p class="pet-desc">
-                            Метис якутской лайки. Активный и любознательный. Привит
-                        </p>
-                        <button class="pet-meet-btn">Познакомиться</button>
-                    </article>
-
-                    <article class="pet-card">
-                        <div class="image-placeholder pet-photo">
-                            <img src="./adoption_assets/d2.jpg" alt="Лого-благополучная собака">
-                        </div>
-                        <div class="pet-header">
-                            <div class="pet-name">Микки</div>
-                            <div class="pet-age">5 лет</div>
-                        </div>
-                        <p class="pet-desc">
-                            Очень ласковый, умный и деликатный. Микки любит общение с человеком
-                        </p>
-                        <button class="pet-meet-btn">Познакомиться</button>
-                    </article>
-                </div>
-            </div>
-        </section>
 
         <!-- FOOTER -->
         <footer class="footer-wrapper" id="contacts">
@@ -190,7 +258,7 @@
                     <div>
                         <div class="footer-column-title">О проекте</div>
                         <div class="footer-links">
-                            <a href="#contacts">Контакты</a>
+                            <a href="mailto:order@sknms.ru" class="contact-trigger">Контакты</a>
                         </div>
                     </div>
                     <div>
@@ -224,88 +292,21 @@
             <h3 class="about-modal__title">О проекте</h3>
             <div class="about-modal__content">
                 <p>
-                    Наш просветительский проект поможет вам организовать жизнь вашей собаки
-                    максимально благополучно. Узнать потребности, которые стоят за ее
-                    поведением и понимать, как их удовлетворить.
+                    "Благополучная собака" объединяет мои просветительские материалы и практику
+                    кинолога в современном гуманном подходе.
                 </p>
                 <p>
-                    Вы начнете понимать язык тела и сигналы вашей собаки и сможете ей помочь
-                    в стрессовых для нее ситуациях.
+                    Здесь можно изучить основы благополучия, язык тела, возрастные особенности
+                    и причины нежелательного поведения, а затем обратиться ко мне за индивидуальной помощью.
                 </p>
                 <p>
-                    Если вы мечтаете взять собаку из приюта и не знаете, как помочь ей
-                    адаптироваться дома, мы бережно поможем вам это сделать.
+                    В работе я использую методы, основанные на доверии, уважении к собаке
+                    и постепенном изменении среды и поведения.
                 </p>
-                <p>Приятного изучения ❤️</p>
             </div>
         </div>
     </div>
 
-    <script>
-    (function () {
-      // Модалка "Контакты" (ваш существующий код)
-      //var contactsButton = document.querySelector('.header-contacts-btn');
-      //if (contactsButton) {
-      //  var receiverEmail = 'i@msuedova.ru';
-      //  var widgetStyle = document.createElement('style');
-      //  widgetStyle.textContent = '.contacts-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;z-index:2000}.contacts-modal.is-open{display:flex}.contacts-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.42)}.contacts-modal__dialog{position:relative;z-index:1;width:100%;max-width:460px;background:#fff;border-radius:18px;padding:24px;box-shadow:0 18px 46px rgba(0,0,0,.16)}.contacts-modal__title{margin:0 28px 14px 0;font-size:20px}.contacts-modal__close{position:absolute;top:10px;right:10px;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer}.contacts-form{display:flex;flex-direction:column;gap:10px}.contacts-form input,.contacts-form textarea{width:100%;border:1px solid #d7d7d7;border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px}.contacts-form textarea{min-height:90px;resize:vertical}.contacts-form button{margin-top:4px;border:0;border-radius:999px;padding:12px 18px;font-family:inherit;font-weight:700;cursor:pointer;background:#5D6855;color:#fff}';
-      //  document.head.appendChild(widgetStyle);
-       // var modal = document.createElement('div');
-        //modal.className = 'contacts-modal';
-        //modal.setAttribute('aria-hidden', 'true');
-        //modal.innerHTML = '<div class="contacts-modal__backdrop" data-close="1"></div><div class="contacts-modal__dialog"><button type="button" class="contacts-modal__close" data-close="1" aria-label="Закрыть">×</button><h3 class="contacts-modal__title">Контакты</h3><form class="contacts-form"><input name="name" placeholder="Имя" required><input name="contacts" placeholder="Контакты" required><textarea name="comment" placeholder="Комментарий"></textarea><button type="submit">Отправить</button></form></div>';
-        //document.body.appendChild(modal);
-        //function openModal(){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
-        //function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-        //contactsButton.addEventListener('click', openModal);
-        //modal.addEventListener('click', function (e) { if (e.target.closest('[data-close="1"]')) closeModal(); });
-        //document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
-        //modal.querySelector('.contacts-form').addEventListener('submit', function (e) {
-          //e.preventDefault();
-          //var formData = new FormData(e.target);
-          //var subject = encodeURIComponent('Новая заявка с сайта');
-          //var body = encodeURIComponent('Имя: ' + (formData.get('name') || '') + '\nКонтакты: ' + (formData.get('contacts') || '') + '\nКомментарий: ' + (formData.get('comment') || ''));
-          //window.location.href = 'mailto:' + receiverEmail + '?subject=' + subject + '&body=' + body;
-          //closeModal();
-        //});
-      //}
-
-      // Модалка "О проекте"
-      var aboutBtn = document.querySelector('.about-project-btn');
-      var aboutModal = document.querySelector('.about-modal');
-
-      if (aboutBtn && aboutModal) {
-        function openAboutModal() {
-          aboutModal.classList.add('is-open');
-          aboutModal.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        }
-
-        function closeAboutModal() {
-          aboutModal.classList.remove('is-open');
-          aboutModal.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        }
-
-        aboutBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          openAboutModal();
-        });
-
-        aboutModal.addEventListener('click', function (e) {
-          if (e.target.closest('[data-about-close="1"]')) {
-            closeAboutModal();
-          }
-        });
-
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && aboutModal.classList.contains('is-open')) {
-            closeAboutModal();
-          }
-        });
-      }
-    })();
-    </script>
     <script src="./js/common.js"></script>
 </body>
 </html>

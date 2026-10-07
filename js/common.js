@@ -1,14 +1,162 @@
 /* ============================================================
    ОБЩИЙ СКРИПТ САЙТА «БЛАГОПОЛУЧНАЯ СОБАКА»
    Работает в связке с общим header (см. css/common.css):
-   - кнопка «Контакты» (.header-contacts-btn) — ведёт на Google-форму;
-     старый код модального окна формы сохранён ниже (закомментирован),
-     его можно вернуть, если снова понадобится модалка вместо ссылки;
+   - кнопки записи и контактов открывают форму заявки;
    - модалка «О проекте» (.about-project-btn -> .about-modal),
      подключается на любой странице, где есть эти элементы.
    ============================================================ */
 (function () {
     'use strict';
+
+    /* ---------- Мобильное меню ---------- */
+    var navToggle = document.querySelector('.nav-toggle');
+    var mainNav = document.querySelector('.main-nav');
+
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+            var isOpen = mainNav.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        mainNav.addEventListener('click', function (e) {
+            if (e.target.closest('a')) {
+                mainNav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.header-right')) {
+                mainNav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                mainNav.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    /* ---------- Форма записи к Марии ---------- */
+    var contactTriggers = document.querySelectorAll('.contact-trigger, .cta-main-btn');
+
+    if (contactTriggers.length) {
+        var googleFormAction = 'https://docs.google.com/forms/d/e/1FAIpQLSfDIeWYM20dN8r2koMXgGV49qG7XZClAPoclxJj0yZWZRHNhQ/formResponse';
+        var googleFormFields = {
+            name: 'entry.398667946',
+            pet: 'entry.889443764',
+            problem: 'entry.1255608769'
+        };
+        var contactModal = document.createElement('div');
+        contactModal.className = 'contacts-modal';
+        contactModal.setAttribute('aria-hidden', 'true');
+        contactModal.innerHTML = [
+            '<div class="contacts-modal__backdrop" data-contact-close="1"></div>',
+            '<div class="contacts-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contacts-modal-title">',
+                '<button type="button" class="contacts-modal__close" data-contact-close="1" aria-label="Закрыть">×</button>',
+                '<h3 class="contacts-modal__title" id="contacts-modal-title">Записаться к Марии</h3>',
+                '<form class="contacts-form">',
+                    '<label class="contacts-form__field">',
+                        '<span>Ваше имя</span>',
+                        '<input name="name" autocomplete="name" required>',
+                    '</label>',
+                    '<label class="contacts-form__field">',
+                        '<span>Ваш питомец</span>',
+                        '<input name="pet" required>',
+                    '</label>',
+                    '<label class="contacts-form__field">',
+                        '<span>Контакты</span>',
+                        '<input name="contacts" autocomplete="tel" required>',
+                    '</label>',
+                    '<label class="contacts-form__field">',
+                        '<span>Проблема</span>',
+                        '<textarea name="problem" required></textarea>',
+                    '</label>',
+                    '<button type="submit">Отправить</button>',
+                    '<p class="contacts-form__status" aria-live="polite"></p>',
+                '</form>',
+            '</div>'
+        ].join('');
+        document.body.appendChild(contactModal);
+
+        var contactForm = contactModal.querySelector('.contacts-form');
+        var contactStatus = contactModal.querySelector('.contacts-form__status');
+        var submitButton = contactForm.querySelector('button[type="submit"]');
+
+        function openContactModal() {
+            contactModal.classList.add('is-open');
+            contactModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            contactStatus.textContent = '';
+            contactStatus.classList.remove('is-error');
+            var firstInput = contactModal.querySelector('input');
+            if (firstInput) {
+                firstInput.focus();
+            }
+        }
+
+        function closeContactModal() {
+            contactModal.classList.remove('is-open');
+            contactModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        contactTriggers.forEach(function (trigger) {
+            trigger.addEventListener('click', function (e) {
+                e.preventDefault();
+                openContactModal();
+            });
+        });
+
+        contactModal.addEventListener('click', function (e) {
+            if (e.target.closest('[data-contact-close="1"]')) {
+                closeContactModal();
+            }
+        });
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var formData = new FormData(contactForm);
+            var googleData = new FormData();
+            var problemText = [
+                formData.get('problem') || '',
+                '',
+                'Контакты: ' + (formData.get('contacts') || '')
+            ].join('\n');
+
+            googleData.append(googleFormFields.name, formData.get('name') || '');
+            googleData.append(googleFormFields.pet, formData.get('pet') || '');
+            googleData.append(googleFormFields.problem, problemText);
+
+            submitButton.disabled = true;
+            contactStatus.textContent = 'Отправляю заявку...';
+            contactStatus.classList.remove('is-error');
+
+            fetch(googleFormAction, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: googleData
+            }).then(function () {
+                contactForm.reset();
+                contactStatus.textContent = 'Спасибо! Заявка отправлена.';
+                setTimeout(closeContactModal, 1400);
+            }).catch(function () {
+                contactStatus.textContent = 'Не получилось отправить заявку. Попробуйте еще раз.';
+                contactStatus.classList.add('is-error');
+            }).finally(function () {
+                submitButton.disabled = false;
+            });
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && contactModal.classList.contains('is-open')) {
+                closeContactModal();
+            }
+        });
+    }
 
     /* ---------- Модалка «О проекте» ---------- */
     var aboutBtn = document.querySelector('.about-project-btn');
@@ -45,34 +193,4 @@
         });
     }
 
-    /* ---------- Старая модалка «Контакты» (не используется:
-       кнопка «Контакты» теперь ссылка на Google-форму).
-       При необходимости раскомментируйте и уберите href у кнопки.
-
-    var contactsButton = document.querySelector('.header-contacts-btn');
-    if (contactsButton) {
-      var receiverEmail = 'i@msuedova.ru';
-      var widgetStyle = document.createElement('style');
-      widgetStyle.textContent = '.contacts-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;z-index:2000}.contacts-modal.is-open{display:flex}.contacts-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.42)}.contacts-modal__dialog{position:relative;z-index:1;width:100%;max-width:460px;background:#fff;border-radius:18px;padding:24px;box-shadow:0 18px 46px rgba(0,0,0,.16)}.contacts-modal__title{margin:0 28px 14px 0;font-size:20px}.contacts-modal__close{position:absolute;top:10px;right:10px;border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer}.contacts-form{display:flex;flex-direction:column;gap:10px}.contacts-form input,.contacts-form textarea{width:100%;border:1px solid #d7d7d7;border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px}.contacts-form textarea{min-height:90px;resize:vertical}.contacts-form button{margin-top:4px;border:0;border-radius:999px;padding:12px 18px;font-family:inherit;font-weight:700;cursor:pointer;background:#5D6855;color:#fff}';
-      document.head.appendChild(widgetStyle);
-      var modal = document.createElement('div');
-      modal.className = 'contacts-modal';
-      modal.setAttribute('aria-hidden', 'true');
-      modal.innerHTML = '<div class="contacts-modal__backdrop" data-close="1"></div><div class="contacts-modal__dialog"><button type="button" class="contacts-modal__close" data-close="1" aria-label="Закрыть">×</button><h3 class="contacts-modal__title">Контакты</h3><form class="contacts-form"><input name="name" placeholder="Имя" required><input name="contacts" placeholder="Контакты" required><textarea name="comment" placeholder="Комментарий"></textarea><button type="submit">Отправить</button></form></div>';
-      document.body.appendChild(modal);
-      function openModal(){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
-      function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-      contactsButton.addEventListener('click', openModal);
-      modal.addEventListener('click', function (e) { if (e.target.closest('[data-close="1"]')) closeModal(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
-      modal.querySelector('.contacts-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        var formData = new FormData(e.target);
-        var subject = encodeURIComponent('Новая заявка с сайта');
-        var body = encodeURIComponent('Имя: ' + (formData.get('name') || '') + '\nКонтакты: ' + (formData.get('contacts') || '') + '\nКомментарий: ' + (formData.get('comment') || ''));
-        window.location.href = 'mailto:' + receiverEmail + '?subject=' + subject + '&body=' + body;
-        closeModal();
-      });
-    }
-    ---------- */
 })();
