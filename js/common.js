@@ -44,6 +44,12 @@
     var contactTriggers = document.querySelectorAll('.contact-trigger, .cta-main-btn');
 
     if (contactTriggers.length) {
+        var googleFormAction = 'https://docs.google.com/forms/d/e/1FAIpQLSfDIeWYM20dN8r2koMXgGV49qG7XZClAPoclxJj0yZWZRHNhQ/formResponse';
+        var googleFormFields = {
+            name: 'entry.398667946',
+            pet: 'entry.889443764',
+            problem: 'entry.1255608769'
+        };
         var contactModal = document.createElement('div');
         contactModal.className = 'contacts-modal';
         contactModal.setAttribute('aria-hidden', 'true');
@@ -66,17 +72,22 @@
                         '<textarea name="problem" required></textarea>',
                     '</label>',
                     '<button type="submit">Отправить</button>',
+                    '<p class="contacts-form__status" aria-live="polite"></p>',
                 '</form>',
             '</div>'
         ].join('');
         document.body.appendChild(contactModal);
 
         var contactForm = contactModal.querySelector('.contacts-form');
+        var contactStatus = contactModal.querySelector('.contacts-form__status');
+        var submitButton = contactForm.querySelector('button[type="submit"]');
 
         function openContactModal() {
             contactModal.classList.add('is-open');
             contactModal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
+            contactStatus.textContent = '';
+            contactStatus.classList.remove('is-error');
             var firstInput = contactModal.querySelector('input');
             if (firstInput) {
                 firstInput.focus();
@@ -105,15 +116,30 @@
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             var formData = new FormData(contactForm);
-            var subject = encodeURIComponent('Заявка на консультацию кинолога');
-            var body = encodeURIComponent(
-                'Ваше имя: ' + (formData.get('name') || '') + '\n' +
-                'Ваш питомец: ' + (formData.get('pet') || '') + '\n' +
-                'Проблема: ' + (formData.get('problem') || '')
-            );
-            window.location.href = 'mailto:order@sknms.ru?subject=' + subject + '&body=' + body;
-            closeContactModal();
-            contactForm.reset();
+            var googleData = new FormData();
+
+            googleData.append(googleFormFields.name, formData.get('name') || '');
+            googleData.append(googleFormFields.pet, formData.get('pet') || '');
+            googleData.append(googleFormFields.problem, formData.get('problem') || '');
+
+            submitButton.disabled = true;
+            contactStatus.textContent = 'Отправляю заявку...';
+            contactStatus.classList.remove('is-error');
+
+            fetch(googleFormAction, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: googleData
+            }).then(function () {
+                contactForm.reset();
+                contactStatus.textContent = 'Спасибо! Заявка отправлена.';
+                setTimeout(closeContactModal, 1400);
+            }).catch(function () {
+                contactStatus.textContent = 'Не получилось отправить заявку. Попробуйте еще раз.';
+                contactStatus.classList.add('is-error');
+            }).finally(function () {
+                submitButton.disabled = false;
+            });
         });
 
         document.addEventListener('keydown', function (e) {

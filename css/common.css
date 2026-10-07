@@ -444,6 +444,23 @@ img {
     cursor: pointer;
 }
 
+.contacts-form button:disabled {
+    cursor: wait;
+    opacity: 0.75;
+}
+
+.contacts-form__status {
+    min-height: 20px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--bg-dark-green);
+}
+
+.contacts-form__status.is-error {
+    color: #A14B4B;
+}
+
 /* ============================================================
    ОБЩИЕ АДАПТИВНЫЕ ОТСТУПЫ КОНТЕЙНЕРА
    ============================================================ */
