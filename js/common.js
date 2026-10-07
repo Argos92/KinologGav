@@ -48,6 +48,7 @@
         var googleFormFields = {
             name: 'entry.398667946',
             pet: 'entry.889443764',
+            contacts: 'entry.1356182996',
             problem: 'entry.1255608769'
         };
         var contactModal = document.createElement('div');
@@ -121,15 +122,11 @@
             e.preventDefault();
             var formData = new FormData(contactForm);
             var googleData = new FormData();
-            var problemText = [
-                formData.get('problem') || '',
-                '',
-                'Контакты: ' + (formData.get('contacts') || '')
-            ].join('\n');
 
             googleData.append(googleFormFields.name, formData.get('name') || '');
             googleData.append(googleFormFields.pet, formData.get('pet') || '');
-            googleData.append(googleFormFields.problem, problemText);
+            googleData.append(googleFormFields.contacts, formData.get('contacts') || '');
+            googleData.append(googleFormFields.problem, formData.get('problem') || '');
 
             submitButton.disabled = true;
             contactStatus.textContent = 'Отправляю заявку...';
