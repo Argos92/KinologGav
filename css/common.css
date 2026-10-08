@@ -56,6 +56,12 @@ img {
     background: #D9D9D9;
 }
 
+.footer-logo .footer-logo-icon {
+    object-fit: contain;
+    background: transparent;
+    display: block;
+}
+
 /* ============================================================
    ОБЩИЙ HEADER (одинаков на всех страницах)
    ============================================================ */
