@@ -52,7 +52,9 @@ body {
             gap: 40px;
             align-items: center;
             padding-top: 60px;
+            padding-right: 40px;
             padding-bottom: 80px;
+            padding-left: 40px;
         }
 
 .hero-badge {
@@ -807,7 +809,7 @@ body {
 @media (max-width: 720px) {
     .container { padding: 0 20px; 
     }
-    .hero { padding-top: 40px; padding-bottom: 60px; 
+    .hero { padding-top: 40px; padding-right: 20px; padding-bottom: 60px; padding-left: 20px; 
     }
     .hero-title { font-size: 32px; 
     }
